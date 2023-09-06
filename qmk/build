@@ -2,5 +2,18 @@
 
 set -euo pipefail
 
-qmk compile -kb keebio/quefrency/rev4 -km elentok
-qmk compile -kb annepro2/c18 -km elentok
+KEYBOARDS=(
+  keebio/sinc/rev3
+  keebio/quefrency/rev4
+  annepro2/c18
+)
+
+if [ $# -gt 0 ]; then
+  for kb in "$@"; do
+    qmk compile -kb "$kb" -km elentok
+  done
+else
+  for kb in "${KEYBOARDS[@]}"; do
+    qmk compile -kb "$kb" -km elentok
+  done
+fi
