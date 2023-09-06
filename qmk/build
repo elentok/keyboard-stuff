@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+qmk compile -kb keebio/quefrency/rev4 -km elentok
+qmk compile -kb annepro2/c18 -km elentok

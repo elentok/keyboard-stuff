@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+ROOT="$(dirname "${BASH_SOURCE[0]-$0}")"
+ROOT="$(cd "$ROOT" && pwd)"
+
+QMK_ROOT="$HOME/qmk_firmware"
+
+echo "ROOT:     $ROOT"
+echo "QMK ROOT: $QMK_ROOT"
+echo
+
+if [ ! -e "$QMK_ROOT" ]; then
+  echo "First setup QMK in ~/qmk_firmware"
+  exit 1
+fi
+
+ln -sf "$ROOT/quefrency-rev4" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
+
+ln -sf "$ROOT/annepro2/keymap" "$QMK_ROOT/keyboards/annepro2/keymaps/elentok"
+# rm -f "$QMK_ROOT/keyboards/annepro2/c18/config.h"
+ln -sf "$ROOT/annepro2/c18-config.h" "$QMK_ROOT/keyboards/annepro2/c18/config.h"
