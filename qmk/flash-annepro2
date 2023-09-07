@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# TODO: install AnnePro2-Tools
+ANNE_PRO2_TOOLS=~/dev/keyboard/AnnePro2-Tools
+
+./build annepro2/c18
+
+"$ANNE_PRO2_TOOLS/target/release/annepro2_tools" ~/qmk_firmware/annepro2_c18_elentok.bin --boot
