@@ -8,20 +8,48 @@ KEYBOARDS=(
   annepro2/c18
 )
 
-./install-symlinks
+function main() {
+  ./install-symlinks
 
-if [ "${1:-}" == "all" ]; then
-  for kb in "${KEYBOARDS[@]}"; do
-    qmk compile -kb "$kb" -km elentok
-  done
-elif [ $# -gt 0 ]; then
+  if [ "${1:-}" == "all" ]; then
+    qmk-compile "${KEYBOARDS[@]}"
+  elif [ $# -gt 0 ]; then
+    qmk-compile "$@"
+  else
+    qmk-compile "$(pick-keyboard)"
+  fi
+}
+
+function qmk-compile() {
   for kb in "$@"; do
     qmk compile -kb "$kb" -km elentok
   done
-else
-  kb="$(for kb in "${KEYBOARDS[@]}"; do echo "$kb"; done | fzf-tmux -p)"
-  if [ -n "$kb" ]; then
-    echo "> qmk compile -kb $kb -km elentok"
-    qmk compile -kb "$kb" -km elentok
-  fi
-fi
+}
+
+function pick-keyboard() {
+  list-keyboards | fzf-tmux -p
+}
+
+function list-keyboards() {
+  for kb in "${KEYBOARDS[@]}"; do
+    echo "$kb"
+  done
+}
+#
+# if [ "${1:-}" == "all" ]; then
+#   for kb in "${KEYBOARDS[@]}"; do
+#     qmk compile -kb "$kb" -km elentok
+#   done
+# elif [ $# -gt 0 ]; then
+#   for kb in "$@"; do
+#     qmk compile -kb "$kb" -km elentok
+#   done
+# else
+#   kb="$(for kb in "${KEYBOARDS[@]}"; do echo "$kb"; done | fzf-tmux -p)"
+#   if [ -n "$kb" ]; then
+#     echo "> qmk compile -kb $kb -km elentok"
+#     qmk compile -kb "$kb" -km elentok
+#   fi
+# fi
+
+main "$@"

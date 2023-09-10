@@ -2,12 +2,8 @@
 
 set -euo pipefail
 
-echo 123
-
 ROOT="$(dirname "${BASH_SOURCE[0]-$0}")"
 ROOT="$(cd "$ROOT" && pwd)"
-
-echo 456
 
 QMK_ROOT="$HOME/qmk_firmware"
 
@@ -19,9 +15,6 @@ if [ ! -e "$QMK_ROOT" ]; then
   echo "First setup QMK in ~/qmk_firmware"
   exit 1
 fi
-
-echo "ROOT=[$ROOT]"
-echo "QMK_ROOT=[$QMK_ROOT]"
 
 ln -sfT "$ROOT/quefrency-rev4" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
 ln -sfT "$ROOT/sinc-rev3" "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"
