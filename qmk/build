@@ -35,21 +35,5 @@ function list-keyboards() {
     echo "$kb"
   done
 }
-#
-# if [ "${1:-}" == "all" ]; then
-#   for kb in "${KEYBOARDS[@]}"; do
-#     qmk compile -kb "$kb" -km elentok
-#   done
-# elif [ $# -gt 0 ]; then
-#   for kb in "$@"; do
-#     qmk compile -kb "$kb" -km elentok
-#   done
-# else
-#   kb="$(for kb in "${KEYBOARDS[@]}"; do echo "$kb"; done | fzf-tmux -p)"
-#   if [ -n "$kb" ]; then
-#     echo "> qmk compile -kb $kb -km elentok"
-#     qmk compile -kb "$kb" -km elentok
-#   fi
-# fi
 
 main "$@"

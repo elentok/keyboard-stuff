@@ -7,9 +7,11 @@ ROOT="$(cd "$ROOT" && pwd)"
 
 QMK_ROOT="$HOME/qmk_firmware"
 
+echo "========================================"
 echo "ROOT:     $ROOT"
 echo "QMK ROOT: $QMK_ROOT"
 echo
+echo "Installing symlinks..."
 
 if [ ! -e "$QMK_ROOT" ]; then
   echo "First setup QMK in ~/qmk_firmware"
@@ -21,3 +23,6 @@ ln -sfT "$ROOT/sinc-rev3" "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"
 
 ln -sfT "$ROOT/annepro2/keymap" "$QMK_ROOT/keyboards/annepro2/keymaps/elentok"
 ln -sfT "$ROOT/annepro2/c18-config.h" "$QMK_ROOT/keyboards/annepro2/c18/config.h"
+
+echo "Done."
+echo "========================================"
