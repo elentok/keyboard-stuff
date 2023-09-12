@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+side="${1:-}"
+
+if [ -z "$side" ]; then
+  echo
+  echo "Usage: ./flash-sinc <left|right>"
+  echo
+  exit 1
+fi
+
+echo
+echo "IMPORTANT: Double click the reset button to get the keyboard into bootloader mode"
+echo
+
+qmk flash -bl "uf2-split-$side" sinc-rev3/keebio_sinc_rev3_elentok.uf2
