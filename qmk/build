@@ -23,6 +23,8 @@ function main() {
 function qmk-compile() {
   for kb in "$@"; do
     qmk compile -kb "$kb" -km elentok
+    kb_basename="$(echo "$kb" | tr / _)"
+    cp -f "$HOME/qmk_firmware/${kb_basename}_elentok".* ./binaries
   done
 }
 

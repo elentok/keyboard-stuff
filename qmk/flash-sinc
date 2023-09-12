@@ -15,4 +15,4 @@ echo
 echo "IMPORTANT: Double click the reset button to get the keyboard into bootloader mode"
 echo
 
-qmk flash -bl "uf2-split-$side" sinc-rev3/keebio_sinc_rev3_elentok.uf2
+qmk flash -bl "uf2-split-$side" ./binaries/keebio_sinc_rev3_elentok.uf2
