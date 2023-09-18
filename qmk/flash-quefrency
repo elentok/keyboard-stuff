@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+side="${1:-}"
+
+if [ -z "$side" ]; then
+  echo
+  echo "Usage: ./flash-quefrency <left|right>"
+  echo
+  exit 1
+fi
+
+echo
+echo "IMPORTANT: Double click the reset button to get the keyboard into bootloader mode"
+echo
+
+qmk flash -bl "avrdude-split-$side" ./binaries/keebio_quefrency_rev4_elentok.hex
