@@ -28,32 +28,32 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_80_with_macro(
-    KC_MUTE,   /*HOLE*/ /*|*/ KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,  KC_F6,    /*|*/ KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,           KC_DEL,  KC_INS,
-    ELC_LOCK,  KC_MPLY, /*|*/ KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,     KC_5,   KC_6,     /*|*/ KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC, KC_HOME,
-    KC_MPLY,   KC_VOLU, /*|*/ KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,             /*|*/ KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, KC_END,
-    KC_F5,     KC_VOLD, /*|*/ KC_LCTL, EL_A,    EL_S,    EL_D,    EL_F,     KC_G,             /*|*/ KC_H,    EL_J,    EL_K,    EL_L,     EL_SCLN, KC_QUOT,     KC_ENT,       KC_PGUP,
-    KC_F7,     KC_F8,   /*|*/ KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,             /*|*/ KC_N,    KC_M,    KC_COMM, KC_DOT,   KC_SLSH,     KC_RSFT,      KC_UP,   KC_PGDN,
-    KC_F9,     KC_F10,  /*|*/ KC_LCTL, MO(LF),  KC_LALT, KC_LGUI,           EL_SPC,           /*|*/ EL_SPC,  MO(LJ),  EL_SPC,  KC_RGUI,  MO(LJ),  KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
+    KC_MUTE,   /*HOLE*/ /*|*/ KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,  KC_F6,    /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,           KC_DEL,  KC_INS,
+    ELC_LOCK,  KC_MPLY, /*|*/ KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,     KC_5,   KC_6,     /*|*/ KC_7,    KC_8,    KC_9,     KC_0,     KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC, KC_HOME,
+    KC_MPLY,   KC_VOLU, /*|*/ KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,             /*|*/ KC_Y,    KC_U,    KC_I,     KC_O,     KC_P,    KC_LBRC, KC_RBRC, KC_BSLS, KC_END,
+    KC_F5,     KC_VOLD, /*|*/ KC_LCTL, EL_A,    EL_S,    EL_D,    EL_F,     KC_G,             /*|*/ KC_H,    EL_J,    EL_K,     EL_L,     EL_SCLN, KC_QUOT,     KC_ENT,       KC_PGUP,
+    KC_F7,     KC_F8,   /*|*/ KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,             /*|*/ KC_N,    KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,     KC_RSFT,      KC_UP,   KC_PGDN,
+    KC_F9,     KC_F10,  /*|*/ KC_LCTL, MO(LF),  KC_LALT, KC_LGUI,           EL_SPC,           /*|*/ EL_SPC,  MO(LJ),  EL_SPC,   KC_RGUI,  MO(LJ),  KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
   ),
 
   // When F is held,
   [LF] = LAYOUT_80_with_macro(
-    EE_CLR,    _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______, /*|*/ _______, _______, _______, _______,  _______, _______, _______,
-    RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,  _______, _______, _______,
-    RGB_SAI,   RGB_SAD, /*|*/ RGB_TOG, RGB_MOD, KC_LBRC, KC_RBRC, KC_TAB,   _______,          /*|*/ _______, _______, _______, _______,  _______, _______, _______, _______, _______,
-    RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______, _______, _______,  EL_LF_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, _______, EL_LF_QUOT,  _______,      _______,
-    _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______,          /*|*/ EL_LJ_N, _______, _______, _______,  _______,     _______,      _______, _______,
-    QK_REBOOT, _______, /*|*/ _______, _______, _______, _______,           _______,          /*|*/ _______, _______, _______, _______,  _______, _______, _______, _______, _______
+    EE_CLR,    _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______, /*|*/ _______, _______, _______,  _______,  _______, _______, _______,
+    RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,  _______, _______, _______,
+    RGB_SAI,   RGB_SAD, /*|*/ RGB_TOG, RGB_MOD, KC_LBRC, KC_RBRC, KC_TAB,   _______,          /*|*/ _______, _______, ELC_LOCK, _______,  _______, _______, _______, _______, _______,
+    RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______, _______, _______,  EL_LF_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  ,  KC_RIGHT, _______, EL_LF_QUOT,  _______,      _______,
+    _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______,          /*|*/ EL_LF_N, _______, _______,  _______,  _______,     _______,      _______, _______,
+    QK_REBOOT, _______, /*|*/ _______, _______, _______, _______,           _______,          /*|*/ _______, _______, _______,  _______,  _______, _______, _______, _______, _______
   ),
 
   // When J is held
   [LJ] = LAYOUT_80_with_macro(
-    EE_CLR,    _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______, /*|*/ _______, _______, _______, _______,  _______, _______, _______,
-    RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,  _______, _______, _______,
-    RGB_SAI,   RGB_SAD, /*|*/ RGB_TOG, RGB_MOD, KC_LBRC, KC_RBRC, KC_TAB,   _______,          /*|*/ _______, _______, _______, _______,  _______, _______, _______, _______, _______,
-    RGB_VAI,   RGB_VAD, /*|*/ _______, _______, KC_LPRN, KC_RPRN, ELC_LOCK, EL_LJ_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, _______, EL_LJ_QUOT,  _______,      _______,
-    _______,   _______, /*|*/ _______, _______, KC_LCBR, KC_RCBR, _______,  _______,          /*|*/ EL_LJ_N, _______, _______, _______,  _______,     _______,      _______, _______,
-    QK_REBOOT, _______, /*|*/ _______, _______, _______, _______,           _______,          /*|*/ _______, _______, _______, _______,  _______, _______, _______, _______, _______
+    EE_CLR,    _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______, /*|*/ _______, _______, _______,  _______,  _______, _______, _______,
+    RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,  _______, _______, _______,
+    RGB_SAI,   RGB_SAD, /*|*/ RGB_TOG, RGB_MOD, KC_LBRC, KC_RBRC, KC_TAB,   _______,          /*|*/ _______, _______, _______,  _______,  _______, _______, _______, _______, _______,
+    RGB_VAI,   RGB_VAD, /*|*/ _______, _______, KC_LPRN, KC_RPRN, ELC_LOCK, EL_LJ_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  ,  KC_RIGHT, _______, EL_LJ_QUOT,  _______,      _______,
+    _______,   _______, /*|*/ _______, _______, KC_LCBR, KC_RCBR, _______,  _______,          /*|*/ EL_LJ_N, _______, _______,  _______,  _______,     _______,      _______, _______,
+    QK_REBOOT, _______, /*|*/ _______, _______, _______, _______,           _______,          /*|*/ _______, _______, _______,  _______,  _______, _______, _______, _______, _______
   ),
 };
 
