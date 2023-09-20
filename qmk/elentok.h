@@ -24,6 +24,8 @@ enum elentok_layers {
 #define EL_SPC LSFT_T(KC_SPC)
 
 // Layer changes
+#define EL_LF_Q KC_ESC
+#define EL_LJ_Q KC_ESC
 #define EL_LF_G KC_TAB
 #define EL_LJ_G KC_TAB
 #define EL_LF_N KC_ENT
