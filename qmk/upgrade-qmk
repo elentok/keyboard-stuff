@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+QMK_ROOT="$HOME/qmk_firmware"
+
+rm -f "$QMK_ROOT/elentok.h"
+rm -f "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
+rm -f "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"
+rm -f "$QMK_ROOT/keyboards/annepro2/keymaps/elentok"
+rm -f "$QMK_ROOT/keyboards/annepro2/c18/config.h"
+
+(cd "$QMK_ROOT" && git pull)
+
+./install-symlinks
