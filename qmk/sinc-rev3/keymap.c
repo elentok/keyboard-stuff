@@ -11,17 +11,22 @@
 // #undef RGBLIGHT_EFFECT_STATIC_GRADIENT
 // #undef RGBLIGHT_EFFECT_RAINBOW_SWIRL
 // #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_STATIC_LIGHT
-#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_STATIC_LIGHT
-#define RGBLIGHT_DEFAULT_HUE 128
-#define RGBLIGHT_DEFAULT_SAT 255
-#define RGBLIGHT_DEFAULT_VAL 100
-#define RGBLIGHT_LIMIT_VAL 100
-#define RGBLIGHT_SPLIT
+// #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_STATIC_LIGHT
+// #define RGBLIGHT_DEFAULT_HUE 128
+// #define RGBLIGHT_DEFAULT_SAT 255
+// #define RGBLIGHT_DEFAULT_VAL 100
+// #define RGBLIGHT_LIMIT_VAL 100
+// #define RGBLIGHT_SPLIT
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   ELC_LOCK,
 };
+
+void keyboard_post_init_user(void) {
+  rgb_matrix_enable();
+  rgb_matrix_set_color_all(0, 255, 203);
+}
 
 // KC_MPLY = KC_MEDIA_PLAY_PAUSE
 // EE_CLR = QK_CLEAR_EEPROM - Reinitializes the keyboard's EEPROM (persistent memory)                                                                                          |
@@ -42,8 +47,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,  _______, _______, QK_BOOT,
     RGB_SAI,   RGB_SAD, /*|*/ RGB_TOG, EL_LF_Q, _______, _______, _______,  _______,          /*|*/ _______, KC_PGUP, ELC_LOCK, _______,  _______, _______, _______, _______, QK_REBOOT,
     RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______, _______, _______,  EL_LF_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  ,  KC_RIGHT, _______, EL_LF_QUOT,  _______,      _______,
-    _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______,          /*|*/ EL_LF_N, KC_PGDN, _______,  _______,  _______,     _______,      _______, _______,
-    QK_REBOOT, _______, /*|*/ _______, _______, _______, _______,           _______,          /*|*/ _______, _______, _______,  _______,  _______, _______, _______, _______, _______
+    _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______,          /*|*/ EL_LF_N, KC_PGDN, _______,  _______,  _______,     _______,      DT_UP,   _______,
+    QK_REBOOT, _______, /*|*/ _______, _______, _______, _______,           _______,          /*|*/ _______, _______, _______,  _______,  _______, _______, _______, DT_DOWN, DT_PRNT
   ),
 
   // When J is held
