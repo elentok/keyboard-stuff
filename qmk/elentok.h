@@ -8,6 +8,10 @@ enum elentok_layers {
   LJ, // When J is held
 };
 
+enum elentok_tapdance {
+  TD_LSFT_CAPS,
+};
+
 // Left home row mods
 #define EL_A LCTL_T(KC_A)
 #define EL_S LALT_T(KC_S)
@@ -21,7 +25,8 @@ enum elentok_layers {
 #define EL_J    LT(LJ, KC_J)
 
 // Space
-#define EL_SPC LSFT_T(KC_SPC)
+#define EL_LSPC TD(TD_LSFT_CAPS)
+#define EL_RSPC KC_SPC
 
 // Layer changes
 #define EL_LF_Q KC_ESC
