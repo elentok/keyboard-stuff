@@ -147,7 +147,3 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     }
     return false;
 }
-
-tap_dance_action_t tap_dance_actions[] = {
-  [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
-};

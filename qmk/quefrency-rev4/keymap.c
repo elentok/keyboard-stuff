@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MEDIA_PLAY_PAUSE,   KC_VOLU,  /*|*/ KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,             /*|*/ KC_Y,    KC_U,    KC_I,     KC_O,     KC_P,    KC_LBRC,    KC_RBRC, KC_BSLS, KC_END,
     KC_F5,                 KC_VOLD,  /*|*/ KC_LCTL, EL_A,    EL_S,    EL_D,    EL_F,    KC_G,             /*|*/ KC_H,    EL_J,    EL_K,     EL_L,     EL_SCLN, KC_QUOT,             KC_ENT,  KC_PGUP,
     KC_F7,                 KC_F8,    /*|*/ KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,             /*|*/ KC_N,    KC_M,    KC_COMM,  KC_DOT,   KC_SLSH, KC_RSFT,             KC_UP,   KC_PGDN,
-    KC_F9,                 ELC_LOCK, /*|*/ KC_LCTL, MO(LF),  KC_LALT, KC_LGUI, EL_SPC,  _______,          /*|*/ EL_SPC,  MO(LJ),  KC_RCTL,  _______,                       KC_LEFT, KC_DOWN, KC_RGHT
+    KC_F9,                 ELC_LOCK, /*|*/ KC_LCTL, MO(LF),  KC_LALT, KC_LGUI, EL_LSPC, _______,          /*|*/ EL_RSPC, MO(LJ),  KC_RCTL,  _______,                       KC_LEFT, KC_DOWN, KC_RGHT
   ),
 
   [LF] = LAYOUT_65_with_macro(
