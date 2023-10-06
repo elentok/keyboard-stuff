@@ -19,6 +19,7 @@ if [ ! -e "$QMK_ROOT" ]; then
 fi
 
 ln -sfT "$ROOT/elentok.h" "$QMK_ROOT/elentok.h"
+ln -sfT "$ROOT/hillside46" "$QMK_ROOT/keyboards/hillside/46/keymaps/elentok"
 
 ln -sfT "$ROOT/quefrency-rev4" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
 ln -sfT "$ROOT/sinc-rev3" "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"

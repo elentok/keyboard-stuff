@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+side="${1:-}"
+
+if [ -z "$side" ]; then
+  echo
+  echo "Usage: ./flash-hillside <left|right>"
+  echo
+  exit 1
+fi
+
+qmk flash -bl "dfu-split-left" ./binaries/hillside_46_0_1_elentok.hex

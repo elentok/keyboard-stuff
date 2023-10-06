@@ -6,6 +6,7 @@ KEYBOARDS=(
   keebio/sinc/rev3
   keebio/quefrency/rev4
   annepro2/c18
+  hillside/46/0_1
 )
 
 function main() {
