@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ ! -e ~/qmk_firmware ]; then
+  cd
+  git clone https://github.com/qmk/qmk_firmware --depth=1 --recurse-submodules --shallow-submodules 
+fi
