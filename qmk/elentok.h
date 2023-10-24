@@ -14,13 +14,15 @@ enum elentok_tapdance {
 };
 
 // Left home row mods
-#define EL_A LCTL_T(KC_A)
+// #define EL_A LCTL_T(KC_A)
+#define EL_A KC_A
 #define EL_S LALT_T(KC_S)
 #define EL_D LGUI_T(KC_D)
 #define EL_F LT(LF, KC_F)
 
 // Right home row mods
-#define EL_SCLN RCTL_T(KC_SCLN)
+// #define EL_SCLN RCTL_T(KC_SCLN)
+#define EL_SCLN KC_SCLN
 #define EL_L    RALT_T(KC_L)
 #define EL_K    RGUI_T(KC_K)
 #define EL_J    LT(LJ, KC_J)
