@@ -6,6 +6,7 @@ enum elentok_layers {
   BASE,
   LF, // When F is held
   LJ, // When J is held
+  GAME,
 };
 
 enum elentok_tapdance {
