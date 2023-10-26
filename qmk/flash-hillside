@@ -11,4 +11,4 @@ if [ -z "$side" ]; then
   exit 1
 fi
 
-qmk flash -bl "avrdude-split-left" ./binaries/hillside_46_0_1_elentok.hex
+qmk flash -bl "avrdude-split-$side" ./binaries/hillside_46_0_1_elentok.hex
