@@ -20,7 +20,13 @@ fi
 
 ln -sfT "$ROOT/elentok.h" "$QMK_ROOT/elentok.h"
 ln -sfT "$ROOT/hillside46/keymap" "$QMK_ROOT/keyboards/hillside/46/keymaps/elentok"
-ln -sfT "$ROOT/hillside46/0_1-info.json" "$QMK_ROOT/keyboards/hillside/46/0_1/info.json"
+
+if [ ! -e "$QMK_ROOT/keyboards/hillside/46-original" ]; then
+  mv "$QMK_ROOT/keyboards/hillside/46" \
+    "$QMK_ROOT/keyboards/hillside/46-original"
+fi
+
+ln -sfT "$ROOT/hillside46" "$QMK_ROOT/keyboards/hillside/46"
 
 ln -sfT "$ROOT/quefrency-rev4" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
 ln -sfT "$ROOT/sinc-rev3" "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"
