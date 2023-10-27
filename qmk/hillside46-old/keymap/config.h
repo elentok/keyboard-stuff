@@ -12,6 +12,8 @@
 #undef SPLIT_HAND_MATRIX_GRID
 #define EE_HANDS
 
+// #define MASTER_LEFT
+
 // Default LED colors
 #define RGBLIGHT_DEFAULT_HUE 128
 #define RGBLIGHT_DEFAULT_SAT 255
