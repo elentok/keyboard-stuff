@@ -4,11 +4,16 @@
 #pragma once
 
 
+// ==================================================
+// elentok@: I had to change this block to get it to work with the Aliexpress
+// Type-C ProMicros.
+
 /* Split */
 // #define SPLIT_HAND_MATRIX_GRID B5, F6
 // #define MATRIX_MASKED
 #define EE_HANDS
 #define SPLIT_USB_DETECT
+// ==================================================
 
 /* Haptic hardware */
 // The Pimoroni is the likely hardware, for which these settings work
