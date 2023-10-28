@@ -2,11 +2,16 @@
 
 set -euo pipefail
 
+if [ "${1:-}" == "-b" ]; then
+  ./build hillside/46/0_1
+  shift
+fi
+
 side="${1:-}"
 
 if [ -z "$side" ]; then
   echo
-  echo "Usage: ./flash-hillside <left|right>"
+  echo "Usage: ./flash-hillside [-b] <left|right>"
   echo
   exit 1
 fi
