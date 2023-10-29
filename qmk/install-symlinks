@@ -19,7 +19,6 @@ if [ ! -e "$QMK_ROOT" ]; then
 fi
 
 ln -sfT "$ROOT/elentok.h" "$QMK_ROOT/elentok.h"
-ln -sfT "$ROOT/hillside46/keymap" "$QMK_ROOT/keyboards/hillside/46/keymaps/elentok"
 
 if [ ! -e "$QMK_ROOT/keyboards/hillside/46-original" ]; then
   mv "$QMK_ROOT/keyboards/hillside/46" \
