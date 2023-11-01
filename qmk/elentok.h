@@ -42,6 +42,6 @@ enum elentok_tapdance {
 #define EL_LF_QUOT KC_BSPC
 #define EL_LJ_QUOT KC_BSPC
 
-tap_dance_action_t tap_dance_actions[] = {
-  [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
-};
+// tap_dance_action_t tap_dance_actions[] = {
+//   [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
+// };
