@@ -21,8 +21,8 @@ enum elentok_tapdance {
 #define EL_F LT(LF, KC_F)
 
 // Right home row mods
-// #define EL_SCLN RCTL_T(KC_SCLN)
-#define EL_SCLN KC_SCLN
+#define EL_SCLN RCTL_T(KC_SCLN)
+// #define EL_SCLN KC_SCLN
 #define EL_L    RALT_T(KC_L)
 #define EL_K    RGUI_T(KC_K)
 #define EL_J    LT(LJ, KC_J)
