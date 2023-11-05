@@ -37,6 +37,7 @@ enum elentok_tapdance {
 #define EL_LJ_Q KC_ESC
 #define EL_LF_G KC_TAB
 #define EL_LJ_G KC_TAB
+#define EL_LJ_T LSFT(KC_TAB)
 #define EL_LF_N KC_ENT
 #define EL_LJ_N KC_ENT
 #define EL_LF_QUOT KC_BSPC
