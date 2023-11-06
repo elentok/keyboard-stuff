@@ -13,8 +13,10 @@ enum layers {
 
 #define xxxxxxx KC_NO
 
-#define LY_NAV MO(_NAV)
-#define LY_SYM MO(_SYM)
+// #define LY_NAV MO(_NAV)
+#define LY_NAV LT(_NAV, KC_BSPC)
+// #define LY_SYM MO(_SYM)
+#define LY_SYM LT(_SYM, KC_ENT)
 #define LY_ADJ MO(_ADJUST)
 #define ALT_GR OSM(MOD_RALT)
 #define OSM_SFT OSM(MOD_LSFT)
@@ -32,7 +34,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
      KC_GRV,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-     KC_TAB,  KC_A,    KC_S,    EL_D,    KC_F,    KC_G,                                           KC_H,    KC_J,    EL_K,    KC_L,    KC_SCLN, KC_ENT,
+     KC_TAB,  EL_A,    EL_S,    EL_D,    KC_F,    KC_G,                                           KC_H,    KC_J,    EL_K,    EL_L,    EL_SCLN, KC_ENT,
      KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_ESC,                       CW_TOGG, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_QUOT,
                                          KC_LGUI, KC_LALT, KC_SPC, LY_SYM ,     LY_NAV , KC_RSFT , KC_LALT, KC_RGUI
     ),
@@ -43,9 +45,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                          _______, _______, _______, _______,    LY_ADJ , _______, _______, _______
     ),
     [_SYM] = LAYOUT(
-     KC_ESC,  KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC,                                        KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
-     xxxxxxx, KC_BSLS, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC,                                        KC_HOME, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI, KC_END,
-     _______, KC_PIPE, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, ALT_GR ,                      KC_APP , KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY, xxxxxxx, KC_RCTL,
+     KC_ESC,  KC_EXLM, KC_AT  , KC_HASH, KC_DLR , _______,                                        KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
+     xxxxxxx, KC_BSLS, KC_PERC, KC_LBRC, KC_RBRC, _______,                                         KC_EQL, KC_PLUS, KC_RCTL, KC_LALT, KC_RGUI, KC_END,
+     _______, KC_PIPE, _______, KC_LCBR, KC_RCBR, _______,  ALT_GR ,                      KC_APP , KC_UNDS, KC_MINS, KC_VOLU, KC_MPLY, xxxxxxx, KC_RCTL,
                                          _______, _______, _______, LY_ADJ ,    _______, _______, _______, _______ 
     ),
     [_ADJUST] = LAYOUT(
