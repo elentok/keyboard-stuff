@@ -3,10 +3,15 @@
 // Layers
 
 enum elentok_layers {
-  BASE,
+  BASE = 0,
   LF, // When F is held
   LJ, // When J is held
   GAME,
+
+  // Hillside-specific (for now)
+  SYM,
+  NAV,
+  ADJUST,
 };
 
 enum elentok_tapdance {
