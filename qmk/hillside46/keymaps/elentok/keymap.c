@@ -22,6 +22,7 @@
 #define REDO LCTL(KC_Y)
 // (For OS X, you'll want to change these editing keys to LGUI(KC_Z) etc.)
 
+#define EL_LANG LGUI(KC_1)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -29,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_GRV,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
      KC_TAB,  EL_A,    EL_S,    EL_D,    EL_F,    KC_G,                                           KC_H,    EL_J,    EL_K,    EL_L,    EL_SCLN, KC_ENT,
      KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_ESC,                       CW_TOGG, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_QUOT,
-                                         KC_LGUI, KC_LALT, KC_SPC, KC_LSFT,     LY_NAV , LY_SYM,  KC_LALT, KC_RGUI
+                                         KC_LGUI, KC_LALT, KC_LSFT, KC_SPC,     LY_NAV , LY_SYM,  KC_LALT, KC_RGUI
     ),
 
 //  [??] = LAYOUT(
@@ -40,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  ),
 
     [LF] = LAYOUT(
-     _______, EL_LF_Q, KC_COLON,KC_ENT,  _______, _______,                                        _______, _______, _______, _______, _______, _______,
+     _______, EL_LF_Q, KC_COLN, EL_LANG, _______, _______,                                        _______, _______, _______, _______, _______, _______,
      _______, _______, _______, KC_BSPC, _______, EL_LF_G,                                        KC_LEFT, KC_DOWN, KC_UP,  KC_RIGHT, _______, _______,
      _______, _______, _______, _______, _______, _______, _______,                      QK_BOOT, _______, _______, _______, _______, _______, _______,
                                          _______, _______, _______, _______,    _______, _______, _______, _______
