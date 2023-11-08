@@ -44,7 +44,8 @@ enum elentok_tapdance {
 // Space
 #define EL_LSPC KC_SPC
 // #define EL_RSPC TD(TD_LSFT_CAPS)
-#define EL_RSPC KC_LSFT
+#define EL_RSPC OSM(MOD_LSFT)
+// #define EL_RSPC KC_LSFT
 
 // Layer changes
 #define EL_LF_Q KC_ESC
