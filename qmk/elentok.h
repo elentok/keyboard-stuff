@@ -12,11 +12,20 @@ enum elentok_layers {
   SYM,
   NAV,
   ADJUST,
+
+  // Vi-mode
+  VI_NORM,
+  VI_VIS,
 };
 
 enum elentok_tapdance {
   TD_LSFT_CAPS,
 };
+
+// Vi
+#define TO_NORM TO(VI_NORM)
+#define TO_VIS TO(VI_VIS)
+#define TO_BASE TO(BASE)
 
 // Left home row mods
 #define EL_A LCTL_T(KC_A)
