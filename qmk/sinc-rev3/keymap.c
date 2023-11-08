@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    EE_CLR,    _______, /*|*/ _______, _______, _______,   _______, _______,  _______, _______, /*|*/ _______, _______, _______,  _______,  _______, TG(GAME), TG(GAME),
     RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,    KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,  _______, _______, QK_BOOT,
     RGB_SAI,   RGB_SAD, /*|*/ KC_ESC,  EL_LF_Q, KC_COLON, KC_ENT,  _______,  _______,          /*|*/ KC_PIPE, KC_COLON, KC_QUOT, KC_DQUO,  _______, _______, _______, _______, QK_REBOOT,
-    RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______,  KC_BSPC, _______,  EL_LF_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  ,  KC_RIGHT, KC_BSPC, EL_LF_QUOT,  _______,      _______,
+    RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______,  _______, _______,  EL_LF_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  ,  KC_RIGHT, KC_BSPC, EL_LF_QUOT,  _______,      _______,
     RGB_TOG,   _______, /*|*/ _______, _______, _______,  _______, _______,  _______,          /*|*/ EL_LF_N, KC_BSPC, _______,  _______,  _______,     _______,      DT_UP,   _______,
     QK_REBOOT, _______, /*|*/ _______, _______, _______,  _______,           KC_ENT,  KC_ENT,  /*|*/ _______, _______,  _______,  _______, _______, _______, DT_DOWN, DT_PRNT
   ),
