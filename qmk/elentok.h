@@ -28,8 +28,8 @@ enum elentok_tapdance {
 #define TO_BASE TO(BASE)
 
 // Left home row mods
-#define EL_A LCTL_T(KC_A)
-// #define EL_A KC_A
+// #define EL_A LCTL_T(KC_A)
+#define EL_A KC_A
 #define EL_S LALT_T(KC_S)
 #define EL_D LGUI_T(KC_D)
 #define EL_F LT(LF, KC_F)

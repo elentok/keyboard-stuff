@@ -9,10 +9,12 @@ enum custom_keycodes {
   ELC_VI_C,
   ELC_VI_X,
   ELC_VI_O,
+  ELC_VI_Y,
   ELC_WIN_SWITCH,
   ELC_LOCK,
   ELC_RED,
   ELC_NO_RED,
+  ELC_ALFRED,
 };
 
 // less bright version
@@ -41,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LF] = LAYOUT_80_with_macro(
    EE_CLR,    _______, /*|*/ _______, _______, _______,   _______, _______,  _______, _______, /*|*/ _______, _______, _______,  _______,  _______, TG(GAME), TG(GAME),
     RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,    KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,  _______, _______, QK_BOOT,
-    RGB_SAI,   RGB_SAD, /*|*/ KC_ESC,  EL_LF_Q, KC_COLON, TO_NORM,  _______,  _______,          /*|*/ KC_PIPE, KC_COLON, KC_QUOT, KC_DQUO,  _______, _______, _______, _______, QK_REBOOT,
+    RGB_SAI,   RGB_SAD, /*|*/ KC_ESC,  EL_LF_Q, KC_COLON, TO_NORM,  _______,  _______,         /*|*/ KC_PIPE, KC_COLON, KC_QUOT, KC_DQUO,  _______, _______, _______, _______, QK_REBOOT,
     RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______,  _______, _______,  EL_LF_G,          /*|*/ KC_LEFT, KC_DOWN, KC_UP  ,  KC_RIGHT, KC_BSPC, EL_LF_QUOT,  _______,      _______,
     RGB_TOG,   _______, /*|*/ _______, _______, _______,  _______, _______,  _______,          /*|*/ EL_LF_N, KC_BSPC, TO_NORM,  _______,  _______,     _______,      DT_UP,   _______,
     QK_REBOOT, _______, /*|*/ _______, _______, _______,  _______,           KC_ENT,  KC_ENT,  /*|*/ _______, _______,  _______,  _______, _______, _______, DT_DOWN, DT_PRNT
@@ -53,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_HUI,   RGB_HUD, /*|*/ QK_GESC, KC_F1,   KC_F2,    KC_F3,   KC_F4,    KC_F5,   KC_F6,   /*|*/ KC_F7,   KC_F8,   KC_F9,    KC_F10,   KC_F11,  KC_F12,  _______, _______, QK_BOOT,
     RGB_SAI,   RGB_SAD, /*|*/ KC_ESC,  EL_LJ_Q, KC_COLON, KC_LPRN, KC_RPRN,  EL_LJ_T,          /*|*/ _______, _______, _______,  _______,  _______, _______, _______, _______, QK_REBOOT,
     RGB_VAI,   RGB_VAD, /*|*/ _______, _______, _______,  KC_LBRC, KC_RBRC,  EL_LJ_G,          /*|*/ _______, _______, _______,  _______, _______, EL_LJ_QUOT,  _______,      _______,
-    RGB_TOG,   RGB_MOD, /*|*/ ELC_RED, ELC_NO_RED, _______,  KC_LCBR, KC_RCBR,  _______,          /*|*/ EL_LJ_N, _______, TO_NORM,  _______,  _______,     _______,      _______, _______,
+    RGB_TOG,   RGB_MOD, /*|*/ ELC_RED, ELC_NO_RED, _______,  KC_LCBR, KC_RCBR,  _______,       /*|*/ EL_LJ_N, _______, TO_NORM,  _______,  _______,     _______,      _______, _______,
     QK_REBOOT, _______, /*|*/ _______, _______, _______,  _______,           ELC_LOCK,         /*|*/ _______, _______, _______,  _______,  _______, _______, _______, _______, _______
   ),
 
@@ -70,9 +72,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // VI Normal mode
   [VI_NORM] = LAYOUT_80_with_macro(
     _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______,         /*|*/ _______, _______, _______, _______,   _______, _______, _______,
-    _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______,         /*|*/ _______, _______, _______, _______,   _______, _______, _______, _______, _______,
-    _______,   _______, /*|*/ _______, TO_BASE, A(KC_RIGHT), A(KC_RIGHT),   LGUI(S(KC_TAB)),  _______,  /*|*/ _______, LGUI(KC_Z), TO_BASE, ELC_VI_O, G(KC_V), _______, _______, _______, _______,
-    _______,   _______, /*|*/ _______, KC_LCTL, _______, KC_DEL, _______,   ELC_WIN_SWITCH,            /*|*/ KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,  G(KC_RIGHT), _______, _______, _______,
+    _______,   _______, /*|*/ _______, _______, _______, _______, G(KC_RIGHT),  _______, _______,         /*|*/ _______, _______, _______, G(KC_LEFT),   _______, _______, _______, _______, _______,
+    _______,   _______, /*|*/ _______, TO_BASE, A(KC_RIGHT), A(KC_RIGHT),   LGUI(S(KC_TAB)), _______, /*|*/ _______, LGUI(KC_Z), TO_BASE, ELC_VI_O, G(KC_V), _______, _______, _______, _______,
+    _______,   _______, /*|*/ _______, KC_LCTL, _______, KC_DEL, ELC_ALFRED,   ELC_WIN_SWITCH,           /*|*/ KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,  G(KC_RIGHT), _______, _______, _______,
     _______,   _______, /*|*/ _______, _______, KC_BSPC, _______, TO_VIS,   A(KC_LEFT),               /*|*/ LCTL(S(KC_TAB)), LCTL(KC_TAB), G(KC_LEFT), G(KC_RIGHT), _______, _______, _______, _______,
     _______,   _______, /*|*/ _______, _______, _______, _______,           _______, _______,         /*|*/ _______, KC_ENT, _______, _______,   _______, _______, _______, _______
   ),
@@ -81,8 +83,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // VI Visual mode
   [VI_VIS] = LAYOUT_80_with_macro(
     _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______, /*|*/ _______, _______, _______, _______,   _______, _______, _______,
-    _______,   _______, /*|*/ _______, _______, _______, _______, _______,  _______, _______, /*|*/ _______, _______, _______, _______,   _______, _______, _______, _______, _______,
-    _______,   _______, /*|*/ _______, TO_NORM, A(S(KC_RIGHT)), A(S(KC_RIGHT)), _______,  _______,   /*|*/ G(KC_C), _______, _______, _______,   G(KC_V), _______, _______, _______, _______,
+    _______,   _______, /*|*/ _______, _______, _______, _______, G(S(KC_RIGHT)),  _______, _______, /*|*/ _______, _______, _______, G(S(KC_LEFT)),   _______, _______, _______, _______, _______,
+    _______,   _______, /*|*/ _______, TO_NORM, A(S(KC_RIGHT)), A(S(KC_RIGHT)), _______,  _______,   /*|*/ ELC_VI_Y, _______, _______, _______,   G(KC_V), _______, _______, _______, _______,
     _______,   _______, /*|*/ _______, _______, _______, KC_DEL, _______,  _______,           /*|*/ S(KC_LEFT), S(KC_DOWN), S(KC_UP), S(KC_RIGHT),   _______, _______, _______, _______,
     _______,   _______, /*|*/ _______, _______, ELC_VI_X, ELC_VI_C, _______,  A(S(KC_LEFT)),    /*|*/ _______, _______, G(S(KC_LEFT)), G(S(KC_RIGHT)),   _______, _______, _______, _______,
     _______,   _______, /*|*/ _______, _______, _______, _______,           _______, _______, /*|*/ _______, _______,   _______, _______, _______, _______, _______, _______
@@ -132,7 +134,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       if (!record->event.pressed) {
         // SEND_STRING(SS_TAP(X_ENT));
         SEND_STRING("\n");
+        layer_move(BASE);
+      }
+      break;
+    case ELC_VI_Y: // yank
+      if (!record->event.pressed) {
+        // SEND_STRING(SS_TAP(X_ENT));
+        SEND_STRING(SS_LGUI("c"));
         layer_move(VI_NORM);
+      }
+      break;
+    case ELC_ALFRED:
+      if (!record->event.pressed) {
+        SEND_STRING(SS_LGUI(" "));
+        layer_move(BASE);
       }
       break;
     case ELC_WIN_SWITCH:
