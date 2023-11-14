@@ -47,16 +47,32 @@ enum elentok_tapdance {
 #define EL_RSPC OSM(MOD_LSFT)
 // #define EL_RSPC KC_LSFT
 
-// Layer changes
-#define EL_LF_Q KC_ESC
-#define EL_LJ_Q KC_ESC
-#define EL_LF_G KC_TAB
-#define EL_LJ_G KC_TAB
+// Layer J - Row 1
 #define EL_LJ_T LSFT(KC_TAB)
-#define EL_LF_N KC_ENT
-#define EL_LJ_N KC_ENT
-#define EL_LF_QUOT KC_BSPC
+#define EL_LJ_Q KC_ESC
+
+// Layer J - Row 2
+#define EL_LJ_G KC_TAB
 #define EL_LJ_QUOT KC_BSPC
+
+// Layer J - Row 3
+#define EL_LJ_N KC_ENT
+#define EL_LJ_M KC_BSPC
+
+// Layer F - Row 1
+#define EL_LF_Q KC_ESC
+
+// Layer F - Row 2
+#define EL_LF_G KC_TAB
+#define EL_LF_QUOT KC_BSPC
+
+// Layer F - Row 3
+#define EL_LF_N KC_ENT
+#define EL_LF_M KC_BSPC
+
+// Layer F - Thumb
+#define EL_LF_LSPC KC_ENT
+#define EL_LF_RSPC KC_BSPC
 
 // tap_dance_action_t tap_dance_actions[] = {
 //   [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
