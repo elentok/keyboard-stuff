@@ -3,6 +3,7 @@
 set -euo pipefail
 
 KEYBOARDS=(
+  keebio/iris/rev8
   keebio/sinc/rev3
   keebio/quefrency/rev4
   annepro2/c18

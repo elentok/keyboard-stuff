@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+side="${1:-}"
+
+if [ -z "$side" ]; then
+  echo
+  echo "Usage: ./flash-iris <left|right>"
+  echo
+  exit 1
+fi
+
+echo
+echo "IMPORTANT: Double click the reset button to get the keyboard into bootloader mode"
+echo
+
+qmk flash -bl "uf2-split-$side" ./binaries/keebio_iris_rev8_elentok.uf2
