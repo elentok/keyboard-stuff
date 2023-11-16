@@ -44,8 +44,8 @@ enum custom_keycodes {
 // Home row mods {{{1
 
 // Left home row mods
-// #define E_A LCTL_T(KC_A)
-#define E_A KC_A
+#define E_A LCTL_T(KC_A)
+// #define E_A KC_A
 #define E_S LALT_T(KC_S)
 #define E_D LGUI_T(KC_D)
 #define E_F LT(LF, KC_F)
@@ -140,11 +140,11 @@ enum custom_keycodes {
 #define EVI_CLN KC_PIPE
 
 // Layer VI - Row 3 {{{2
-// #define EVI_Z
 #define EVI_Z KC_VOLD
 #define EVI_X EC_VI_X
 #define EVI_C EC_VI_C
 #define EVI_V TO_VIS
+#define EVI_B A(KC_LEFT)
 
 #define EVI_N   LCTL(S(KC_TAB))
 #define EVI_M   LCTL(KC_TAB)
@@ -153,9 +153,32 @@ enum custom_keycodes {
 
 // Layer VI Visual {{{1
 #define EVV_ESC TO_NORM
+#define EVV_4 G(S(KC_RIGHT))
+#define EVV_0 G(S(KC_LEFT))
 
 // Layer VI Visual - Row1 {{{2
 #define EVV_Q TO_NORM
+#define EVV_W A(S(KC_RIGHT))
+#define EVV_E A(S(KC_RIGHT))
+
+#define EVV_Y EC_VI_Y
+#define EVV_P G(KC_V)
 
 // Layer VI Visual - Row2 {{{2
+
+#define EVV_D KC_DEL
+
+#define EVV_H S(KC_LEFT)
+#define EVV_J S(KC_DOWN)
+#define EVV_K S(KC_UP)
+#define EVV_L S(KC_RIGHT)
+
 // Layer VI Visual - Row3 {{{2
+
+#define EVV_X EC_VI_X
+#define EVV_C EC_VI_C
+#define EVV_B A(S(KC_LEFT))
+
+#define EVV_COM G(S(KC_LEFT))
+#define EVV_DOT G(S(KC_RIGHT))
+
