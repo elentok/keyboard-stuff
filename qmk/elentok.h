@@ -66,14 +66,27 @@ enum custom_keycodes {
 
 // Layer J {{{1
 // Layer J - Row 1
-#define EJ_T LSFT(KC_TAB)
 #define EJ_Q KC_ESC
+#define EJ_W KC_PLUS
+#define EJ_E KC_LPRN
+#define EJ_R KC_RPRN
+#define EJ_T LSFT(KC_TAB)
 
 // Layer J - Row 2
+#define EJ_A KC_VOLU
+#define EJ_S KC_MINS
+#define EJ_D KC_LBRC
+#define EJ_F KC_RBRC
 #define EJ_G KC_TAB
+
+// TODO: remove
 #define EJ_QUOT KC_BSPC
 
 // Layer J - Row 3
+#define EJ_X KC_UNDS
+#define EJ_C KC_LCBR
+#define EJ_V KC_RCBR
+
 #define EJ_N KC_ENT
 #define EJ_M KC_BSPC
 
