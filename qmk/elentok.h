@@ -73,7 +73,7 @@ enum custom_keycodes {
 #define EJ_T LSFT(KC_TAB)
 
 // Layer J - Row 2
-#define EJ_A KC_VOLU
+#define EJ_A KC_EQUAL
 #define EJ_S KC_MINS
 #define EJ_D KC_LBRC
 #define EJ_F KC_RBRC
@@ -83,7 +83,7 @@ enum custom_keycodes {
 #define EJ_QUOT KC_BSPC
 
 // Layer J - Row 3
-#define EJ_Z KC_VOLD
+#define EJ_Z KC_PIPE
 #define EJ_X KC_UNDS
 #define EJ_C KC_LCBR
 #define EJ_V KC_RCBR
@@ -126,7 +126,8 @@ enum custom_keycodes {
 #define EVI_P G(KC_V)
 
 // Layer VI - Row 2 {{{2
-#define EVI_A   KC_MINS
+#define EVI_A   KC_VOLU
+// TODO: figure a better usage for this
 #define EVI_S   KC_EQUAL
 #define EVI_D   KC_DEL
 #define EVI_F   EC_ALFRED
@@ -140,7 +141,7 @@ enum custom_keycodes {
 
 // Layer VI - Row 3 {{{2
 // #define EVI_Z
-#define EVI_Z KC_PLUS
+#define EVI_Z KC_VOLD
 #define EVI_X EC_VI_X
 #define EVI_C EC_VI_C
 #define EVI_V TO_VIS
