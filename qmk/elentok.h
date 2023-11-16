@@ -83,9 +83,11 @@ enum custom_keycodes {
 #define EJ_QUOT KC_BSPC
 
 // Layer J - Row 3
+#define EJ_Z KC_VOLD
 #define EJ_X KC_UNDS
 #define EJ_C KC_LCBR
 #define EJ_V KC_RCBR
+#define EJ_B KC_MPLY
 
 #define EJ_N KC_ENT
 #define EJ_M KC_BSPC
