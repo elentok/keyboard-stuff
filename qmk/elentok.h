@@ -36,10 +36,11 @@ enum custom_keycodes {
 
 // Misc {{{1
 
-// Vi 
+// Layer switching
 #define TO_NORM TO(VI_NORM)
 #define TO_VIS TO(VI_VIS)
 #define TO_BASE TO(BASE)
+#define TO_GAME TO(GAME)
 
 // Home row mods {{{1
 
@@ -93,6 +94,9 @@ enum custom_keycodes {
 #define EJ_M KC_BSPC
 
 // Layer F {{{1
+#define EF_9 KC_MINS
+#define EF_0 KC_EQUAL
+
 // Layer F - Row 1
 #define EF_Q KC_ESC
 
