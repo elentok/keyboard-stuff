@@ -107,6 +107,8 @@ enum custom_keycodes {
 // Layer F - Row 3
 #define EF_N KC_ENT
 #define EF_M KC_BSPC
+#define EF_SLSH KC_BSLS
+#define EF_DEL KC_BSLS
 
 // Layer F - Thumb
 #define EF_LSPC KC_ENT
