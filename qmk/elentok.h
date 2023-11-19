@@ -99,6 +99,7 @@ enum custom_keycodes {
 
 // Layer F - Row 1
 #define EF_Q KC_ESC
+#define EF_O KC_UNDS
 
 // Layer F - Row 2
 #define EF_G KC_TAB
