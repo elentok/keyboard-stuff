@@ -98,8 +98,10 @@ enum custom_keycodes {
 #define EF_0 KC_EQUAL
 
 // Layer F - Row 1
+#define EF_E KC_COLN
 #define EF_Q KC_ESC
 #define EF_O KC_UNDS
+#define EF_P KC_PLUS
 
 // Layer F - Row 2
 #define EF_G KC_TAB
