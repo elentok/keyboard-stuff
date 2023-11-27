@@ -8,6 +8,7 @@ enum elentok_layers {
   LF, // When F is held
   LJ, // When J is held
   GAME,
+  NUM,
 
   // Hillside-specific (for now)
   SYM,
@@ -41,6 +42,7 @@ enum custom_keycodes {
 #define TO_VIS TO(VI_VIS)
 #define TO_BASE TO(BASE)
 #define TO_GAME TO(GAME)
+#define TO_NUM TO(NUM)
 
 // Home row mods {{{1
 
@@ -104,12 +106,15 @@ enum custom_keycodes {
 #define EF_P KC_PLUS
 
 // Layer F - Row 2
+#define EF_J KC_ENT
+#define EF_K KC_BSPC
 #define EF_G KC_TAB
 #define EF_QUOT KC_BSPC
 
 // Layer F - Row 3
 #define EF_N KC_ENT
-#define EF_M KC_BSPC
+#define EF_M KC_ENT
+#define EF_COMM KC_BSPC
 #define EF_SLSH KC_BSLS
 #define EF_DEL KC_BSLS
 
