@@ -62,10 +62,34 @@ enum custom_keycodes {
 
 // Thumbs {{{1
 // TODO: rename from LSPC/RPSC to LTHM, RTHM
-#define E_LSPC KC_SPC
+#define E_LTHM1 TO_NORM
+#define E_LTHM2 KC_SPC
+// #define E_LSPC KC_SPC
 // #define E_RSPC TD(TD_LSFT_CAPS)
-#define E_RSPC OSM(MOD_LSFT)
+#define E_RTHM1 OSM(MOD_LSFT)
+#define E_RTHM2 TO_NUM
+// #define E_RSPC OSM(MOD_LSFT)
 // #define E_RSPC KC_LSFT
+
+// Layer Num {{{1
+
+#define EN_Q KC_GRV
+#define EN_W KC_COLN
+#define EN_E KC_LPRN
+#define EN_R KC_RPRN
+#define EN_T KC_TILDE
+
+#define EN_A KC_EQUAL
+#define EN_S KC_MINS
+#define EN_D KC_LBRC
+#define EN_F KC_RBRC
+#define EN_G KC_TAB
+
+#define EN_Z KC_PIPE
+#define EN_X KC_UNDS
+#define EN_C KC_LCBR
+#define EN_V KC_RCBR
+#define EN_B KC_MPLY
 
 // Layer J {{{1
 // Layer J - Row 1
@@ -112,9 +136,10 @@ enum custom_keycodes {
 #define EF_QUOT KC_BSPC
 
 // Layer F - Row 3
-#define EF_N KC_ENT
+#define EF_N KC_BSPC
 #define EF_M KC_ENT
-#define EF_COMM KC_BSPC
+#define EF_COMM KC_HOME
+#define EF_DOT KC_END
 #define EF_SLSH KC_BSLS
 #define EF_DEL KC_BSLS
 
@@ -140,11 +165,13 @@ enum custom_keycodes {
 #define EVI_P G(KC_V)
 
 // Layer VI - Row 2 {{{2
-#define EVI_A   KC_VOLU
+// #define EVI_A   KC_VOLU
+#define EVI_A   LCTL_T(KC_VOLU)
 // TODO: figure a better usage for this
 #define EVI_S   KC_EQUAL
-#define EVI_D   KC_DEL
-#define EVI_F   EC_ALFRED
+#define EVI_D   LGUI_T(KC_DEL)
+// #define EVI_F   EC_ALFRED
+#define EVI_F   KC_TAB
 #define EVI_G   EC_WIN
 
 #define EVI_H   KC_LEFT
