@@ -129,8 +129,8 @@ enum custom_keycodes {
 #define EF_E KC_COLN
 
 #define EF_Y KC_TILDE
-#define EF_U KC_MINS
-#define EF_I KC_PLUS
+#define EF_U KC_PLUS
+#define EF_I KC_MINS
 #define EF_O KC_EQL
 #define EF_P KC_UNDS
 
