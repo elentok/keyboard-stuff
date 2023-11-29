@@ -124,16 +124,23 @@ enum custom_keycodes {
 #define EF_0 KC_EQUAL
 
 // Layer F - Row 1
-#define EF_E KC_COLN
 #define EF_Q KC_ESC
-#define EF_O KC_UNDS
-#define EF_P KC_PLUS
+#define EF_W KC_GRV
+#define EF_E KC_COLN
+
+#define EF_Y KC_TILDE
+#define EF_U KC_MINS
+#define EF_I KC_PLUS
+#define EF_O KC_EQL
+#define EF_P KC_UNDS
 
 // Layer F - Row 2
 #define EF_J KC_ENT
 #define EF_K KC_BSPC
 #define EF_G KC_TAB
 #define EF_QUOT KC_BSPC
+
+#define EF_SCLN KC_TAB
 
 // Layer F - Row 3
 #define EF_N KC_BSPC
