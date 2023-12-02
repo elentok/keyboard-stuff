@@ -1,75 +1,62 @@
-type LeftLetter = "q" | "w" | "e" | "r" | "t" | "a" | "s" | "d" | "f" | "g" | "z" | "x" | "v" | "b"
-type RightLetter = "y" | "u" | "i" | "o" | "p" | "h" | "j" | "k" | "l" | ";" | "b" | "n" | "m" | "," | "." | "/"
-type Letter = LeftLetter | RightLetter
+type Row1Chars = "q" | "w" | "e" | "r" | "t" | "y" | "u" | "i" | "o" | "p"
+type Row2Chars = "a" | "s" | "d" | "f" | "g" | "h" | "j" | "k" | "l" | ";"
+type Row3Chars = "z" | "x" | "c" | "v" | "b" | "n" | "m" | "," | "." | "/"
 
-type HalfRow = [
-  string,
-  string,
-  string,
-  string,
-  string,
+type LayerName = "BASE" | "LF" | "LJ"
+
+type Layer = [
+  Partial<Record<Row1Chars, string>>,
+  Partial<Record<Row2Chars, string>>,
+  Partial<Record<Row3Chars, string>>,
 ]
-type Row = { left: HalfRow; right: HalfRow }
-type Layer = [Row, Row, Row]
-type Layout = Record<string, Layer>
 
-type Layer2 = Record<Letter, string>
+type Layout = Partial<Record<LayerName, Layer>>
 
-const BASE_LAYER: Layer2 = {
-  ...{ q: "KC_Q", w: "KC_W", e: "KC_E", r: "KC_R", t: "KC_T", y: "KC_Y", u: "KC_U", i: "KC_I", o: "KC_O", p: "KC_P" },
-  ...{
-    a: "LCTL_T(KC_A)",
-    s: "LALT_T(KC_S)",
-    d: "LGUI_T(KC_D)",
-    f: "LT(LF, KC_F)",
-    g: "KC_G",
-    h: "KC_H",
-    j: "E_J",
-    k: "E_K",
-    l: "E_L",
-    ";": "E_SCLN",
-  },
-  ...{
-    z: "KC_Z",
-    x: "KC_X",
-    c: "KC_C",
-    v: "KC_V",
-    b: "KC_B",
-    n: "KC_N",
-    m: "KC_M",
-    ",": "KC_COMM",
-    ".": "KC_DOT",
-    "/": "KC_SLSH",
-  },
+const CharToCode = new Map<string, string>([
+  ["~", "KC_TILDE"],
+  ["=", "KC_EQL"],
+  ["-", "KC_MINS"],
+  ["+", "KC_PLUS"],
+  ["_", "KC_UNDS"],
+])
+
+function to(layer: LayerName): string {
+  return `TO(${layer})`
 }
-
-const ___ = "_______"
 
 const layout: Layout = {
   BASE: [
+    { q: "q", w: "w", e: "e", r: "r", t: "t", y: "y", u: "u", i: "i", o: "o", p: "p" },
     {
-      left: ["KC_Q", "KC_W", "KC_E", "KC_R", "KC_T"],
-      right: ["KC_Y", "KC_U", "KC_I", "KC_O", "KC_P"],
+      a: "LCTL_T(KC_A)",
+      s: "LALT_T(KC_S)",
+      d: "LGUI_T(KC_D)",
+      f: "LT(LF, KC_F)",
+      g: "g",
+      h: "h",
+      j: "LT(LJ, KC_J)",
+      k: "RGUI_T(KC_K)",
+      l: "RALT_T(KC_L)",
+      ";": "RCTL_T(KC_SCLN)",
     },
     {
-      left: ["LCTL_T(KC_A)", "LALT_T(KC_S)", "LGUI_T(KC_D)", "LT(LF, KC_F)", "KC_G"],
-      right: ["KC_H", "E_J", "E_K", "E_L", "E_SCLN"],
-    },
-    {
-      left: ["KC_Z", "KC_X", "KC_C", "KC_V", "KC_B"],
-      right: ["KC_N", "KC_M", "KC_COMM", "KC_DOT", "KC_SLSH"],
+      z: "z",
+      x: "x",
+      c: "c",
+      v: "v",
+      b: "b",
+      n: "n",
+      m: "m",
+      ",": "KC_COMM",
+      ".": "KC_DOT",
+      "/": "KC_SLSH",
     },
   ],
-  // LF: [
-  //   {
-  //     left: ["KC_ESC", "KC_GRV", "KC_COLN", ___, ___],
-  //     right: ["KC_TILDE", "KC_PLUS", "KC_MINS", "KC_EQL", "KC_UNDS"],
-  //   },
-  //   {
-  //     left: ["KC_ESC", "KC_GRV", "KC_COLN", ___, ___],
-  //     right: ["KC_TILDE", "KC_PLUS", "KC_MINS", "KC_EQL", "KC_UNDS"],
-  //   },
-  // ],
+  LF: [
+    { q: "KC_ESC", w: "KC_GRV", e: "KC_COLN", u: "~", i: "+", o: "-", p: "_" },
+    { g: to("BASE"), h: "KC_LEFT", j: "KC_DOWN", k: "KC_UP", l: "KC_RIGHT" },
+    { n: "KC_BSPC", m: "KC_ENT", ",": "KC_HOME", ".": "KC_END", "/": "KC_BSLS" },
+  ],
 }
 
 console.info(layout)
