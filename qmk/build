@@ -15,10 +15,13 @@ function main() {
 
   if [ "${1:-}" == "all" ]; then
     qmk-compile "${KEYBOARDS[@]}"
-  elif [ $# -gt 0 ]; then
-    qmk-compile "$@"
   else
-    qmk-compile "$(pick-keyboard)"
+    kb="$(pick-keyboard "$@")"
+    if [ -z "$kb" ]; then
+      echo "No keyboard selected."
+      exit 1
+    fi
+    qmk-compile "$kb"
   fi
 }
 
@@ -31,13 +34,21 @@ function qmk-compile() {
 }
 
 function pick-keyboard() {
-  list-keyboards | fzf-tmux -p
+  list-keyboards | filter "$@" | fzf-tmux -p --select-1
 }
 
 function list-keyboards() {
   for kb in "${KEYBOARDS[@]}"; do
     echo "$kb"
   done
+}
+
+function filter() {
+  if [ $# -eq 0 ]; then
+    cat
+  else
+    grep "$@"
+  fi
 }
 
 main "$@"

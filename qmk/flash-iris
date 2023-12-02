@@ -2,14 +2,7 @@
 
 set -euo pipefail
 
-side="${1:-}"
-
-if [ -z "$side" ]; then
-  echo
-  echo "Usage: ./flash-iris <left|right>"
-  echo
-  exit 1
-fi
+side="${1:-left}"
 
 echo
 echo "IMPORTANT: Double click the reset button to get the keyboard into bootloader mode"
