@@ -100,8 +100,8 @@ enum custom_keycodes {
 #define EJ_T LSFT(KC_TAB)
 
 // Layer J - Row 2
-#define EJ_A KC_EQUAL
-#define EJ_S KC_MINS
+#define EJ_A KC_SLSH
+#define EJ_S KC_QUES
 #define EJ_D KC_LBRC
 #define EJ_F KC_RBRC
 #define EJ_G KC_TAB
