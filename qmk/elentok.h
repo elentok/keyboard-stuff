@@ -40,9 +40,10 @@ enum custom_keycodes {
 // Misc {{{1
 
 // Layer switching
+#define TO_L1 TO(L1)
+#define TO_L2 TO(L2)
 #define TO_L3 TO(L3)
 #define TO_VIS TO(VI_VIS)
-#define TO_L1 TO(L1)
 #define TO_GAME TO(GAME)
 #define TO_NUM TO(NUM)
 
