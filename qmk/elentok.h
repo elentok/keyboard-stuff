@@ -4,11 +4,14 @@
 // Layer config {{{1
 
 enum elentok_layers {
-  BASE = 0,
+  L1 = 0, // Base layer
+  L2, // Symbols
+  L3, // Movement
+  NUM,
+
   LF, // When F is held
   LJ, // When J is held
   GAME,
-  NUM,
 
   // Hillside-specific (for now)
   SYM,
@@ -16,7 +19,6 @@ enum elentok_layers {
   ADJUST,
 
   // Vi-mode
-  VI_NORM,
   VI_VIS,
 };
 
@@ -38,9 +40,9 @@ enum custom_keycodes {
 // Misc {{{1
 
 // Layer switching
-#define TO_NORM TO(VI_NORM)
+#define TO_L3 TO(L3)
 #define TO_VIS TO(VI_VIS)
-#define TO_BASE TO(BASE)
+#define TO_L1 TO(L1)
 #define TO_GAME TO(GAME)
 #define TO_NUM TO(NUM)
 
@@ -62,7 +64,7 @@ enum custom_keycodes {
 
 // Thumbs {{{1
 // TODO: rename from LSPC/RPSC to LTHM, RTHM
-#define E_LTHM1 TO_NORM
+#define E_LTHM1 TO_L3
 #define E_LTHM2 KC_SPC
 // #define E_LSPC KC_SPC
 // #define E_RSPC TD(TD_LSFT_CAPS)
@@ -156,10 +158,10 @@ enum custom_keycodes {
 
 // Layer VI {{{1
 
-#define EVI_ESC TO_BASE
+#define EVI_ESC TO_L1
 
 // Layer VI - Row 1 {{{2
-#define EVI_Q TO_BASE
+#define EVI_Q TO_L1
 #define EVI_W A(KC_RIGHT)
 #define EVI_E A(KC_RIGHT)
 #define EVI_R LGUI(S(KC_TAB))
@@ -167,7 +169,7 @@ enum custom_keycodes {
 
 #define EVI_Y LGUI(KC_C)
 #define EVI_U LGUI(KC_Z)
-#define EVI_I TO_BASE
+#define EVI_I TO_L1
 #define EVI_O EC_VI_O
 #define EVI_P G(KC_V)
 
@@ -200,12 +202,12 @@ enum custom_keycodes {
 #define EVI_DOT G(KC_RIGHT)
 
 // Layer VI Visual {{{1
-#define EVV_ESC TO_NORM
+#define EVV_ESC TO_L3
 #define EVV_4 G(S(KC_RIGHT))
 #define EVV_0 G(S(KC_LEFT))
 
 // Layer VI Visual - Row1 {{{2
-#define EVV_Q TO_NORM
+#define EVV_Q TO_L3
 #define EVV_W A(S(KC_RIGHT))
 #define EVV_E A(S(KC_RIGHT))
 

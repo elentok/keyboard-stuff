@@ -27,7 +27,7 @@ void keyboard_post_init_user(void) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-  [BASE] = LAYOUT(
+  [L1] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
-  [VI_NORM] = LAYOUT(
+  [L3] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      EVI_ESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, EVI_Z,   EVI_X,   EVI_C,   EVI_V,   EVI_B,   KC_MPLY,          _______, EVI_N,   EVI_M,   EVI_COM, EVI_DOT, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, TO_BASE, _______,                   _______, _______, _______
+                                    _______, TO_L1, _______,                   _______, _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, EVV_X,   EVV_C,   _______, EVV_B,   _______,          _______, _______, _______, EVV_COM, EVI_DOT, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, TO_NORM, _______,                   _______, _______, _______
+                                    _______, TO_L3,   _______,                   _______, _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LGUI, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    TO_BASE,          KC_END,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    TO_L1,          KC_END,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_LCTL, KC_LSFT,  KC_SPC,                   KC_SPC,  KC_ENT,  KC_RALT // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, EN_Z,    EN_X,    EN_C,    EN_V,    EN_B,    _______,          _______, KC_EQL,  KC_1,    KC_2,    KC_3,    KC_BSLS,  _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, _______,                   _______, TO_BASE, KC_0
+                                    _______, _______, _______,                   _______, TO_L1, KC_0
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
 )
 
@@ -145,33 +145,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case EC_VI_C:
       if (!record->event.pressed) {
         SEND_STRING(SS_TAP(X_DEL));
-        layer_move(BASE);
+        layer_move(L1);
       }
       break;
     case EC_VI_X:
       if (!record->event.pressed) {
         SEND_STRING(SS_LGUI("x"));
-        layer_move(VI_NORM);
+        layer_move(L3);
       }
       break;
     case EC_VI_O:
       if (!record->event.pressed) {
         // SEND_STRING(SS_TAP(X_ENT));
         SEND_STRING("\n");
-        layer_move(BASE);
+        layer_move(L1);
       }
       break;
     case EC_VI_Y: // yank
       if (!record->event.pressed) {
         // SEND_STRING(SS_TAP(X_ENT));
         SEND_STRING(SS_LGUI("c"));
-        layer_move(VI_NORM);
+        layer_move(L3);
       }
       break;
     case EC_ALFRED:
       if (!record->event.pressed) {
         SEND_STRING(SS_LGUI(" "));
-        layer_move(BASE);
+        layer_move(L1);
       }
       break;
     case EC_WIN:
@@ -221,7 +221,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   switch(get_highest_layer(state)) {
-  case VI_NORM:
+  case L3:
     rgb_matrix_sethsv_noeeprom(HSV_GREEN);
     break;
   case VI_VIS:
