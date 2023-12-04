@@ -170,13 +170,16 @@ enum custom_keycodes {
 #define EVI_R LGUI(S(KC_TAB))
 // #define EVI_T EC_WIN
 
-#define EVI_Y LGUI(KC_C)
+#define EVI_Y KC_WBAK
+// LGUI(KC_C)
 #define EVI_U LGUI(S(KC_LBRC))
 // LGUI(KC_Z)
 #define EVI_I LGUI(S(KC_RBRC))
 // TO_L1
-#define EVI_O EC_VI_O
-#define EVI_P G(KC_V)
+#define EVI_O KC_WFWD
+// EC_VI_O
+#define EVI_P KC_BSPC
+// G(KC_V)
 
 // Layer VI - Row 2 {{{2
 // #define EVI_A   KC_VOLU
@@ -193,7 +196,8 @@ enum custom_keycodes {
 #define EVI_J   KC_DOWN
 #define EVI_K   KC_UP
 #define EVI_L   KC_RIGHT
-#define EVI_CLN KC_PIPE
+#define EVI_CLN KC_ENT
+// #define EVI_CLN KC_PIPE
 
 // Layer VI - Row 3 {{{2
 #define EVI_Z KC_GRV
