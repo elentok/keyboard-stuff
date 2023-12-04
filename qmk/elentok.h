@@ -7,7 +7,7 @@ enum elentok_layers {
   L1 = 0, // Base layer
   L2, // Symbols
   L3, // Movement
-  NUM,
+  L4,
 
   LF, // When F is held
   LJ, // When J is held
@@ -43,9 +43,9 @@ enum custom_keycodes {
 #define TO_L1 TO(L1)
 #define TO_L2 TO(L2)
 #define TO_L3 TO(L3)
+#define TO_L4 TO(L4)
 #define TO_VIS TO(VI_VIS)
 #define TO_GAME TO(GAME)
-#define TO_NUM TO(NUM)
 
 // Home row mods {{{1
 
@@ -65,12 +65,12 @@ enum custom_keycodes {
 
 // Thumbs {{{1
 // TODO: rename from LSPC/RPSC to LTHM, RTHM
-#define E_LTHM1 TO_L3
+#define E_LTHM1 KC_SPC
 #define E_LTHM2 KC_SPC
 // #define E_LSPC KC_SPC
 // #define E_RSPC TD(TD_LSFT_CAPS)
 #define E_RTHM1 OSM(MOD_LSFT)
-#define E_RTHM2 TO_NUM
+#define E_RTHM2 TO_L2
 // #define E_RSPC OSM(MOD_LSFT)
 // #define E_RSPC KC_LSFT
 
@@ -162,21 +162,25 @@ enum custom_keycodes {
 #define EVI_ESC TO_L1
 
 // Layer VI - Row 1 {{{2
-#define EVI_Q TO_L1
+#define EVI_Q KC_ESC 
+//TO_L1
 #define EVI_W A(KC_RIGHT)
 #define EVI_E A(KC_RIGHT)
 #define EVI_R LGUI(S(KC_TAB))
 // #define EVI_T EC_WIN
 
 #define EVI_Y LGUI(KC_C)
-#define EVI_U LGUI(KC_Z)
-#define EVI_I TO_L1
+#define EVI_U LGUI(S(KC_LBRC))
+// LGUI(KC_Z)
+#define EVI_I LGUI(S(KC_RBRC))
+// TO_L1
 #define EVI_O EC_VI_O
 #define EVI_P G(KC_V)
 
 // Layer VI - Row 2 {{{2
 // #define EVI_A   KC_VOLU
-#define EVI_A   LCTL_T(KC_VOLU)
+#define EVI_A KC_TAB
+//LCTL_T(KC_VOLU)
 // TODO: figure a better usage for this
 #define EVI_S   KC_EQUAL
 #define EVI_D   LGUI_T(KC_DEL)
@@ -191,7 +195,8 @@ enum custom_keycodes {
 #define EVI_CLN KC_PIPE
 
 // Layer VI - Row 3 {{{2
-#define EVI_Z KC_VOLD
+#define EVI_Z KC_GRV
+// KC_VOLD
 #define EVI_X EC_VI_X
 #define EVI_C EC_VI_C
 #define EVI_V TO_VIS
