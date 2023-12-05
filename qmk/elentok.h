@@ -10,6 +10,7 @@ enum elentok_layers {
   L4,
 
   LV, // When V is held
+  LM, // When M is held
   LF, // When F is held
   LJ, // When J is held
   GAME,
@@ -57,6 +58,7 @@ enum custom_keycodes {
 #define E_D LGUI_T(KC_D)
 #define E_F LT(LF, KC_F)
 #define E_V LT(LV, KC_V)
+#define E_M LT(LM, KC_M)
 
 
 // Right home row mods
@@ -136,8 +138,8 @@ enum custom_keycodes {
 
 // Layer F - Row 1
 #define EF_Q KC_ESC
-#define EF_W KC_GRV
-#define EF_E KC_COLN
+#define EF_W KC_COLN
+#define EF_E KC_GRV
 
 #define EF_Y KC_TILDE
 #define EF_U KC_PLUS
