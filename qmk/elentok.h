@@ -9,6 +9,7 @@ enum elentok_layers {
   L3, // Movement
   L4,
 
+  LV, // When V is held
   LF, // When F is held
   LJ, // When J is held
   GAME,
@@ -55,6 +56,8 @@ enum custom_keycodes {
 #define E_S LALT_T(KC_S)
 #define E_D LGUI_T(KC_D)
 #define E_F LT(LF, KC_F)
+#define E_V LT(LV, KC_V)
+
 
 // Right home row mods
 #define E_SCLN RCTL_T(KC_SCLN)
@@ -66,14 +69,16 @@ enum custom_keycodes {
 // Thumbs {{{1
 // TODO: rename from LSPC/RPSC to LTHM, RTHM
 // #define E_LTHM1 KC_SPC
-#define E_LTHM1 OSM(MOD_LSFT)
+// #define E_LTHM1 OSM(MOD_LSFT)
+#define E_LTHM1 OSM(MOD_LGUI)
 // #define E_LTHM2 OSM(MOD_LSFT)
 #define E_LTHM2 KC_SPC
 // #define E_LSPC KC_SPC
 // #define E_RSPC TD(TD_LSFT_CAPS)
 #define E_RTHM1 OSM(MOD_LSFT)
 // #define E_RTHM1 OSM(MOD_RCTL)
-#define E_RTHM2 TO_L2
+#define E_RTHM2 KC_ENT
+// #define E_RTHM2 TO_L2
 // #define E_RSPC OSM(MOD_LSFT)
 // #define E_RSPC KC_LSFT
 
