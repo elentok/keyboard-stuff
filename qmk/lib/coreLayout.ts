@@ -28,20 +28,28 @@ export const coreLayout: CoreLayout = {
       ".": "KC_DOT",
       "/": "KC_SLSH",
     },
+    thumb: {
+      "l-thumb1": "KC_SPC",
+      "l-thumb2": "OSM(MOD_LGUI)",
+      "r-thumb1": "OSM(MOD_LSFT)",
+      "r-thumb2": "KC_ENT",
+    },
   },
   LF: {
     row1: { q: "KC_ESC", w: "KC_GRV", e: "KC_COLN", u: "~", i: "+", o: "-", p: "_" },
     row2: { g: to("BASE"), h: "KC_LEFT", j: "KC_DOWN", k: "KC_UP", l: "KC_RIGHT" },
     row3: { n: "KC_BSPC", m: "KC_ENT", ",": "KC_HOME", ".": "KC_END", "/": "KC_BSLS" },
+    thumb: {},
   },
   LJ: {
     row1: {},
     row2: {},
     row3: {},
+    thumb: {},
   },
 }
 
-export function createLayout<T>(extraKeys: LayoutExtraKeys<T>): Layout<T> {
+export function createLayout<T extends string>(extraKeys: LayoutExtraKeys<T>): Layout<T> {
   const newLayout: Layout<T> = {}
 
   for (const layerName of layerNames) {
