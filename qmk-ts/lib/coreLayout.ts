@@ -1,20 +1,20 @@
-import { to } from "./helpers.ts"
+import { LT, MT, OSM, to } from "./helpers.ts"
 import { CoreLayout, layerNames, Layout, LayoutExtraKeys } from "./types.ts"
 
 export const coreLayout: CoreLayout = {
   BASE: {
     row1: { q: "q", w: "w", e: "e", r: "r", t: "t", y: "y", u: "u", i: "i", o: "o", p: "p" },
     row2: {
-      a: "LCTL_T(KC_A)",
-      s: "LALT_T(KC_S)",
-      d: "LGUI_T(KC_D)",
-      f: "LT(LF, KC_F)",
+      a: MT("LCTL", "a"),
+      s: MT("LALT", "s"),
+      d: MT("LGUI", "d"),
+      f: LT("LF", "KC_F"),
       g: "g",
       h: "h",
-      j: "LT(LJ, KC_J)",
-      k: "RGUI_T(KC_K)",
-      l: "RALT_T(KC_L)",
-      ";": "RCTL_T(KC_SCLN)",
+      j: LT("LJ", "j"),
+      k: MT("RGUI", "k"),
+      l: MT("RALT", "l"),
+      ";": MT("RCTL", ";"),
     },
     row3: {
       z: "z",
@@ -24,21 +24,21 @@ export const coreLayout: CoreLayout = {
       b: "b",
       n: "n",
       m: "m",
-      ",": "KC_COMM",
-      ".": "KC_DOT",
-      "/": "KC_SLSH",
+      ",": ",",
+      ".": ".",
+      "/": "/",
     },
     thumb: {
       "l-thumb1": "KC_SPC",
-      "l-thumb2": "OSM(MOD_LGUI)",
-      "r-thumb1": "OSM(MOD_LSFT)",
+      "l-thumb2": OSM("LGUI"),
+      "r-thumb1": OSM("LSFT"),
       "r-thumb2": "KC_ENT",
     },
   },
   LF: {
-    row1: { q: "KC_ESC", w: "KC_GRV", e: "KC_COLN", u: "~", i: "+", o: "-", p: "_" },
+    row1: { q: "KC_ESC", w: "`", e: ":", u: "~", i: "+", o: "-", p: "_" },
     row2: { g: to("BASE"), h: "KC_LEFT", j: "KC_DOWN", k: "KC_UP", l: "KC_RIGHT" },
-    row3: { n: "KC_BSPC", m: "KC_ENT", ",": "KC_HOME", ".": "KC_END", "/": "KC_BSLS" },
+    row3: { n: "KC_BSPC", m: "KC_ENT", ",": "KC_HOME", ".": "KC_END", "/": "\\" },
     thumb: {},
   },
   LJ: {

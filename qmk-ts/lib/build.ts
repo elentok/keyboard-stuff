@@ -1,7 +1,5 @@
-import { expandAlias } from "./helpers.ts"
+import { expandMapping } from "./helpers.ts"
 import { Keyboard, Layer, LayerName, layerNames, Layout } from "./types.ts"
-
-const textEncoder = new TextEncoder()
 
 interface BuiltLayer {
   name: string
@@ -20,8 +18,6 @@ export function build<T extends string>(keyboard: Keyboard<T>, layout: Layout<T>
     builtLayers.push(buildLayer(keyboard, layerName, layer))
   }
 
-  console.log("[david] [build.ts] build 1")
-
   const maxCellWidth = builtLayers.reduce((prevMax, layer) => {
     const maxRowCellWidth = layer.mappings.reduce((rowPrevMax, cell) => {
       return cell.length > rowPrevMax ? cell.length : rowPrevMax
@@ -30,8 +26,6 @@ export function build<T extends string>(keyboard: Keyboard<T>, layout: Layout<T>
     return maxRowCellWidth
   }, 0)
 
-  console.log("[david] [build.ts] build 2", maxCellWidth)
-
   for (const layer of builtLayers) {
     lines.push(`[${layer.name}] = LAYOUT(`)
     for (const row of layer.mappings) {
@@ -39,8 +33,6 @@ export function build<T extends string>(keyboard: Keyboard<T>, layout: Layout<T>
       lines.push(`  ${line}`)
     }
   }
-
-  console.log("[david] [build.ts] build", lines)
 }
 
 function buildLayer<T extends string>(keyboard: Keyboard<T>, name: LayerName, layer: Layer<T>): BuiltLayer {
@@ -48,7 +40,7 @@ function buildLayer<T extends string>(keyboard: Keyboard<T>, name: LayerName, la
   const mappings = keyboard.rows.map((row) => {
     return row.map((key) => {
       const mapping = keyToMapping[key] ?? "_______"
-      const aliasedMapping = expandAlias(mapping)
+      const aliasedMapping = expandMapping(mapping)
       return aliasedMapping ?? mapping
     })
   })
