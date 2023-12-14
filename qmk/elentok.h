@@ -110,24 +110,24 @@ enum custom_keycodes {
 #define EJ_W KC_COLN
 #define EJ_E KC_LPRN
 #define EJ_R KC_RPRN
-#define EJ_T LSFT(KC_TAB)
+#define EJ_T KC_PLUS
 
 // Layer J - Row 2
-#define EJ_A KC_SLSH
-#define EJ_S KC_QUES
+#define EJ_A KC_UNDS
+#define EJ_S KC_MINS
 #define EJ_D KC_LBRC
 #define EJ_F KC_RBRC
-#define EJ_G KC_TAB
+#define EJ_G KC_DOLLAR
 
 // TODO: remove
 #define EJ_QUOT KC_BSPC
 
 // Layer J - Row 3
 #define EJ_Z KC_PIPE
-#define EJ_X KC_UNDS
+#define EJ_X KC_LABK
 #define EJ_C KC_LCBR
 #define EJ_V KC_RCBR
-#define EJ_B KC_MPLY
+#define EJ_B KC_RABK
 
 #define EJ_N KC_ENT
 #define EJ_M KC_BSPC
@@ -142,8 +142,8 @@ enum custom_keycodes {
 #define EF_E KC_GRV
 
 #define EF_Y KC_TILDE
-#define EF_U KC_PLUS
-#define EF_I KC_MINS
+#define EF_U LSFT(KC_TAB)
+#define EF_I KC_TAB
 #define EF_O KC_EQL
 #define EF_P KC_UNDS
 
