@@ -11,9 +11,9 @@ export interface Structure {
   rows: Row[]
 }
 
-export type Row = Cell[]
+export type Row = Array<Cell | null>
 
 export interface Cell {
   keyIndex: number
-  colSpan: number
+  colSpan?: number
 }
