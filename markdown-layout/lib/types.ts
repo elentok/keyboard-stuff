@@ -1,13 +1,15 @@
 export interface Layout {
-  structure: Structure | SplitStructure
+  structure: SingleStructure | SplitStructure
 }
+
+export type Structure = SingleStructure | SplitStructure
 
 export interface SplitStructure {
-  left: Structure
-  right: Structure
+  left: SingleStructure
+  right: SingleStructure
 }
 
-export interface Structure {
+export interface SingleStructure {
   rows: Row[]
 }
 

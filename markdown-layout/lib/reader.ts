@@ -1,4 +1,4 @@
-import { Cell, Layout, Structure } from "./types.ts"
+import { Cell, Layout, SingleStructure } from "./types.ts"
 
 class LayoutError extends Error {}
 
@@ -45,8 +45,8 @@ export function findBlocks(lines: string[]): Block[] {
   return blocks
 }
 
-export function parseStructure(lines: string[]): Structure {
-  const s: Structure = { rows: [] }
+export function parseStructure(lines: string[]): SingleStructure {
+  const s: SingleStructure = { rows: [] }
 
   const validLines = lines.filter(isNotCommentOrBlank)
   for (const line of validLines) {
