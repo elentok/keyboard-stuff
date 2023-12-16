@@ -1,4 +1,4 @@
-import { isNotCommentOrBlank } from "./helpers.ts"
+import { isNotCommentOrBlank, splitLinesForSplitKeyboard } from "./helpers.ts"
 import { LayoutError, SingleStructure, Structure, StructureCell } from "./types.ts"
 
 export function parseStructure(lines: string[]): Structure {
@@ -6,18 +6,10 @@ export function parseStructure(lines: string[]): Structure {
 
   const isSplitStructure = presentLines.some((line) => line.includes("||"))
   if (isSplitStructure) {
-    const splitLines = presentLines.map((line) => {
-      const halfs = line.split(" || ")
-      if (halfs.length !== 2) {
-        throw new LayoutError(`Invalid split keyboard structure line: '${line}'`)
-      }
-      return halfs
-    })
-    const leftLines = splitLines.map((halfs) => halfs[0])
-    const rightLines = splitLines.map((halfs) => halfs[1])
+    const { left, right } = splitLinesForSplitKeyboard(presentLines)
     return {
-      left: parseSingleStructure(leftLines),
-      right: parseSingleStructure(rightLines),
+      left: parseSingleStructure(left),
+      right: parseSingleStructure(right),
     }
   } else {
     return parseSingleStructure(presentLines)
@@ -27,11 +19,11 @@ export function parseStructure(lines: string[]): Structure {
 function parseSingleStructure(presentLines: string[]): SingleStructure {
   const s: SingleStructure = { rows: [] }
 
-  for (const line of presentLines) {
+  presentLines.forEach((line, index) => {
     if (!isStructureLineValid(line)) {
-      throw new LayoutError(`Invalid structure line: '${line}'`)
+      throw new LayoutError(`Invalid structure line: '${line}'`, index + 1)
     }
-  }
+  })
   const columns = countColumns(presentLines)
 
   for (const line of presentLines) {
