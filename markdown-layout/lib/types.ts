@@ -39,6 +39,6 @@ export interface LayerCell {
 
 export class LayoutError extends Error {
   constructor(msg: string, lineNr?: number) {
-    super(`Error at line #${lineNr}: ${msg}`)
+    super(lineNr != null ? `Error at line #${lineNr}: ${msg}` : msg)
   }
 }

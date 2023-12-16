@@ -61,7 +61,7 @@ Deno.test(function testStringifyLayer_SingleLayer() {
   ])
 
   const layer = parseLayer("1", [
-    "a b   c",
+    "a b   c   ",
     "d l(f)/f",
     "x y",
   ], structure)

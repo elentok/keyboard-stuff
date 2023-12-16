@@ -25,7 +25,7 @@ function parseSingleLayer(name: string, lines: string[], structure: SingleStruct
 
   const layerRows = structure.rows.map((structureRow, rowIndex) => {
     const line = lines[rowIndex]
-    const mappings = line.split(/\s+/)
+    const mappings = line.trim().split(/\s+/)
     const nonNullCells = structureRow.filter((c) => c != null).length
     if (mappings.length !== nonNullCells) {
       throw new LayoutError(
