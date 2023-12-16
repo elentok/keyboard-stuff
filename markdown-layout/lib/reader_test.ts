@@ -3,12 +3,12 @@ import { findBlocks } from "./reader.ts"
 
 const lines = [
   "",
-  "```block1",
+  "```structure",
   "hello",
   "world",
   "```",
   "",
-  "```block2",
+  "```layer:abc",
   "hello1",
   "world1",
   "",
@@ -19,13 +19,13 @@ const lines = [
 Deno.test(function testFindBlocks() {
   assertEquals(findBlocks(lines), [
     {
-      name: "block1",
+      name: "structure",
       lines: ["hello", "world"],
       startLineNr: 2,
       endLineNr: 5,
     },
     {
-      name: "block2",
+      name: "layer:abc",
       lines: ["hello1", "world1", ""],
       startLineNr: 7,
       endLineNr: 11,

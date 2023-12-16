@@ -1,5 +1,6 @@
 export interface Layout {
-  structure: SingleStructure | SplitStructure
+  structure: Structure
+  layers: Layer[]
 }
 
 export type Structure = SingleStructure | SplitStructure
