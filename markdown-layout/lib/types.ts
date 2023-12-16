@@ -18,3 +18,5 @@ export type Row = Array<Cell | null>
 export interface Cell {
   keyIndex: number
 }
+
+export class LayoutError extends Error {}
