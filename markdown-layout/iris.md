@@ -17,11 +17,11 @@ This is an example for the Iris keyboard.
 ## Base layer
 
 ```layer:base
-esc  1      2      3       4      5             |          6    7      8      9      0      bs
-tab  q      w      e       r      t             |          y    u      i      o      p      \
-lgui lctl/a lalt/s lgui/d  l(f)/f g             |          h    l(j)/j rgui/k ralt/l rctl/; '
-lsft z      x      c       l(v)/v b        home | end      n    m      ,      .      /      rsft
-                           lctl   os(lgui) spc  | os(rsft) ent
+esc  1      2      3       4      5             ||          6    7      8      9      0      bs
+tab  q      w      e       r      t             ||          y    u      i      o      p      \
+lgui lctl/a lalt/s lgui/d  l(f)/f g             ||          h    l(j)/j rgui/k ralt/l rctl/; '
+lsft z      x      c       l(v)/v b        home || end      n    m      ,      .      /      rsft
+                           lctl   os(lgui) spc  || os(rsft) ent
 ```
 
 ## F layer

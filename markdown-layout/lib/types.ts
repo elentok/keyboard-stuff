@@ -19,4 +19,25 @@ export interface StructureCell {
   keyIndex: number
 }
 
-export class LayoutError extends Error {}
+export type Layer = SingleLayer | SplitLayer
+
+export interface SplitLayer {
+  left: SingleLayer
+  right: SingleLayer
+}
+
+export interface SingleLayer {
+  rows: LayerRow[]
+}
+
+export type LayerRow = Array<LayerCell | null>
+
+export interface LayerCell {
+  mapping: string
+}
+
+export class LayoutError extends Error {
+  constructor(msg: string, lineNr?: number) {
+    super(`Error at line #${lineNr}: ${msg}`)
+  }
+}
