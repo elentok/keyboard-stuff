@@ -1,5 +1,5 @@
 import { isNotCommentOrBlank } from "./helpers.ts"
-import { Cell, LayoutError, SingleStructure, Structure } from "./types.ts"
+import { LayoutError, SingleStructure, Structure, StructureCell } from "./types.ts"
 
 export function parseStructure(lines: string[]): Structure {
   const presentLines = lines.filter(isNotCommentOrBlank)
@@ -35,7 +35,7 @@ function parseSingleStructure(presentLines: string[]): SingleStructure {
   const columns = countColumns(presentLines)
 
   for (const line of presentLines) {
-    const row: Array<Cell | null> = []
+    const row: Array<StructureCell | null> = []
     for (let i = 0; i < columns; i++) {
       const value = line.substring(i * 3, i * 3 + 3).trim()
       if (value.length === 0) {

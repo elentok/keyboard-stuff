@@ -10,12 +10,12 @@ export interface SplitStructure {
 }
 
 export interface SingleStructure {
-  rows: Row[]
+  rows: StructureRow[]
 }
 
-export type Row = Array<Cell | null>
+export type StructureRow = Array<StructureCell | null>
 
-export interface Cell {
+export interface StructureCell {
   keyIndex: number
 }
 
