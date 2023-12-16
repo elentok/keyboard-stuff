@@ -33,7 +33,7 @@ Deno.test(function testFindBlocks() {
   ])
 })
 
-Deno.test(function testParseStructure() {
+Deno.test(function testParseStructure_SingleStructure() {
   assertEquals(
     parseStructure([
       "11 12 13 14 15",
@@ -65,6 +65,30 @@ Deno.test(function testParseStructure() {
           { keyIndex: 7 },
         ],
       ],
+    },
+  )
+})
+
+Deno.test(function testParseStructure_SplitStructure() {
+  assertEquals(
+    parseStructure([
+      "11 12 13 | 16 17 18",
+      "19     1 |  2  3",
+      "",
+    ]),
+    {
+      left: {
+        rows: [
+          [{ keyIndex: 11 }, { keyIndex: 12 }, { keyIndex: 13 }],
+          [{ keyIndex: 19 }, null, { keyIndex: 1 }],
+        ],
+      },
+      right: {
+        rows: [
+          [{ keyIndex: 16 }, { keyIndex: 17 }, { keyIndex: 18 }],
+          [{ keyIndex: 2 }, { keyIndex: 3 }, null],
+        ],
+      },
     },
   )
 })

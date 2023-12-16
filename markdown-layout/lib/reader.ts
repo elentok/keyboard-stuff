@@ -1,4 +1,4 @@
-import { Cell, Layout, SingleStructure } from "./types.ts"
+import { Cell, Layout, SingleStructure, Structure } from "./types.ts"
 
 class LayoutError extends Error {}
 
@@ -45,18 +45,40 @@ export function findBlocks(lines: string[]): Block[] {
   return blocks
 }
 
-export function parseStructure(lines: string[]): SingleStructure {
+export function parseStructure(lines: string[]): Structure {
+  const presentLines = lines.filter(isNotCommentOrBlank)
+
+  const isSplitStructure = presentLines.some((line) => line.includes("|"))
+  if (isSplitStructure) {
+    const splitLines = presentLines.map((line) => {
+      const halfs = line.split(" | ")
+      if (halfs.length !== 2) {
+        throw new LayoutError(`Invalid split keyboard structure line: '${line}'`)
+      }
+      return halfs
+    })
+    const leftLines = splitLines.map((halfs) => halfs[0])
+    const rightLines = splitLines.map((halfs) => halfs[1])
+    return {
+      left: parseSingleStructure(leftLines),
+      right: parseSingleStructure(rightLines),
+    }
+  } else {
+    return parseSingleStructure(presentLines)
+  }
+}
+
+function parseSingleStructure(presentLines: string[]): SingleStructure {
   const s: SingleStructure = { rows: [] }
 
-  const validLines = lines.filter(isNotCommentOrBlank)
-  for (const line of validLines) {
+  for (const line of presentLines) {
     if (!isStructureLineValid(line)) {
       throw new LayoutError(`Invalid structure line: '${line}'`)
     }
   }
-  const columns = countColumns(validLines)
+  const columns = countColumns(presentLines)
 
-  for (const line of validLines) {
+  for (const line of presentLines) {
     const row: Array<Cell | null> = []
     for (let i = 0; i < columns; i++) {
       const value = line.substring(i * 3, i * 3 + 3).trim()
