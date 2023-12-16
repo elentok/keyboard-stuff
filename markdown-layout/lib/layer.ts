@@ -1,4 +1,4 @@
-import { isNotCommentOrBlank, splitLinesForSplitKeyboard } from "./helpers.ts"
+import { isNotCommentOrBlank, maxLayerColWidth, splitLinesForSplitKeyboard } from "./helpers.ts"
 import { Layer, LayerRow, LayoutError, SingleLayer, SingleStructure, Structure } from "./types.ts"
 
 export function parseLayer(name: string, lines: string[], structure: Structure): Layer {
@@ -46,4 +46,48 @@ function parseSingleLayer(name: string, lines: string[], structure: SingleStruct
   })
 
   return { rows: layerRows }
+}
+
+export function stringifyLayer(layer: Layer, structure: Structure): string[] {
+  const lines: string[] = []
+  const colWidth = maxLayerColWidth(layer)
+
+  if ("left" in layer && "left" in structure) {
+    for (let rowIndex = 0; rowIndex < structure.left.rows.length; rowIndex++) {
+      const leftRow = structure.left.rows[rowIndex]
+      const rightRow = structure.right.rows[rowIndex]
+
+      const rowParts: string[] = []
+
+      for (let colIndex = 0; colIndex < leftRow.length; colIndex++) {
+        const cell = layer.left.rows[rowIndex][colIndex]
+        rowParts.push((cell?.mapping ?? "").padEnd(colWidth))
+      }
+
+      rowParts.push("||")
+
+      for (let colIndex = 0; colIndex < rightRow.length; colIndex++) {
+        const cell = layer.right.rows[rowIndex][colIndex]
+        rowParts.push((cell?.mapping ?? "").padEnd(colWidth))
+      }
+
+      lines.push(rowParts.join(" ").trimEnd())
+    }
+  } else if ("rows" in layer && "rows" in structure) {
+    for (let rowIndex = 0; rowIndex < structure.rows.length; rowIndex++) {
+      const row = structure.rows[rowIndex]
+
+      const rowParts: string[] = []
+
+      for (let colIndex = 0; colIndex < row.length; colIndex++) {
+        const cell = layer.rows[rowIndex][colIndex]
+        rowParts.push((cell?.mapping ?? "").padEnd(colWidth))
+      }
+
+      lines.push(rowParts.join(" ").trimEnd())
+    }
+  } else {
+    throw new Error("Invalid input, got a non-matching pair of single/split layer/structure")
+  }
+  return lines
 }
