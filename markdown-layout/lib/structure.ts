@@ -4,10 +4,10 @@ import { LayoutError, SingleStructure, Structure, StructureCell } from "./types.
 export function parseStructure(lines: string[]): Structure {
   const presentLines = lines.filter(isNotCommentOrBlank)
 
-  const isSplitStructure = presentLines.some((line) => line.includes("|"))
+  const isSplitStructure = presentLines.some((line) => line.includes("||"))
   if (isSplitStructure) {
     const splitLines = presentLines.map((line) => {
-      const halfs = line.split(" | ")
+      const halfs = line.split(" || ")
       if (halfs.length !== 2) {
         throw new LayoutError(`Invalid split keyboard structure line: '${line}'`)
       }

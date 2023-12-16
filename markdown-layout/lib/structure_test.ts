@@ -40,8 +40,8 @@ Deno.test(function testParseStructure_SingleStructure() {
 Deno.test(function testParseStructure_SplitStructure() {
   assertEquals(
     parseStructure([
-      "11 12 13 | 16 17 18",
-      "19     1 |  2  3",
+      "11 12 13 || 16 17 18",
+      "19     1 ||  2  3",
       "",
     ]),
     {
