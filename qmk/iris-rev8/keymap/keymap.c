@@ -198,7 +198,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (!process_achordion(keycode, record)) { return false; }
+  // if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
     case EC_VI_C:
@@ -303,6 +303,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 
-void matrix_scan_user(void) {
-  achordion_task();
-}
+// void matrix_scan_user(void) {
+//   achordion_task();
+// }
+
