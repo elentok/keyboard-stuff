@@ -3,6 +3,7 @@
 
 #include QMK_KEYBOARD_H
 #include "elentok.h"
+#include "features/achordion.h"
 
 // less bright version
 #define HSV_CYAN1       128, 255, 100
@@ -197,6 +198,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (!process_achordion(keycode, record)) { return false; }
+
   switch (keycode) {
     case EC_VI_C:
       if (!record->event.pressed) {
@@ -298,4 +301,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   }
 
   return state;
+}
+
+void matrix_scan_user(void) {
+  achordion_task();
 }
