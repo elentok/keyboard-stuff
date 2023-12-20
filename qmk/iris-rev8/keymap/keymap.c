@@ -2,8 +2,9 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
-#include "elentok.h"
-#include "iris-layout.h"
+// #include "elentok.h"
+#include "generated-layout.h"
+// #include "iris-layout.h"
 // #include "features/achordion.h"
 
 // less bright version
@@ -31,45 +32,45 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
-    case EC_VI_C:
-      if (!record->event.pressed) {
-        SEND_STRING(SS_TAP(X_DEL));
-        layer_move(L1);
-      }
-      break;
-    case EC_VI_X:
-      if (!record->event.pressed) {
-        SEND_STRING(SS_LGUI("x"));
-        layer_move(L3);
-      }
-      break;
-    case EC_VI_O:
-      if (!record->event.pressed) {
-        // SEND_STRING(SS_TAP(X_ENT));
-        SEND_STRING("\n");
-        layer_move(L1);
-      }
-      break;
-    case EC_VI_Y: // yank
-      if (!record->event.pressed) {
-        // SEND_STRING(SS_TAP(X_ENT));
-        SEND_STRING(SS_LGUI("c"));
-        layer_move(L3);
-      }
-      break;
-    case EC_ALFRED:
-      if (!record->event.pressed) {
-        SEND_STRING(SS_LGUI(" "));
-        layer_move(L1);
-      }
-      break;
-    case EC_WIN:
-      if (record->event.pressed) {
-        SEND_STRING(SS_DOWN(X_LGUI) SS_TAP(X_TAB));
-      } else {
-        SEND_STRING(SS_UP(X_LGUI));
-      }
-      break;
+    // case EC_VI_C:
+    //   if (!record->event.pressed) {
+    //     SEND_STRING(SS_TAP(X_DEL));
+    //     layer_move(L1);
+    //   }
+    //   break;
+    // case EC_VI_X:
+    //   if (!record->event.pressed) {
+    //     SEND_STRING(SS_LGUI("x"));
+    //     layer_move(L3);
+    //   }
+    //   break;
+    // case EC_VI_O:
+    //   if (!record->event.pressed) {
+    //     // SEND_STRING(SS_TAP(X_ENT));
+    //     SEND_STRING("\n");
+    //     layer_move(L1);
+    //   }
+    //   break;
+    // case EC_VI_Y: // yank
+    //   if (!record->event.pressed) {
+    //     // SEND_STRING(SS_TAP(X_ENT));
+    //     SEND_STRING(SS_LGUI("c"));
+    //     layer_move(L3);
+    //   }
+    //   break;
+    // case EC_ALFRED:
+    //   if (!record->event.pressed) {
+    //     SEND_STRING(SS_LGUI(" "));
+    //     layer_move(L1);
+    //   }
+    //   break;
+    // case EC_WIN:
+    //   if (record->event.pressed) {
+    //     SEND_STRING(SS_DOWN(X_LGUI) SS_TAP(X_TAB));
+    //   } else {
+    //     SEND_STRING(SS_UP(X_LGUI));
+    //   }
+    //   break;
     // case QWERTY:
     //   if (record->event.pressed) {
     //     set_single_persistent_default_layer(_QWERTY);
@@ -110,19 +111,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   switch(get_highest_layer(state)) {
-  case L2:
-    rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
-    break;
-  case L3:
-    rgb_matrix_sethsv_noeeprom(HSV_GREEN);
-    break;
-  case L4:
-    rgb_matrix_sethsv_noeeprom(HSV_PURPLE);
-    break;
-  case VI_VIS:
-    rgb_matrix_sethsv_noeeprom(HSV_BLUE);
-    break;
-  case GAME:
+  // case L2:
+  //   rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
+  //   break;
+  // case L3:
+  //   rgb_matrix_sethsv_noeeprom(HSV_GREEN);
+  //   break;
+  // case L4:
+  //   rgb_matrix_sethsv_noeeprom(HSV_PURPLE);
+  //   break;
+  // case VI_VIS:
+  //   rgb_matrix_sethsv_noeeprom(HSV_BLUE);
+  //   break;
+  case LGAME:
     rgb_matrix_sethsv_noeeprom(HSV_RED);
     break;
   default:

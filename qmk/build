@@ -2,19 +2,11 @@
 
 set -euo pipefail
 
-KEYBOARDS=(
-  keebio/iris/rev8
-  keebio/sinc/rev3
-  keebio/quefrency/rev4
-  annepro2/c18
-  hillside/46/0_1
-)
-
 function main() {
   ./install-symlinks
 
   if [ "${1:-}" == "all" ]; then
-    qmk-compile "${KEYBOARDS[@]}"
+    qmk-compile "$(list-keyboards)"
   else
     kb="$(pick-keyboard "$@")"
     if [ -z "$kb" ]; then
@@ -25,11 +17,24 @@ function main() {
   fi
 }
 
+function list-keyboards() {
+  cut -d, -f2 keyboards.cfg
+}
+
 function qmk-compile() {
   for kb in "$@"; do
+    build-markdown "$kb"
     qmk compile -kb "$kb" -km elentok
     kb_basename="$(echo "$kb" | tr / _)"
     cp -f "$HOME/qmk_firmware/${kb_basename}_elentok".* ./binaries
+  done
+}
+
+function build-markdown() {
+  dir="$(keyboard-dir "$kb")"
+  fd layout.md "$dir" | while read -r file; do
+    echo "- Building markdown file $file"
+    (cd "$(dirname "$file")" && qmkmd build layout.md)
   done
 }
 
@@ -37,10 +42,8 @@ function pick-keyboard() {
   list-keyboards | filter "$@" | fzf-tmux -p --select-1
 }
 
-function list-keyboards() {
-  for kb in "${KEYBOARDS[@]}"; do
-    echo "$kb"
-  done
+function keyboard-dir() {
+  grep ",$1\$" keyboards.cfg | cut -d, -f1
 }
 
 function filter() {
