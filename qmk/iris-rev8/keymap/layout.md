@@ -8,6 +8,10 @@ This is an example for the Iris keyboard.
 layoutFn = LAYOUT
 ```
 
+```aliases
+lock = c+g+q
+```
+
 ## Keyboard Structure
 
 ```structure
@@ -41,7 +45,7 @@ __        __     __     __     __     __        __       || boot bs   ent    hom
 ## Layer: J (when J is held)
 
 ```layer:j
-__        !      @      #      $      5                  ||      __   __     __     __     __     __
+lock      !      @      #      $      5                  ||      __   __     __     __     __     __
 *         `      :      (      )      ~                  ||      __   __     __     __     __     __
 =         _      -      [      ]      $                  ||      __   __     __     __     __     __
 __        |      <      {      }      >         f12      || __   __   __     __     __     __     __
@@ -87,7 +91,3 @@ __   __     __     __      __     __            ||          __  __     __     __
 __   __     __     __      __     __       __   || __       __  __     __     __     __     __
                            __     __       __   || __       __  __
 ```
-
-
-
-
