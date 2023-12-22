@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCTL(LGUI(KC_Q)), KC_EXLM,      KC_AT,        KC_HASH,      KC_DLR,       KC_5,                      /* || */           _______, _______,      _______,         _______,      _______,         _______,
     KC_ASTR,          KC_GRV,       KC_COLN,      KC_LPRN,      KC_RPRN,      KC_TILD,                   /* || */           _______, _______,      _______,         _______,      _______,         _______,
     KC_EQL,           KC_UNDS,      KC_MINS,      KC_LBRC,      KC_RBRC,      KC_DLR,                    /* || */           _______, _______,      _______,         _______,      _______,         _______,
-    _______,          KC_PIPE,      KC_LABK,      KC_LCBR,      KC_RBRC,      KC_RABK,       KC_F12,     /* || */  _______, _______, _______,      _______,         _______,      _______,         _______,
+    _______,          KC_PIPE,      KC_LABK,      KC_LCBR,      KC_RCBR,      KC_RABK,       KC_F12,     /* || */  _______, _______, _______,      _______,         _______,      _______,         _______,
                                                                 _______,      _______,       _______,    /* || */  _______, _______, _______
   ),
   [LV] = LAYOUT(
