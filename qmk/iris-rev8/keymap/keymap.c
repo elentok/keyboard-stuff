@@ -126,6 +126,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   case LGAME:
     rgb_matrix_sethsv_noeeprom(HSV_RED);
     break;
+  case LONE:
+    rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
+    break;
   default:
     rgb_matrix_sethsv_noeeprom(HSV_CYAN1);
     break;
