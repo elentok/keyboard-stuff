@@ -36,8 +36,8 @@ osm(lsft) z      x      lalt/c l(v)/v b         home     || end  n        l(m)/m
 
 ```layer:f
 __        !      @      #      $      boot               ||      ^        &      *       -      =      __
-__        esc    __     __     __     __                 ||      ~        pgdn   s+tab   tab    pgup   __
-__        __     __     __     __     to(game)           ||      left     down   up      right  __     __
+__        esc    __     __     __     __                 ||      _        pgdn   s+tab   tab    pgup   __
+__        __     __     __     __     to(game)           ||      left     down   up      right  $      __
 __        __     __     __     __     __        __       || boot bs       ent    home    end    /      __
                                __     __        __       || __   __       __
 ```
