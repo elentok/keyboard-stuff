@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+qmk flash ./binaries/planck_rev7_elentok.bin

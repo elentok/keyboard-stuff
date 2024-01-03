@@ -30,7 +30,7 @@ ln -sfT "$ROOT/hillside46" "$QMK_ROOT/keyboards/hillside/46"
 ln -sfT "$ROOT/quefrency-rev4" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
 ln -sfT "$ROOT/sinc-rev3" "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"
 ln -sfT "$ROOT/iris-rev8/keymap" "$QMK_ROOT/keyboards/keebio/iris/keymaps/elentok"
-
+ln -sfT "$ROOT/planck-rev7/keymap" "$QMK_ROOT/keyboards/planck/rev7/keymaps/elentok"
 ln -sfT "$ROOT/annepro2/keymap" "$QMK_ROOT/keyboards/annepro2/keymaps/elentok"
 ln -sfT "$ROOT/annepro2/c18-config.h" "$QMK_ROOT/keyboards/annepro2/c18/config.h"
 
