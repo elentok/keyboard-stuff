@@ -38,7 +38,7 @@ osm(lsft) z      x      lalt/c l(v)/v b         home     || end  n        l(m)/m
 __        !      @      #      $      boot               ||      ^        &      *       -      =      __
 __        esc    __     __     __     __                 ||      _        pgdn   s+tab   tab    pgup   __
 __        __     __     __     __     to(game)           ||      left     down   up      right  $      __
-__        __     __     __     __     __        __       || boot bs       ent    home    end    /      __
+__        __     __     __     __     __        __       || boot bs       ent    __      __     __     __
                                __     __        __       || __   __       __
 ```
 
