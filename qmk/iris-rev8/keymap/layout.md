@@ -25,11 +25,11 @@ lock = c+g+q
 ## Base layer
 
 ```layer:base
-tab       1      2      3      4         5             ||     6        7        8       9      0      bs
-osm(lsft) q      w      e      r         t             ||     y        u        i       o      p      osm(rsft)
-osm(lgui) lctl/a lsft/s lgui/d l(f)/f    g             ||     h        l(j)/j   rgui/k  rsft/l rctl/; osm(rgui)
+esc       1      2      3      4         5             ||     6        7        8       9      0      bs
+tab       q      w      e      r         t             ||     y        u        i       o      p      \
+osm(lgui) lctl/a lsft/s lgui/d l(f)/f    g             ||     h        l(j)/j   rgui/k  rsft/l rctl/; '
 osm(lsft) z      x      lalt/c l(v)/v    b         spc || ent n        l(m)/m   lalt/,  .      /      osm(rsft)
-                               osm(lctl) osm(lgui) spc || ent bs       ralt
+                               osm(lctl) osm(lsft) spc || ent bs       ralt
 ```
 
 ## Layer: F (when F is held)
