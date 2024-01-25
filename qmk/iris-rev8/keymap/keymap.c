@@ -141,15 +141,21 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 //   achordion_task();
 // }
 
-const uint16_t PROGMEM test_combo1[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
-const uint16_t PROGMEM test_combo2[] = {LSFT_T(KC_S), LGUI_T(KC_D), COMBO_END};
-const uint16_t PROGMEM test_combo3[] = {LT(LJ, KC_J), RGUI_T(KC_K), COMBO_END};
-const uint16_t PROGMEM test_combo4[] = {RGUI_T(KC_K), RSFT_T(KC_L), COMBO_END};
-const uint16_t PROGMEM test_combo5[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM df_combo[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
+const uint16_t PROGMEM sd_combo[] = {LSFT_T(KC_S), LGUI_T(KC_D), COMBO_END};
+const uint16_t PROGMEM jk_combo[] = {LT(LJ, KC_J), RGUI_T(KC_K), COMBO_END};
+const uint16_t PROGMEM kl_combo[] = {RGUI_T(KC_K), RSFT_T(KC_L), COMBO_END};
+const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM ji_combo[] = {LT(LJ, KC_J), KC_I, COMBO_END};
+const uint16_t PROGMEM jo_combo[] = {LT(LJ, KC_J), KC_O, COMBO_END};
+const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(test_combo1, KC_LBRC),
-    COMBO(test_combo2, LCTL(KC_A)), // keycodes with modifiers are possible too!
-    COMBO(test_combo3, KC_ESC),
-    COMBO(test_combo4, KC_COLON),
-    COMBO(test_combo5, KC_ESC),
+    COMBO(df_combo, KC_LBRC),
+    COMBO(sd_combo, LCTL(KC_A)), // keycodes with modifiers are possible too!
+    COMBO(jk_combo, KC_ESC),
+    COMBO(kl_combo, KC_COLON),
+    COMBO(we_combo, KC_ESC),
+    COMBO(ji_combo, KC_MINS),
+    COMBO(jo_combo, KC_EQL),
+    COMBO(io_combo, KC_UNDS),
 };

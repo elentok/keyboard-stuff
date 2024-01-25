@@ -6,4 +6,4 @@
 // #define QUICK_TAP_TERM 0
 
 #undef COMBO_COUNT
-#define COMBO_COUNT 5
+#define COMBO_COUNT 8
