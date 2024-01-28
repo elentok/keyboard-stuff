@@ -35,7 +35,7 @@ osm(lsft) z      x      lalt/c l(v)/v    b         spc || ent n        l(m)/m   
 ## Layer: F (when F is held)
 
 ```layer:f
-esc       !      @      #      $         boot          ||     ^        &        *       -      =      __
+esc       __     g+s+4  g+s+5  $         boot          ||     ^        &        *       -      =      __
 __        esc    __     __     __        __            ||     _        pgdn     s+tab   tab    pgup   \
 __        __     __     __     __        to(game)      ||     left     down     up      right  $      '
 __        __     __     __     __        __        __  || __  bs       ent      __      __     __     __
@@ -45,7 +45,7 @@ __        __     __     __     __        __        __  || __  bs       ent      
 ## Layer: J (when J is held)
 
 ```layer:j
-esc       !      @      #      $         5             ||     __       __       __      __     __     __
+esc       !      @      #      g+s+4     g+s+5         ||     __       __       __      __     __     __
 *         `      :      (      )         ~             ||     __       __       __      __     __     __
 =         _      -      [      ]         $             ||     to(one)  __       __      __     __     __
 __        |      <      {      }         >         __  || __  __       __       __      __     __     __
