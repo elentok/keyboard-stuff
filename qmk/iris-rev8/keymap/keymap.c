@@ -156,7 +156,7 @@ const uint16_t PROGMEM ji_combo[] = {LT(LJ, KC_J), KC_I, COMBO_END};
 const uint16_t PROGMEM jo_combo[] = {LT(LJ, KC_J), KC_O, COMBO_END};
 const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM comma_dot_io_combo[] = {LALT_T(KC_COMM), KC_DOT, COMBO_END};
+// const uint16_t PROGMEM comma_dot_io_combo[] = {LALT_T(KC_COMM), KC_DOT, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(df_combo, OSM(MOD_LGUI)),
     COMBO(fg_combo, KC_DLR),
@@ -173,5 +173,5 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(jo_combo, KC_EQL),
     COMBO(io_combo, KC_UNDS),
     COMBO(ui_combo, LGUI(KC_1)),
-    COMBO(comma_dot_io_combo, LGUI(KC_1)),
+    // COMBO(comma_dot_io_combo, LGUI(KC_1)),
 };
