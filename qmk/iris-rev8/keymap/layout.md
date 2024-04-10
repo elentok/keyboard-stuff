@@ -10,6 +10,7 @@ layoutFn = LAYOUT
 
 ```aliases
 lock = c+g+q
+esc2 = raw(SUPER_ESC)
 ```
 
 ## Keyboard Structure
@@ -25,7 +26,7 @@ lock = c+g+q
 ## Base layer
 
 ```layer:base
-esc       1      2      3      4         5             ||     6        7        8       9      0      bs
+esc2      1      2      3      4         5             ||     6        7        8       9      0      bs
 tab       q      w      e      r         t             ||     y        u        i       o      p      \
 osm(lgui) lctl/a lsft/s lgui/d l(f)/f    g             ||     h        l(j)/j   rgui/k  rsft/l rctl/; '
 osm(lsft) z      x      lalt/c l(v)/v    b         spc || ent n        l(m)/m   lalt/,  .      /      osm(rsft)
@@ -35,8 +36,8 @@ osm(lsft) z      x      lalt/c l(v)/v    b         spc || ent n        l(m)/m   
 ## Layer: F (when F is held)
 
 ```layer:f
-esc       __     g+s+4  g+s+5  $         boot          ||     ^        &        *       -      =      __
-tab       esc    __     __     __        __            ||     _        pgdn     s+tab   tab    pgup   \
+esc2      __     g+s+4  g+s+5  $         boot          ||     ^        &        *       -      =      __
+tab       esc2   __     __     __        __            ||     _        pgdn     s+tab   tab    pgup   \
 __        __     __     __     __        to(game)      ||     left     down     up      right  $      '
 __        __     __     __     __        __        __  || __  bs       ent      __      __     __     __
                                __        __        __  || __  __       f12
@@ -45,7 +46,7 @@ __        __     __     __     __        __        __  || __  bs       ent      
 ## Layer: J (when J is held)
 
 ```layer:j
-esc       !      @      #      g+s+4     g+s+5         ||     __       __       __      __     __     __
+esc2      !      @      #      g+s+4     g+s+5         ||     __       __       __      __     __     __
 tab       `      :      (      )         ~             ||     __       __       __      __     __     __
 =         _      -      [      ]         $             ||     to(one)  __       __      __     __     __
 __        |      <      {      }         >         __  || __  __       __       __      __     __     __
@@ -75,7 +76,7 @@ __        __     __     __     __        __        __  || __  __       __       
 ## Layer: Gaming
 
 ```layer:game
-esc       1      2      3      4         5             ||     6        7        8       9      0      bs
+esc2      1      2      3      4         5             ||     6        7        8       9      0      bs
 tab       q      w      e      r         t             ||     y        u        i       o      p      \
 lgui      a      s      d      f         g             ||     h        j        k       l      ;      '
 lsft      z      x      c      v         b         spc || ent n        m        ,       .      /      rsft
@@ -95,7 +96,7 @@ __        __     __     __     __        __        __  || __  bs       ent      
 ## Experimental layer
 
 ```layer:exp
-esc       !      @      #      g+s+4     g+s+5         ||     __       __       __      __     __     __
+esc2      !      @      #      g+s+4     g+s+5         ||     __       __       __      __     __     __
 __        `      :      (      )         ~             ||     __       __       __      __     __     __
 __        _      -      [      ]         $             ||     left     down     up      right  __     __
 __        |      <      {      }         >         __  || __  bs       ent      home    end    __     __

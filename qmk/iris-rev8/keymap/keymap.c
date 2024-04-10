@@ -3,6 +3,7 @@
 
 #include QMK_KEYBOARD_H
 // #include "elentok.h"
+#include "pre-layout.h"
 #include "generated-layout.h"
 // #include "iris-layout.h"
 // #include "features/achordion.h"
@@ -32,12 +33,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
-    // case EC_VI_C:
-    //   if (!record->event.pressed) {
-    //     SEND_STRING(SS_TAP(X_DEL));
-    //     layer_move(L1);
-    //   }
-    //   break;
+    case SUPER_ESC:
+      if (!record->event.pressed) {
+        reset_oneshot_layer();
+        clear_oneshot_mods();
+        SEND_STRING(SS_TAP(X_ESC));
+      }
+      break;
     // case EC_VI_X:
     //   if (!record->event.pressed) {
     //     SEND_STRING(SS_LGUI("x"));
