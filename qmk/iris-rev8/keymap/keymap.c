@@ -143,7 +143,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 const uint16_t PROGMEM df_combo[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
 // const uint16_t PROGMEM fg_combo[] = {LT(LF, KC_F), KC_G, COMBO_END};
-const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
+// const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM ef_combo[] = {KC_E, LT(LF, KC_F), COMBO_END};
 const uint16_t PROGMEM sd_combo[] = {LSFT_T(KC_S), LGUI_T(KC_D), COMBO_END};
 // const uint16_t PROGMEM sdf_combo[] = {LSFT_T(KC_S), LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
@@ -164,7 +164,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(df_combo, KC_DLR),
     // COMBO(df_combo, OSM(MOD_LGUI)),
     // COMBO(fg_combo, KC_DLR),
-    COMBO(er_combo, KC_LPRN),
+    // COMBO(er_combo, KC_LPRN),
     COMBO(ef_combo, KC_LBRC),
     COMBO(sd_combo, LCTL(KC_A)), // keycodes with modifiers are possible too!
     // COMBO(sdf_combo, LGUI(KC_SPC)),
