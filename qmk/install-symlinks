@@ -27,7 +27,7 @@ fi
 
 ln -sfT "$ROOT/hillside46" "$QMK_ROOT/keyboards/hillside/46"
 
-ln -sfT "$ROOT/quefrency-rev4" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
+ln -sfT "$ROOT/quefrency-rev4/keymap" "$QMK_ROOT/keyboards/keebio/quefrency/keymaps/elentok"
 ln -sfT "$ROOT/sinc-rev3" "$QMK_ROOT/keyboards/keebio/sinc/keymaps/elentok"
 ln -sfT "$ROOT/iris-rev8/keymap" "$QMK_ROOT/keyboards/keebio/iris/keymaps/elentok"
 ln -sfT "$ROOT/planck-rev7/keymap" "$QMK_ROOT/keyboards/planck/rev7/keymaps/elentok"
