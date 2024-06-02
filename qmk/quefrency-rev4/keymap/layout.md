@@ -24,31 +24,31 @@ lock = c+g+q
 ## Base layer
 
 ```layer:base
-f1   esc  || `         1  2    3    4      5   6  || 7    8      9  0         -  =  del       bs   home
-play vol+ || tab       q  w    e    r      t      || y    u      i  o         p  [  ]         \    end
-pscr vol- || osm(lgui) a  s    d    l(f)/f g      || h    l(j)/j k  l         ;  '  ent            pgup
-lock f12  || osm(lsft) z  x    c    v      b      || n    m      ,  .         /     osm(rsft) up   pgdn
-wbak wfwd || osm(lctl) a  lalt lgui        spc __ || ent         a  osm(rctl) __    left      down right
+f1   esc  || `         1  2    3      4      5   6  || 7    8      9  0         -  =  del       bs   home
+play vol+ || tab       q  w    e      r      t      || y    u      i  o         p  [  ]         \    end
+pscr vol- || osm(lgui) a  s    lgui/d l(f)/f g      || h    l(j)/j k  l         ;  '  ent            pgup
+lock f12  || osm(lsft) z  x    c      v      b      || n    m      ,  .         /     osm(rsft) up   pgdn
+wbak wfwd || osm(lctl) a  lalt lgui          spc __ || ent         a  osm(rctl) __    left      down right
 ```
 
 ## Layer: F (when F is held)
 
 ```layer:f
-__   __   || __        __ __   __   __     __  __ || __   __     __ __        __ __ __        __   boot
-__   __   || __        __ __   __   __     __     || __   __     __ __        __ __ __        __   __
-__   __   || __        __ __   __   __     __     || left down   up right     __ __ __             __
-__   __   || __        __ __   __   __     __     || __   __     __ __        __    __        __   __
-__   __   || __        __ __   __          __  __ || __          __ __        __    __        __   __
+__   __   || __        __ __   __     __     __  __ || __   __     __ __        __ __ __        __   boot
+__   __   || __        __ __   __     __     __     || __   __     __ __        __ __ __        __   __
+__   __   || __        __ __   __     __     __     || left down   up right     __ __ __             __
+__   __   || __        __ __   __     __     __     || bs   ent    __ __        __    __        __   __
+__   __   || __        __ __   __            __  __ || __          __ __        __    __        __   __
 ```
 
 ## Layer: J (when J is held)
 
 ```layer:j
-__   __   || __        __ __   __   __     __  __ || __   __     __ __        __ __ __        __   __
-__   __   || __        __ __   (    )      __     || __   __     __ __        __ __ __        __   __
-__   __   || __        __ __   [    ]      __     || __   __     __ __        __ __ __             __
-__   __   || __        __ __   {    }      __     || __   __     __ __        __    __        __   __
-__   __   || __        __ __   __          __  __ || __          __ __        __    __        __   __
+__   __   || __        __ __   __     __     __  __ || __   __     __ __        __ __ __        __   __
+__   __   || __        __ __   (      )      __     || __   __     __ __        __ __ __        __   __
+__   __   || __        __ __   [      ]      __     || __   __     __ __        __ __ __             __
+__   __   || __        __ __   {      }      __     || __   __     __ __        __    __        __   __
+__   __   || __        __ __   __            __  __ || __          __ __        __    __        __   __
 ```
 
 ## Layer template
