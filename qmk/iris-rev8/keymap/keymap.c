@@ -156,11 +156,22 @@ const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM wf_combo[] = {KC_W, LT(LF, KC_F), COMBO_END};
 const uint16_t PROGMEM ji_combo[] = {LT(LJ, KC_J), KC_I, COMBO_END};
 const uint16_t PROGMEM jo_combo[] = {LT(LJ, KC_J), KC_O, COMBO_END};
-const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END};
+// const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM mcommadot_combo[] = {LT(LM, KC_M), LALT_T(KC_COMM), KC_DOT, COMBO_END};
+
+const uint16_t PROGMEM de_combo[] = {LGUI_T(KC_D), KC_E, COMBO_END};
+const uint16_t PROGMEM rf_combo[] = {KC_R, LT(LF, KC_F), COMBO_END};
+
+
+#undef COMBO_COUNT
+#define COMBO_COUNT 14
+
 // const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 // const uint16_t PROGMEM comma_dot_io_combo[] = {LALT_T(KC_COMM), KC_DOT, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
+    COMBO(de_combo, KC_LBRC),
+    COMBO(rf_combo, KC_RBRC),
+
     COMBO(df_combo, KC_DLR),
     // COMBO(df_combo, OSM(MOD_LGUI)),
     // COMBO(fg_combo, KC_DLR),
@@ -170,15 +181,16 @@ combo_t key_combos[COMBO_COUNT] = {
     // COMBO(sdf_combo, LGUI(KC_SPC)),
     // COMBO(sf_combo, LGUI(KC_SPC)),
     COMBO(jk_combo, KC_ESC),
-    COMBO(jl_combo, KC_COLON),
+    COMBO(jl_combo, KC_UNDS),
     COMBO(uio_combo, LCTL(LSFT(LGUI(KC_I)))),
     COMBO(kl_combo, KC_COLON),
     COMBO(we_combo, KC_TILDE),
     COMBO(wf_combo, KC_GRV),
     COMBO(ji_combo, KC_MINS),
     COMBO(jo_combo, KC_EQL),
-    COMBO(io_combo, KC_UNDS),
+    // COMBO(io_combo, KC_UNDS),
     COMBO(mcommadot_combo, LGUI(KC_1)),
     // COMBO(ui_combo, LGUI(KC_1)),
     // COMBO(comma_dot_io_combo, LGUI(KC_1)),
 };
+
