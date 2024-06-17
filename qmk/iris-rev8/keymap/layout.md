@@ -13,20 +13,24 @@ lock = c+g+q
 ```
 
 ```combos
-d+e = [
-r+f = ]
 lgui/d+l(f)/f = $
 e+l(f)/f = [
 lsft/s+lgui/d = c+a
 l(j)/j+rgui/k = esc
+# l(j)/j+rgui/k = osl(j)
 l(j)/j+rsft/l = _
 u+i+o = c+s+g+i
-k+rsft/l = :
+rgui/k+rsft/l = :
 w+e = ~
 w+l(f)/f = `
 l(j)/j+i = -
 l(j)/j+o = =
 l(m)/m+lalt/,+. = g+1
+l(f)/f+r = [
+l(j)/j+u = ]
+rsft/l+rctl/; = right
+# lgui/d+e = [
+# rgui/k+i = ]
 ```
 
 ## Keyboard Structure
