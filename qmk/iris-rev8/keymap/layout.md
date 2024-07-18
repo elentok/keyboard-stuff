@@ -29,6 +29,10 @@ l(m)/m+lalt/,+. = g+1
 l(f)/f+r = [
 l(j)/j+u = ]
 rsft/l+rctl/; = right
+rsft/l+. = right
+rgui/k+lalt/, = up
+l(j)/j+l(m)/m = down
+h+n = left
 # lgui/d+e = [
 # rgui/k+i = ]
 ```
