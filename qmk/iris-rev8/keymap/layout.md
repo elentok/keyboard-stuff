@@ -54,7 +54,7 @@ esc       1      2      3      4         5             ||     6        7        
 tab       q      w      e      r         t             ||     y        u        i       o      p      \
 osm(lgui) lctl/a lsft/s lgui/d l(f)/f    g             ||     h        l(j)/j   rgui/k  rsft/l rctl/; '
 osm(lsft) z      x      lalt/c l(v)/v    b         spc || ent n        l(m)/m   lalt/,  .      /      osm(rsft)
-                               osm(lctl) osm(lsft) spc || ent osl(L1)       ralt
+                               osm(lctl) osl(exp)  spc || ent osl(L1)       ralt
 ```
 
 ## Layer: F (when F is held)
