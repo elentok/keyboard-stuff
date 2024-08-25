@@ -114,7 +114,7 @@ esc       1      2      3      4         5             ||     6        7        
 tab       q      w      e      r         t             ||     y        u        i       o      p      \
 lgui      a      s      d      f         g             ||     h        j        k       l      ;      '
 lsft      z      x      c      v         b         spc || ent n        m        ,       .      /      rsft
-                               lctl      osm(lgui) spc || ent bs       to(base)
+                               lctl      osl(exp)  spc || ent bs       to(base)
 ```
 
 ## Layer one-hand
