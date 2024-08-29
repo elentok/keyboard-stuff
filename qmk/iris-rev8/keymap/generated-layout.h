@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,       KC_GRV,       KC_COLN,          KC_LPRN,          KC_RPRN,          KC_TILD,                    /* || */           _______,       _______,      _______,            _______,      _______,         _______,
     _______,       KC_UNDS,      KC_MINS,          KC_LBRC,          KC_RBRC,          KC_DLR,                     /* || */           KC_LEFT,       KC_DOWN,      KC_UP,              KC_RIGHT,     _______,         _______,
     _______,       KC_PIPE,      KC_LABK,          KC_LCBR,          KC_RCBR,          KC_RABK,          _______,  /* || */  _______, KC_BSPC,       KC_ENT,       KC_HOME,            KC_END,       _______,         _______,
-                                                                     _______,          _______,          _______,  /* || */  _______, _______,       _______
+                                                                     KC_MPLY,          _______,          _______,  /* || */  _______, _______,       _______
   ),
 };
 const uint16_t PROGMEM combo0[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};

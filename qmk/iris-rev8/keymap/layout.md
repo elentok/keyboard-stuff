@@ -134,7 +134,7 @@ esc       !      @      #      g+s+4     g+s+5        ||     __        __       
 __        `      :      (      )         ~            ||     __        __       __      __     __     __
 __        _      -      [      ]         $            ||     left      down     up      right  __     __
 __        |      <      {      }         >        __  || __  bs        ent      home    end    __     __
-                               __        __       __  || __  __        __
+                               play      __       __  || __  __        __
 ```
 
 ## Layer template
