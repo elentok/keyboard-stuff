@@ -2,10 +2,35 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+
 // #include "elentok.h"
-#include "generated-layout.h"
 // #include "iris-layout.h"
 // #include "features/achordion.h"
+
+// SMTD
+
+enum custom_keycodes {
+    SMTD_KEYCODES_BEGIN = SAFE_RANGE,
+    CKC_A, // reads as C(ustom) + KC_A, but you may give any name here
+    CKC_S,
+    CKC_D,
+    CKC_F,
+    SMTD_KEYCODES_END,
+};
+
+// enum custom_keycodes {
+//   SMTD_KEYCODES_BEGIN = SAFE_RANGE,
+//   CKC_A, // reads as C(ustom) + KC_A, but you may give any name here
+//   CKC_S,
+//   CKC_D,
+//   CKC_F,
+//   SMTD_KEYCODES_END,
+// };
+
+
+#include "generated-layout.h"
+#include "sm_td.h"
+
 
 // less bright version
 #define HSV_CYAN1       128, 255, 100
@@ -14,7 +39,7 @@ void keyboard_post_init_user(void) {
   rgb_matrix_enable_noeeprom();
   rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
   rgb_matrix_sethsv_noeeprom(HSV_CYAN1);
-}
+};
 
 // #define _QWERTY 0
 // #define _LOWER 1
@@ -29,6 +54,9 @@ void keyboard_post_init_user(void) {
 // };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (!process_smtd(keycode, record)) {
+      return false;
+  }
   // if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
@@ -193,4 +221,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 //     // COMBO(ui_combo, LGUI(KC_1)),
 //     // COMBO(comma_dot_io_combo, LGUI(KC_1)),
 // };
+
+void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
+    switch (keycode) {
+        SMTD_MT(CKC_A, KC_A, KC_LEFT_CTRL)
+        SMTD_MT(CKC_S, KC_S, KC_LSFT)
+        SMTD_MT(CKC_D, KC_D, KC_LEFT_GUI)
+        SMTD_LT(CKC_F, KC_F, LF)
+    }
+}
 

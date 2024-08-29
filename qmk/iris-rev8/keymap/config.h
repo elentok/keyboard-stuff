@@ -7,3 +7,7 @@
 
 // #define PERMISSIVE_HOLD
 // #define TAPPING_TERM 300
+
+// SMTD
+#define MAX_DEFERRED_EXECUTORS 10
+
