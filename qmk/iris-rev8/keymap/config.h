@@ -9,3 +9,8 @@
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM_PER_KEY
 // #define TAPPING_TERM 300
+
+#define COMBO_TERM 40
+
+#define ACHORDION_STREAK
+
