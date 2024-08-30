@@ -5,7 +5,7 @@
 // #include "elentok.h"
 #include "generated-layout.h"
 // #include "iris-layout.h"
-// #include "features/achordion.h"
+#include "features/achordion.h"
 
 // less bright version
 #define HSV_CYAN1       128, 255, 100
@@ -29,7 +29,7 @@ void keyboard_post_init_user(void) {
 // };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  // if (!process_achordion(keycode, record)) { return false; }
+  if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
     // case EC_VI_C:
@@ -137,9 +137,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 
-// void matrix_scan_user(void) {
-//   achordion_task();
-// }
+void matrix_scan_user(void) {
+  achordion_task();
+}
 
 // const uint16_t PROGMEM df_combo[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
 // // const uint16_t PROGMEM fg_combo[] = {LT(LF, KC_F), KC_G, COMBO_END};
