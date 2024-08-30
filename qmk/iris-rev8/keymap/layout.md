@@ -132,7 +132,7 @@ __        __     __     __     __        __       __  || __  bs        ent      
 ```layer:exp
 esc       !      @      #      g+s+4     g+s+5        ||     boot      __       __      __     __     __
 vol+      `      :      (      )         ~            ||     __        __       __      __     __     __
-play      _      -      [      ]         $            ||     left      down     up      right  __     __
+play      _      -      [      ]         to(game)     ||     left      down     up      right  __     __
 vol-      |      <      {      }         >        __  || __  bs        ent      home    end    __     __
                                play      __       __  || __  __        __
 ```
