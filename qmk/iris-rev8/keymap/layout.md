@@ -70,7 +70,7 @@ __        __     __     __     __        __       __  || __  bs        ent      
 ## Layer: J (when J is held)
 
 ```layer:j
-esc       !      @      #      g+s+4     g+s+5        ||     __        __       __      __     __     __
+esc       !      @      #      g+s+4     g+s+5        ||     boot      __       __      __     __     __
 tab       `      :      (      )         ~            ||     __        __       __      __     __     __
 =         _      -      [      ]         $            ||     to(one)   __       __      __     __     __
 __        |      <      {      }         >        __  || __  __        __       __      __     __     __
@@ -130,10 +130,10 @@ __        __     __     __     __        __       __  || __  bs        ent      
 ## Experimental layer
 
 ```layer:exp
-esc       !      @      #      g+s+4     g+s+5        ||     __        __       __      __     __     __
-__        `      :      (      )         ~            ||     __        __       __      __     __     __
-__        _      -      [      ]         $            ||     left      down     up      right  __     __
-__        |      <      {      }         >        __  || __  bs        ent      home    end    __     __
+esc       !      @      #      g+s+4     g+s+5        ||     boot      __       __      __     __     __
+vol+      `      :      (      )         ~            ||     __        __       __      __     __     __
+play      _      -      [      ]         $            ||     left      down     up      right  __     __
+vol-      |      <      {      }         >        __  || __  bs        ent      home    end    __     __
                                play      __       __  || __  __        __
 ```
 

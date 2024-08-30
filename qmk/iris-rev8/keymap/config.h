@@ -5,5 +5,7 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 // #define QUICK_TAP_TERM 0
 
-// #define PERMISSIVE_HOLD
+#define TAPPING_TERM 175
+#define PERMISSIVE_HOLD
+#define QUICK_TAP_TERM_PER_KEY
 // #define TAPPING_TERM 300

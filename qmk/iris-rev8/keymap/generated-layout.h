@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                      _______,          _______,          _______,  /* || */  _______, _______,       KC_F12
   ),
   [LJ] = LAYOUT(
-    KC_ESC,        KC_EXLM,      KC_AT,            KC_HASH,          LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)),           /* || */           _______,       _______,      _______,            _______,      _______,         _______,
+    KC_ESC,        KC_EXLM,      KC_AT,            KC_HASH,          LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)),           /* || */           QK_BOOT,       _______,      _______,            _______,      _______,         _______,
     KC_TAB,        KC_GRV,       KC_COLN,          KC_LPRN,          KC_RPRN,          KC_TILD,                    /* || */           _______,       _______,      _______,            _______,      _______,         _______,
     KC_EQL,        KC_UNDS,      KC_MINS,          KC_LBRC,          KC_RBRC,          KC_DLR,                     /* || */           TO(LONE),      _______,      _______,            _______,      _______,         _______,
     _______,       KC_PIPE,      KC_LABK,          KC_LCBR,          KC_RCBR,          KC_RABK,          _______,  /* || */  _______, _______,       _______,      _______,            _______,      _______,         _______,
@@ -69,10 +69,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                      _______,          _______,          _______,  /* || */  _______, _______,       TO(LBASE)
   ),
   [LEXP] = LAYOUT(
-    KC_ESC,        KC_EXLM,      KC_AT,            KC_HASH,          LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)),           /* || */           _______,       _______,      _______,            _______,      _______,         _______,
-    _______,       KC_GRV,       KC_COLN,          KC_LPRN,          KC_RPRN,          KC_TILD,                    /* || */           _______,       _______,      _______,            _______,      _______,         _______,
-    _______,       KC_UNDS,      KC_MINS,          KC_LBRC,          KC_RBRC,          KC_DLR,                     /* || */           KC_LEFT,       KC_DOWN,      KC_UP,              KC_RIGHT,     _______,         _______,
-    _______,       KC_PIPE,      KC_LABK,          KC_LCBR,          KC_RCBR,          KC_RABK,          _______,  /* || */  _______, KC_BSPC,       KC_ENT,       KC_HOME,            KC_END,       _______,         _______,
+    KC_ESC,        KC_EXLM,      KC_AT,            KC_HASH,          LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)),           /* || */           QK_BOOT,       _______,      _______,            _______,      _______,         _______,
+    KC_VOLU,       KC_GRV,       KC_COLN,          KC_LPRN,          KC_RPRN,          KC_TILD,                    /* || */           _______,       _______,      _______,            _______,      _______,         _______,
+    KC_MPLY,       KC_UNDS,      KC_MINS,          KC_LBRC,          KC_RBRC,          KC_DLR,                     /* || */           KC_LEFT,       KC_DOWN,      KC_UP,              KC_RIGHT,     _______,         _______,
+    KC_VOLD,       KC_PIPE,      KC_LABK,          KC_LCBR,          KC_RCBR,          KC_RABK,          _______,  /* || */  _______, KC_BSPC,       KC_ENT,       KC_HOME,            KC_END,       _______,         _______,
                                                                      KC_MPLY,          _______,          _______,  /* || */  _______, _______,       _______
   ),
 };

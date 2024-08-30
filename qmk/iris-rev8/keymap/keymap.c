@@ -141,6 +141,23 @@ void matrix_scan_user(void) {
   achordion_task();
 }
 
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
+  // If you quickly hold a tap-hold key after tapping it, the tap action is
+  // repeated. Key repeating is useful e.g. for Vim navigation keys, but can
+  // lead to missed triggers in fast typing. Here, returning 0 means we
+  // instead want to "force hold" and disable key repeating.
+  switch (keycode) {
+    case KC_N:
+    // Repeating is useful for Vim navigation keys.
+    case LT(LJ, KC_J):
+    case RGUI_T(KC_K):
+    case RSFT_T(KC_L):
+      return QUICK_TAP_TERM;  // Enable key repeating.
+    default:
+      return 0;  // Otherwise, force hold and disable key repeating.
+  }
+}
+
 // const uint16_t PROGMEM df_combo[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
 // // const uint16_t PROGMEM fg_combo[] = {LT(LF, KC_F), KC_G, COMBO_END};
 // // const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
