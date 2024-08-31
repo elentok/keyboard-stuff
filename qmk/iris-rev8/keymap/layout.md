@@ -130,7 +130,7 @@ __        __     __     __     __        __       __  || __  bs        ent      
 ## Experimental layer
 
 ```layer:exp
-esc       !      @      #      g+s+4     g+s+5        ||     boot      __       __      __     __     __
+lock      !      @      #      g+s+4     boot         ||     boot      __       __      __     __     __
 vol+      `      :      (      )         ~            ||     __        __       __      __     __     __
 play      _      -      [      ]         to(game)     ||     left      down     up      right  __     __
 vol-      |      <      {      }         >        __  || __  bs        ent      home    end    __     __
