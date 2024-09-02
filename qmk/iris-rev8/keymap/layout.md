@@ -67,10 +67,10 @@ osm(lsft) z      x       lalt/c l(v)/v    b        spc || ent n         l(m)/m  
 ## Layer: F (when F is held)
 
 ```layer:f
-esc       __     g+s+4   g+s+5  $         boot         ||     ^         &        *       -     =      __
-tab       esc    __      __     __        __           ||     _         -        s+tab   tab   pgup   \
-__        __     lgui    __     __        to(game)     ||     left      down     up      right $      '
-__        __     __      __     __        __       __  || __  bs        ent      __      __    __     __
+__        __     g+s+4   g+s+5  $         boot         ||     ^         &        *       -     =      __
+__        lalt   lsft    __     __        __           ||     _         -        s+tab   tab   pgup   \
+__        lctl   lgui    __     __        to(game)     ||     left      down     up      right $      '
+__        __     __      __     __        __       __  || __  __        bs       ent     __    __     __
                                 __        __       __  || __  __        f12
 ```
 
@@ -78,8 +78,8 @@ __        __     __      __     __        __       __  || __  bs        ent     
 
 ```layer:j
 esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
-tab       `      :       (      )         ~            ||     __        __       __      __    __     __
-=         _      -       [      ]         $            ||     to(one)   __       __      __    __     __
+tab       `      :       (      )         ~            ||     __        __       __      rsft  lalt   __
+=         _      -       [      ]         $            ||     to(one)   __       __      rgui  rctl   __
 __        |      <       {      }         >        __  || __  __        __       __      __    __     __
                                 __        __       __  || __  __        __
 ```
@@ -89,8 +89,8 @@ __        |      <       {      }         >        __  || __  __        __      
 ```layer:v
 __        __     __      __     __        __           ||     __        __       *       __    __     __
 __        __     vol+    __     __        __           ||     +         7        8       9     =      __
-__        c+a    __      play   __        __           ||     -         4        5       6     0      /
-__        __     vol-    __     __        __       __  || __  0         1        2       3     .      __
+__        c+a    lgui    play   __        __           ||     -         4        5       6     0      /
+__        __     lsft    __     __        __       __  || __  0         1        2       3     .      __
                                 __        __       __  || __  __        ,
 ```
 
@@ -137,10 +137,10 @@ __        __     __      __     __        __       __  || __  bs        ent     
 ## Experimental layer
 
 ```layer:exp
-lock      !      @       #      g+s+4     boot         ||     boot      __       __      __    __     __
+lock      !      g+tab   #      g+s+4     boot         ||     boot      __       __      __    __     __
 vol+      `      :       (      )         ~            ||     __        __       __      __    __     __
 play      _      -       [      ]         to(game)     ||     left      down     up      right __     __
-vol-      |      <       {      }         >        __  || __  bs        ent      home    end   __     __
+vol-      |      <       g+c    g+v       >        __  || __  bs        ent      home    end   __     __
                                 play      __       __  || __  __        __
 ```
 
