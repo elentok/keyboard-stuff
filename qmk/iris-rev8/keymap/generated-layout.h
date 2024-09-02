@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LBASE] = LAYOUT(
     KC_ESC,           KC_1,         KC_2,               KC_3,             KC_4,             KC_5,                       /* || */           KC_6,          KC_7,         KC_8,               KC_9,         KC_0,            KC_BSPC,
     KC_TAB,           KC_Q,         KC_W,               KC_E,             KC_R,             KC_T,                       /* || */           KC_Y,          KC_U,         KC_I,               KC_O,         KC_P,            KC_BSLS,
-    OSM(MOD_LGUI),    LCTL_T(KC_A), KC_S,               LGUI_T(KC_D),     LT(LF, KC_F),     KC_G,                       /* || */           KC_H,          LT(LJ, KC_J), RGUI_T(KC_K),       KC_L,         RCTL_T(KC_SCLN), KC_QUOT,
+    OSM(MOD_LGUI),    LCTL_T(KC_A), KC_S,               KC_D,             KC_F,             KC_G,                       /* || */           KC_H,          KC_J,         KC_K,               KC_L,         RCTL_T(KC_SCLN), KC_QUOT,
     OSM(MOD_LSFT),    KC_Z,         KC_X,               LALT_T(KC_C),     LT(LV, KC_V),     KC_B,             KC_SPC,   /* || */  KC_ENT,  KC_N,          LT(LM, KC_M), LALT_T(KC_COMM),    KC_DOT,       KC_SLSH,         OSM(MOD_RSFT),
                                                                           OSM(MOD_LCTL),    OSL(LEXP),        KC_SPC,   /* || */  KC_ENT,  OSM(MOD_RSFT), KC_RALT
   ),
@@ -76,27 +76,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                           KC_MPLY,          _______,          _______,  /* || */  _______, _______,       _______
   ),
 };
-const uint16_t PROGMEM combo0[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
-const uint16_t PROGMEM combo1[] = {KC_E, LT(LF, KC_F), COMBO_END};
-const uint16_t PROGMEM combo2[] = {LSFT_T(KC_S), LGUI_T(KC_D), COMBO_END};
-const uint16_t PROGMEM combo3[] = {LT(LJ, KC_J), RSFT_T(KC_L), COMBO_END};
+const uint16_t PROGMEM combo0[] = {KC_D, KC_F, COMBO_END};
+const uint16_t PROGMEM combo1[] = {KC_E, KC_F, COMBO_END};
+const uint16_t PROGMEM combo2[] = {LSFT_T(KC_S), KC_D, COMBO_END};
+const uint16_t PROGMEM combo3[] = {KC_J, RSFT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM combo4[] = {KC_U, KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM combo5[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM combo6[] = {KC_W, LT(LF, KC_F), COMBO_END};
-const uint16_t PROGMEM combo7[] = {LT(LJ, KC_J), KC_I, COMBO_END};
-const uint16_t PROGMEM combo8[] = {LT(LJ, KC_J), KC_O, COMBO_END};
+const uint16_t PROGMEM combo6[] = {KC_W, KC_F, COMBO_END};
+const uint16_t PROGMEM combo7[] = {KC_J, KC_I, COMBO_END};
+const uint16_t PROGMEM combo8[] = {KC_J, KC_O, COMBO_END};
 const uint16_t PROGMEM combo9[] = {LT(LM, KC_M), LALT_T(KC_COMM), KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo10[] = {LT(LF, KC_F), KC_R, COMBO_END};
-const uint16_t PROGMEM combo11[] = {LT(LJ, KC_J), KC_U, COMBO_END};
+const uint16_t PROGMEM combo10[] = {KC_F, KC_R, COMBO_END};
+const uint16_t PROGMEM combo11[] = {KC_J, KC_U, COMBO_END};
 const uint16_t PROGMEM combo12[] = {RSFT_T(KC_L), RCTL_T(KC_SCLN), COMBO_END};
 const uint16_t PROGMEM combo13[] = {RSFT_T(KC_L), KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo14[] = {RGUI_T(KC_K), LALT_T(KC_COMM), COMBO_END};
-const uint16_t PROGMEM combo15[] = {LT(LJ, KC_J), LT(LM, KC_M), COMBO_END};
+const uint16_t PROGMEM combo14[] = {KC_K, LALT_T(KC_COMM), COMBO_END};
+const uint16_t PROGMEM combo15[] = {KC_J, LT(LM, KC_M), COMBO_END};
 const uint16_t PROGMEM combo16[] = {KC_H, KC_N, COMBO_END};
-const uint16_t PROGMEM combo17[] = {RGUI_T(KC_K), KC_L, COMBO_END};
-const uint16_t PROGMEM combo18[] = {KC_S, LGUI_T(KC_D), COMBO_END};
-const uint16_t PROGMEM combo19[] = {LT(LJ, KC_J), RGUI_T(KC_K), COMBO_END};
-const uint16_t PROGMEM combo20[] = {LGUI_T(KC_D), LT(LF, KC_F), COMBO_END};
+const uint16_t PROGMEM combo17[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM combo18[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM combo19[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo20[] = {KC_D, KC_F, COMBO_END};
 const uint16_t PROGMEM combo21[] = {LALT_T(KC_C), LT(LV, KC_V), COMBO_END};
 
 combo_t key_combos[22] = {

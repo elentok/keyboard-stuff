@@ -10,37 +10,41 @@ layoutFn = LAYOUT
 
 ```aliases
 lock = c+g+q
+hf = f
+hj = j
+hk = k
+hd = d
 ```
 
 ```combos
-lgui/d+l(f)/f = $
-# e+l(f)/f = [
-e+l(f)/f = osm(lgui)
-lsft/s+lgui/d = c+a
-# l(j)/j+rgui/k = esc
-# l(j)/j+rgui/k = osl(j)
-l(j)/j+rsft/l = _
+hd+hf = $
+# e+hf = [
+e+hf = osm(lgui)
+lsft/s+hd = c+a
+# hj+hk = esc
+# hj+hk = osl(j)
+hj+rsft/l = _
 u+i+o = c+s+g+i
-# rgui/k+rsft/l = :
+# hk+rsft/l = :
 w+e = ~
-w+l(f)/f = `
-# l(j)/j+i = -
-l(j)/j+i = osm(rgui)
-l(j)/j+o = =
+w+hf = `
+# hj+i = -
+hj+i = osm(rgui)
+hj+o = =
 l(m)/m+lalt/,+. = g+1
-l(f)/f+r = [
-l(j)/j+u = ]
+hf+r = [
+hj+u = ]
 rsft/l+rctl/; = right
 rsft/l+. = right
-rgui/k+lalt/, = up
-l(j)/j+l(m)/m = down
+hk+lalt/, = up
+hj+l(m)/m = down
 h+n = left
-# lgui/d+e = [
-# rgui/k+i = ]
-rgui/k+l = osm(rsft)
-s+lgui/d = osm(lsft)
-l(j)/j+rgui/k = osl(j)
-lgui/d+l(f)/f = osl(f)
+# hd+e = [
+# hk+i = ]
+hk+l = osm(rsft)
+s+hd = osm(lsft)
+hj+hk = osl(j)
+hd+hf = osl(f)
 lalt/c+l(v)/v = osl(v)
 ```
 
@@ -59,7 +63,7 @@ lalt/c+l(v)/v = osl(v)
 ```layer:base
 esc       1      2       3      4         5            ||     6         7        8       9     0      bs
 tab       q      w       e      r         t            ||     y         u        i       o     p      \
-osm(lgui) lctl/a s       lgui/d l(f)/f    g            ||     h         l(j)/j   rgui/k  l     rctl/; '
+osm(lgui) lctl/a s       hd     hf        g            ||     h         hj       hk      l     rctl/; '
 osm(lsft) z      x       lalt/c l(v)/v    b        spc || ent n         l(m)/m   lalt/,  .     /      osm(rsft)
                                 osm(lctl) osl(exp) spc || ent osm(rsft) ralt
 ```
