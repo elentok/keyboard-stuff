@@ -14,16 +14,18 @@ lock = c+g+q
 
 ```combos
 lgui/d+l(f)/f = $
-e+l(f)/f = [
+# e+l(f)/f = [
+e+l(f)/f = osm(lgui)
 lsft/s+lgui/d = c+a
 # l(j)/j+rgui/k = esc
 # l(j)/j+rgui/k = osl(j)
 l(j)/j+rsft/l = _
 u+i+o = c+s+g+i
-rgui/k+rsft/l = :
+# rgui/k+rsft/l = :
 w+e = ~
 w+l(f)/f = `
-l(j)/j+i = -
+# l(j)/j+i = -
+l(j)/j+i = osm(rgui)
 l(j)/j+o = =
 l(m)/m+lalt/,+. = g+1
 l(f)/f+r = [
@@ -35,6 +37,11 @@ l(j)/j+l(m)/m = down
 h+n = left
 # lgui/d+e = [
 # rgui/k+i = ]
+rgui/k+l = osm(rsft)
+s+lgui/d = osm(lsft)
+l(j)/j+rgui/k = osl(j)
+lgui/d+l(f)/f = osl(f)
+lalt/c+l(v)/v = osl(v)
 ```
 
 ## Keyboard Structure
@@ -50,91 +57,91 @@ h+n = left
 ## Base layer
 
 ```layer:base
-esc       1      2      3      4         5            ||     6         7        8       9      0      bs
-tab       q      w      e      r         t            ||     y         u        i       o      p      \
-osm(lgui) lctl/a lsft/s lgui/d l(f)/f    g            ||     h         l(j)/j   rgui/k  rsft/l rctl/; '
-osm(lsft) z      x      lalt/c l(v)/v    b        spc || ent n         l(m)/m   lalt/,  .      /      osm(rsft)
-                               osm(lctl) osl(exp) spc || ent osm(rsft) ralt
+esc       1      2       3      4         5            ||     6         7        8       9     0      bs
+tab       q      w       e      r         t            ||     y         u        i       o     p      \
+osm(lgui) lctl/a s       lgui/d l(f)/f    g            ||     h         l(j)/j   rgui/k  l     rctl/; '
+osm(lsft) z      x       lalt/c l(v)/v    b        spc || ent n         l(m)/m   lalt/,  .     /      osm(rsft)
+                                osm(lctl) osl(exp) spc || ent osm(rsft) ralt
 ```
 
 ## Layer: F (when F is held)
 
 ```layer:f
-esc       __     g+s+4  g+s+5  $         boot         ||     ^         &        *       -      =      __
-tab       esc    __     __     __        __           ||     _         pgdn     s+tab   tab    pgup   \
-__        __     __     __     __        to(game)     ||     left      down     up      right  $      '
-__        __     __     __     __        __       __  || __  bs        ent      __      __     __     __
-                               __        __       __  || __  __        f12
+esc       __     g+s+4   g+s+5  $         boot         ||     ^         &        *       -     =      __
+tab       esc    __      __     __        __           ||     _         -        s+tab   tab   pgup   \
+__        __     lgui    __     __        to(game)     ||     left      down     up      right $      '
+__        __     __      __     __        __       __  || __  bs        ent      __      __    __     __
+                                __        __       __  || __  __        f12
 ```
 
 ## Layer: J (when J is held)
 
 ```layer:j
-esc       !      @      #      g+s+4     g+s+5        ||     boot      __       __      __     __     __
-tab       `      :      (      )         ~            ||     __        __       __      __     __     __
-=         _      -      [      ]         $            ||     to(one)   __       __      __     __     __
-__        |      <      {      }         >        __  || __  __        __       __      __     __     __
-                               __        __       __  || __  __        __
+esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
+tab       `      :       (      )         ~            ||     __        __       __      __    __     __
+=         _      -       [      ]         $            ||     to(one)   __       __      __    __     __
+__        |      <       {      }         >        __  || __  __        __       __      __    __     __
+                                __        __       __  || __  __        __
 ```
 
 ## Layer: V (when V is held)
 
 ```layer:v
-__        __     __     __     __        __           ||     __        __       *       __     __     __
-__        __     vol+   __     __        __           ||     +         7        8       9      =      __
-__        c+a    __     play   __        __           ||     -         4        5       6      0      /
-__        __     vol-   __     __        __       __  || __  0         1        2       3      .      __
-                               __        __       __  || __  __        ,
+__        __     __      __     __        __           ||     __        __       *       __    __     __
+__        __     vol+    __     __        __           ||     +         7        8       9     =      __
+__        c+a    __      play   __        __           ||     -         4        5       6     0      /
+__        __     vol-    __     __        __       __  || __  0         1        2       3     .      __
+                                __        __       __  || __  __        ,
 ```
 
 ## Layer: M (when M is held)
 
 ```layer:m
-__        __     __     __     __        __           ||     __        __       __      __     __     __
-__        __     __     __     __        __           ||     __        __       __      vol+   __     __
-__        __     __     __     __        __           ||     __        __       __      play   __     __
-__        __     __     __     __        __       __  || __  __        __       __      vol-   __     __
-                               __        __       __  || __  __        __
+__        __     __      __     __        __           ||     __        __       __      __    __     __
+__        __     __      __     __        __           ||     __        __       __      vol+  __     __
+__        __     __      __     __        __           ||     __        __       __      play  __     __
+__        __     __      __     __        __       __  || __  __        __       __      vol-  __     __
+                                __        __       __  || __  __        __
 ```
 
 ## Layer: L1
 
 ```layer:L1
-esc       !      @      #      g+s+4     g+s+5        ||     __        __       __      __     __     __
-tab       `      :      (      )         ~            ||     __        __       __      __     __     __
-=         _      -      [      ]         $            ||     to(one)   __       __      __     __     __
-__        |      <      {      }         >        __  || __  __        __       __      __     __     __
-                               __        __       __  || __  __        __
+esc       !      @       #      g+s+4     g+s+5        ||     __        __       __      __    __     __
+tab       `      :       (      )         ~            ||     __        __       __      __    __     __
+=         _      -       [      ]         $            ||     to(one)   __       __      __    __     __
+__        |      <       {      }         >        __  || __  __        __       __      __    __     __
+                                __        __       __  || __  __        __
 ```
 
 ## Layer: Gaming
 
 ```layer:game
-esc       1      2      3      4         5            ||     6         7        8       9      0      bs
-tab       q      w      e      r         t            ||     y         u        i       o      p      \
-lgui      a      s      d      f         g            ||     h         j        k       l      ;      '
-lsft      z      x      c      v         b        spc || ent n         m        ,       .      /      rsft
-                               lctl      osl(exp) spc || ent bs        to(base)
+esc       1      2       3      4         5            ||     6         7        8       9     0      bs
+tab       q      w       e      r         t            ||     y         u        i       o     p      \
+lgui      a      s       d      f         g            ||     h         j        k       l     ;      '
+lsft      z      x       c      v         b        spc || ent n         m        ,       .     /      rsft
+                                lctl      osl(exp) spc || ent bs        to(base)
 ```
 
 ## Layer one-hand
 
 ```layer:one
-__        __     __     __     __        __           ||     __        __       __      __     __     __
-__        __     __     __     __        __           ||     to(base)  pgdn     g+s+tab g+tab  pgup   __
-__        __     __     __     __        __           ||     left      down     up      right  __     __
-__        __     __     __     __        __       __  || __  bs        ent      home    end    /      __
-                               __        __       __  || __  __        to(base)
+__        __     __      __     __        __           ||     __        __       __      __    __     __
+__        __     __      __     __        __           ||     to(base)  pgdn     g+s+tab g+tab pgup   __
+__        __     __      __     __        __           ||     left      down     up      right __     __
+__        __     __      __     __        __       __  || __  bs        ent      home    end   /      __
+                                __        __       __  || __  __        to(base)
 ```
 
 ## Experimental layer
 
 ```layer:exp
-lock      !      @      #      g+s+4     boot         ||     boot      __       __      __     __     __
-vol+      `      :      (      )         ~            ||     __        __       __      __     __     __
-play      _      -      [      ]         to(game)     ||     left      down     up      right  __     __
-vol-      |      <      {      }         >        __  || __  bs        ent      home    end    __     __
-                               play      __       __  || __  __        __
+lock      !      @       #      g+s+4     boot         ||     boot      __       __      __    __     __
+vol+      `      :       (      )         ~            ||     __        __       __      __    __     __
+play      _      -       [      ]         to(game)     ||     left      down     up      right __     __
+vol-      |      <       {      }         >        __  || __  bs        ent      home    end   __     __
+                                play      __       __  || __  __        __
 ```
 
 ## Layer template
