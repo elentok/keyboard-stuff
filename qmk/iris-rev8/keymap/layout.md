@@ -31,6 +31,7 @@ w+hf = `
 # hj+i = -
 hj+i = osm(rgui)
 hj+o = =
+l(m)/m+lalt/, = esc
 l(m)/m+lalt/,+. = g+1
 hf+r = [
 hj+u = ]
@@ -74,18 +75,18 @@ osm(lsft) z      x       lalt/c l(v)/v    b        spc || ent n         l(m)/m  
 __        __     g+s+4   g+s+5  $         boot         ||     ^         &        *       -     =      __
 __        lalt   lsft    __     __        __           ||     _         -        s+tab   tab   pgup   \
 __        lctl   lgui    __     __        to(game)     ||     left      down     up      right $      '
-__        __     __      __     __        __       __  || __  __        bs       ent     __    __     __
-                                __        __       __  || __  __        f12
+__        __     lalt    __     __        __       __  || __  __        bs       ent     __    __     __
+                                __        lalt     __  || __  __        f12
 ```
 
 ## Layer: J (when J is held)
 
 ```layer:j
 esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
-tab       `      :       (      )         ~            ||     __        __       __      rsft  lalt   __
-=         _      -       [      ]         $            ||     to(one)   __       __      rgui  rctl   __
-__        |      <       {      }         >        __  || __  __        __       __      __    __     __
-                                __        __       __  || __  __        __
+tab       `      :       (      )         ~            ||     __        __       __      rsft  ralt   __
+=         _      -       [      ]         $            ||     __        __       __      rgui  rctl   __
+__        |      <       {      }         >        __  || __  __        __       __      __    ralt   __
+                                __        lalt     __  || __  __        __
 ```
 
 ## Layer: V (when V is held)
