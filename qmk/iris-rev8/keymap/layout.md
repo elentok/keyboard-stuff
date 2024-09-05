@@ -29,6 +29,7 @@ u+i+o = c+s+g+i
 w+e = ~
 w+hf = `
 # hj+i = -
+hj+l = -
 hj+i = osm(rgui)
 hj+o = =
 l(m)/m+lalt/, = esc
@@ -69,7 +70,7 @@ osm(lsft) z      x       lalt/c l(v)/v    b        spc || ent n         l(m)/m  
                                 osm(lctl) osl(exp) spc || ent osm(rsft) ralt
 ```
 
-## Layer: F (when F is held)
+## Layer: DF (when DF are held/tapped)
 
 ```layer:f
 __        __     g+s+4   g+s+5  $         boot         ||     ^         &        *       -     =      __
@@ -79,12 +80,12 @@ __        __     lalt    __     __        __       __  || __  __        bs      
                                 __        lalt     __  || __  __        f12
 ```
 
-## Layer: J (when J is held)
+## Layer: JK (when JK are held/tapped)
 
 ```layer:j
 esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
-tab       `      :       (      )         ~            ||     __        __       __      rsft  ralt   __
-=         _      -       [      ]         $            ||     __        __       __      rgui  rctl   __
+tab       `      -       (      )         ~            ||     __        __       __      rsft  ralt   __
+=         _      :       [      ]         $            ||     __        __       __      rgui  rctl   __
 __        |      <       {      }         >        __  || __  __        __       __      __    ralt   __
                                 __        lalt     __  || __  __        __
 ```
@@ -106,16 +107,6 @@ __        __     __      __     __        __           ||     __        __      
 __        __     __      __     __        __           ||     __        __       __      vol+  __     __
 __        __     __      __     __        __           ||     __        __       __      play  __     __
 __        __     __      __     __        __       __  || __  __        __       __      vol-  __     __
-                                __        __       __  || __  __        __
-```
-
-## Layer: L1
-
-```layer:L1
-esc       !      @       #      g+s+4     g+s+5        ||     __        __       __      __    __     __
-tab       `      :       (      )         ~            ||     __        __       __      __    __     __
-=         _      -       [      ]         $            ||     to(one)   __       __      __    __     __
-__        |      <       {      }         >        __  || __  __        __       __      __    __     __
                                 __        __       __  || __  __        __
 ```
 
