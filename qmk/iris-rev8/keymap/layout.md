@@ -32,7 +32,7 @@ w+hf = `
 hj+l = esc
 hj+i = osm(rgui)
 hj+o = =
-m+lalt/,+. = g+1
+m+ralt/,+. = g+1
 hf+r = [
 hj+u = ]
 rsft/l+rctl/; = right
