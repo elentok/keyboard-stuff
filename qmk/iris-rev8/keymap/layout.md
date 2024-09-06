@@ -32,14 +32,13 @@ w+hf = `
 hj+l = esc
 hj+i = osm(rgui)
 hj+o = =
-# l(m)/m+lalt/, = esc
-l(m)/m+lalt/,+. = g+1
+m+lalt/,+. = g+1
 hf+r = [
 hj+u = ]
 rsft/l+rctl/; = right
 rsft/l+. = right
 hk+lalt/, = up
-hj+l(m)/m = down
+hj+m = down
 h+n = left
 # hd+e = [
 # hk+i = ]
@@ -47,7 +46,8 @@ hk+l = osm(rsft)
 s+hd = osm(lsft)
 hj+hk = osl(j)
 hd+hf = osl(f)
-lalt/c+l(v)/v = osl(v)
+lalt/c+v = osl(v)
+ralt/,+. = osl(comdot)
 ```
 
 ## Keyboard Structure
@@ -66,7 +66,7 @@ lalt/c+l(v)/v = osl(v)
 esc       1      2       3      4         5            ||     6         7        8       9     0      bs
 tab       q      w       e      r         t            ||     y         u        i       o     p      \
 osm(lgui) lctl/a s       hd     hf        g            ||     h         hj       hk      l     rctl/; '
-osm(lsft) z      x       lalt/c l(v)/v    b        spc || ent n         l(m)/m   lalt/,  .     /      osm(rsft)
+osm(lsft) z      x       lalt/c v         b        spc || ent n         m        ralt/,  .     /      osm(rsft)
                                 osm(lctl) osl(exp) spc || ent osm(rsft) ralt
 ```
 
@@ -90,7 +90,7 @@ s+tab     =      <       {      }         >        __  || __  __        __      
                                 __        lalt     __  || __  __        __
 ```
 
-## Layer: V (when V is held)
+## Layer: CV (when CV is held)
 
 ```layer:v
 __        __     __      __     __        __           ||     __        __       *       __    __     __
@@ -100,13 +100,13 @@ __        __     lsft    __     __        __       __  || __  0         1       
                                 __        __       __  || __  __        ,
 ```
 
-## Layer: M (when M is held)
+## Layer: COMDOT (when comma and dot are held/tapped)
 
-```layer:m
-__        __     __      __     __        __           ||     __        __       __      __    __     __
-__        __     __      __     __        __           ||     __        __       __      vol+  __     __
-__        __     __      __     __        __           ||     __        __       __      play  __     __
-__        __     __      __     __        __       __  || __  __        __       __      vol-  __     __
+```layer:comdot
+__        f1     f2      f3     f4        f5           ||     __        __       __      __    __     __
+__        __     __      pgup   vol+      __           ||     __        __       __      __    __     __
+__        __     __      pgdn   vol-      __           ||     __        __       __      __    __     __
+__        __     __      __     play      __       __  || __  __        __       __      __    __     __
                                 __        __       __  || __  __        __
 ```
 
