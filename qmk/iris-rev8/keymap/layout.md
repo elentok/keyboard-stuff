@@ -29,10 +29,10 @@ u+i+o = c+s+g+i
 w+e = ~
 w+hf = `
 # hj+i = -
-hj+l = -
+hj+l = esc
 hj+i = osm(rgui)
 hj+o = =
-l(m)/m+lalt/, = esc
+# l(m)/m+lalt/, = esc
 l(m)/m+lalt/,+. = g+1
 hf+r = [
 hj+u = ]
@@ -84,9 +84,9 @@ __        __     lalt    __     __        __       __  || __  __        bs      
 
 ```layer:j
 esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
-tab       `      -       (      )         ~            ||     __        __       __      rsft  ralt   __
-=         _      :       [      ]         $            ||     __        __       __      rgui  rctl   __
-__        |      <       {      }         >        __  || __  __        __       __      __    ralt   __
+tab       `      _       (      )         ~            ||     __        __       __      rsft  ralt   __
+=         -      :       [      ]         $            ||     __        __       __      rgui  rctl   __
+s+tab     =      <       {      }         >        __  || __  __        __       __      __    ralt   __
                                 __        lalt     __  || __  __        __
 ```
 
