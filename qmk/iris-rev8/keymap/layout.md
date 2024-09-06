@@ -48,6 +48,7 @@ hj+hk = osl(j)
 hd+hf = osl(f)
 lalt/c+v = osl(v)
 ralt/,+. = osl(comdot)
+-+( = =
 ```
 
 ## Keyboard Structure
@@ -84,8 +85,8 @@ __        __     lalt    __     __        __       __  || __  __        bs      
 
 ```layer:j
 esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
-tab       `      _       (      )         ~            ||     __        __       __      rsft  ralt   __
-=         -      :       [      ]         $            ||     __        __       __      rgui  rctl   __
+tab       `      -       (      )         ~            ||     __        __       __      rsft  ralt   __
+=         _      :       [      ]         $            ||     __        __       __      rgui  rctl   __
 s+tab     =      <       {      }         >        __  || __  __        __       __      __    ralt   __
                                 __        lalt     __  || __  __        __
 ```
