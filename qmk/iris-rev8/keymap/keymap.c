@@ -211,3 +211,8 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
 //     // COMBO(comma_dot_io_combo, LGUI(KC_1)),
 // };
 
+
+// Disable combos on the gaming layer
+bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+  return !layer_state_is(LGAME);
+}
