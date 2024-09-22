@@ -32,7 +32,7 @@ w+hf = `
 hj+l = esc
 hj+i = osm(rgui)
 hj+o = =
-m+ralt/,+. = g+1
+m+,+. = g+1
 hf+r = [
 hj+u = ]
 rsft/l+rctl/; = right
@@ -46,8 +46,10 @@ hk+l = osm(rsft)
 s+hd = osm(lsft)
 hj+hk = osl(j)
 hd+hf = osl(f)
-lalt/c+v = osl(v)
-ralt/,+. = osl(comdot)
+c+v = osl(v)
+x+c = osm(lalt)
+,+. = osm(ralt)
+# ,+. = osl(comdot)
 -+( = =
 ```
 
@@ -64,81 +66,81 @@ ralt/,+. = osl(comdot)
 ## Base layer
 
 ```layer:base
-esc       1      2       3      4         5            ||     6         7        8       9     0      bs
-tab       q      w       e      r         t            ||     y         u        i       o     p      \
-osm(lgui) lctl/a s       hd     hf        g            ||     h         hj       hk      l     rctl/; '
-osm(lsft) z      x       lalt/c v         b        spc || ent n         m        ralt/,  .     /      osm(rsft)
-                                osm(lctl) osl(exp) spc || ent osm(rsft) ralt
+esc       1      2       3     4         5            ||     6         7        8       9     0      bs
+tab       q      w       e     r         t            ||     y         u        i       o     p      \
+osm(lgui) lctl/a s       hd    hf        g            ||     h         hj       hk      l     rctl/; '
+osm(lsft) z      x       c     v         b        spc || ent n         m        ,       .     /      osm(rsft)
+                               osm(lctl) osl(exp) spc || ent osm(rsft) ralt
 ```
 
 ## Layer: DF (when DF are held/tapped)
 
 ```layer:f
-__        __     g+s+4   g+s+5  $         boot         ||     ^         &        *       -     =      __
-__        lalt   lsft    __     __        __           ||     _         -        s+tab   tab   pgup   \
-__        lctl   lgui    __     __        to(game)     ||     left      down     up      right $      '
-__        __     lalt    __     __        __       __  || __  __        bs       ent     __    __     __
-                                __        lalt     __  || __  __        f12
+__        __     g+s+4   g+s+5 $         boot         ||     ^         &        *       -     =      __
+__        lalt   lsft    __    __        __           ||     _         -        s+tab   tab   pgup   \
+__        lctl   lgui    __    __        to(game)     ||     left      down     up      right $      '
+__        lctl   lalt    __    __        __       __  || __  __        bs       ent     __    __     __
+                               __        lalt     __  || __  __        f12
 ```
 
 ## Layer: JK (when JK are held/tapped)
 
 ```layer:j
-esc       !      g+s+tab g+tab  g+s+4     g+s+5        ||     boot      __       __      __    __     __
-tab       `      -       (      )         ~            ||     __        __       __      rsft  ralt   __
-=         _      :       [      ]         $            ||     __        __       __      rgui  rctl   __
-s+tab     =      <       {      }         >        __  || __  __        __       __      __    ralt   __
-                                __        lalt     __  || __  __        __
+esc       !      g+s+tab g+tab g+s+4     g+s+5        ||     boot      __       __      __    __     __
+tab       `      -       (     )         ~            ||     __        __       __      rsft  ralt   __
+=         _      :       [     ]         $            ||     __        __       __      rgui  rctl   __
+s+tab     =      <       {     }         >        __  || __  __        __       __      __    ralt   __
+                               __        lalt     __  || __  __        __
 ```
 
 ## Layer: CV (when CV is held)
 
 ```layer:v
-__        __     __      __     __        __           ||     __        __       *       __    __     __
-__        __     vol+    __     __        __           ||     +         7        8       9     =      __
-__        c+a    lgui    play   __        __           ||     -         4        5       6     0      /
-__        __     lsft    __     __        __       __  || __  0         1        2       3     .      __
-                                __        __       __  || __  __        ,
+__        __     __      __    __        __           ||     __        __       *       __    __     __
+__        __     vol+    __    __        __           ||     +         7        8       9     =      __
+__        c+a    lgui    play  __        __           ||     -         4        5       6     0      /
+__        __     lsft    __    __        __       __  || __  0         1        2       3     .      __
+                               __        __       __  || __  __        ,
 ```
 
 ## Layer: COMDOT (when comma and dot are held/tapped)
 
 ```layer:comdot
-__        f1     f2      f3     f4        f5           ||     __        __       __      __    __     __
-__        __     __      pgup   vol+      __           ||     __        __       __      __    __     __
-__        __     __      pgdn   vol-      __           ||     __        __       __      __    __     __
-__        __     __      __     play      __       __  || __  __        __       __      __    __     __
-                                __        __       __  || __  __        __
+__        f1     f2      f3    f4        f5           ||     __        __       __      __    __     __
+__        __     __      pgup  vol+      __           ||     __        __       __      __    __     __
+__        __     __      pgdn  vol-      __           ||     __        __       __      __    __     __
+__        __     __      __    play      __       __  || __  __        __       __      __    __     __
+                               __        __       __  || __  __        __
 ```
 
 ## Layer: Gaming
 
 ```layer:game
-esc       1      2       3      4         5            ||     6         7        8       9     0      bs
-tab       q      w       e      r         t            ||     y         u        i       o     p      \
-lgui      a      s       d      f         g            ||     h         j        k       l     ;      '
-lsft      z      x       c      v         b        spc || ent n         m        ,       .     /      rsft
-                                lctl      osl(exp) spc || ent bs        to(base)
+esc       1      2       3     4         5            ||     6         7        8       9     0      bs
+tab       q      w       e     r         t            ||     y         u        i       o     p      \
+lgui      a      s       d     f         g            ||     h         j        k       l     ;      '
+lsft      z      x       c     v         b        spc || ent n         m        ,       .     /      rsft
+                               lctl      osl(exp) spc || ent bs        to(base)
 ```
 
 ## Layer one-hand
 
 ```layer:one
-__        __     __      __     __        __           ||     __        __       __      __    __     __
-__        __     __      __     __        __           ||     to(base)  pgdn     g+s+tab g+tab pgup   __
-__        __     __      __     __        __           ||     left      down     up      right __     __
-__        __     __      __     __        __       __  || __  bs        ent      home    end   /      __
-                                __        __       __  || __  __        to(base)
+__        __     __      __    __        __           ||     __        __       __      __    __     __
+__        __     __      __    __        __           ||     to(base)  pgdn     g+s+tab g+tab pgup   __
+__        __     __      __    __        __           ||     left      down     up      right __     __
+__        __     __      __    __        __       __  || __  bs        ent      home    end   /      __
+                               __        __       __  || __  __        to(base)
 ```
 
 ## Experimental layer
 
 ```layer:exp
-lock      !      g+tab   #      g+s+4     boot         ||     boot      __       __      __    __     __
-vol+      `      :       (      )         ~            ||     __        __       __      __    __     __
-play      _      -       [      ]         to(game)     ||     left      down     up      right __     __
-vol-      |      <       g+c    g+v       >        __  || __  bs        ent      home    end   __     __
-                                play      __       __  || __  __        __
+lock      !      g+tab   #     g+s+4     boot         ||     boot      __       __      __    __     __
+vol+      `      :       (     )         ~            ||     __        __       __      __    __     __
+play      _      -       [     ]         to(game)     ||     left      down     up      right __     __
+vol-      |      <       g+c   g+v       >        __  || __  bs        ent      home    end   __     __
+                               play      __       __  || __  __        __
 ```
 
 ## Layer template
