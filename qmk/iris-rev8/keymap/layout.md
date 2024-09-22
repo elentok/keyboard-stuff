@@ -89,7 +89,7 @@ __        lctl   lalt    __    __        __       __  || __  __        bs       
 esc       !      g+s+tab g+tab g+s+4     g+s+5        ||     boot      __       __      __    __     __
 tab       `      -       (     )         ~            ||     __        __       __      rsft  ralt   __
 =         _      :       [     ]         $            ||     __        __       __      rgui  rctl   __
-s+tab     =      <       {     }         >        __  || __  __        __       __      __    ralt   __
+s+tab     =      <       {     }         >        __  || __  __        __       __      ralt  rctl   __
                                __        lalt     __  || __  __        __
 ```
 
