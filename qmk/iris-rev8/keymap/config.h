@@ -1,4 +1,4 @@
-#define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TAP_TOGGLE 10  /* Tapping this number of times holds the key until tapped once again. */
 // #define TAPPING_TERM 200
 // HOLD_ON_OTHER_KEY_PRESS
 
