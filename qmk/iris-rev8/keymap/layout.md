@@ -51,6 +51,7 @@ x+c = osm(lalt)
 ,+. = osm(ralt)
 # ,+. = osl(comdot)
 -+( = =
+v+b = osl(fkeys)
 ```
 
 ## Keyboard Structure
@@ -141,6 +142,16 @@ vol+      `      :       (     )         ~            ||     __        __       
 play      _      -       [     ]         to(game)     ||     left      down     up      right __     __
 vol-      |      <       g+c   g+v       >        __  || __  bs        ent      home    end   __     __
                                play      __       __  || __  __        __
+```
+
+## Layer template
+
+```layer:fkeys
+__        __     __      __    __        __           ||     __        f10      f11     f12   __     __
+__        __     __      __    __        __           ||     __        f7       f8      f9    __     __
+__        __     __      __    __        __           ||     __        f4       f5      f6    __     __
+__        __     __      __    __        __       __  || __  __        f1       f2      f3    __     __
+                               __        __       __  || __  __        __
 ```
 
 ## Layer template
