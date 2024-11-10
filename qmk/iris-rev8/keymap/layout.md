@@ -26,7 +26,7 @@ lsft/s+hd = c+a
 hj+rsft/l = _
 u+i+o = c+s+g+i
 # hk+rsft/l = :
-w+e = ~
+# w+e = ~
 w+hf = `
 # hj+i = -
 hj+l = esc
@@ -138,9 +138,9 @@ __        __     __      __    __        __       __  || __  bs        ent      
 
 ```layer:exp
 lock      !      g+tab   #     g+s+4     boot         ||     boot      __       __      __    __     __
-vol+      `      :       (     )         ~            ||     __        __       __      __    __     __
+vol+      `      :       (     )         ~            ||     __        (        [       ]     )      __
 play      _      -       [     ]         to(game)     ||     left      down     up      right __     __
-vol-      |      <       g+c   g+v       >        __  || __  bs        ent      home    end   __     __
+vol-      |      <       copy  paste     >        __  || __  bs        ent      home    end   __     __
                                play      __       __  || __  __        __
 ```
 
