@@ -139,7 +139,7 @@ __        __     __      __    __        __       __  || __  bs        ent      
 ```layer:exp
 lock      !      vol-    play  vol+      boot         ||     boot      __       __      __    __     __
 __        `      -       (     )         ~            ||     __        (        [       ]     )      __
-__        _      :       [     ]         to(game)     ||     left      down     up      right __     __
+__        _      :       [     ]         $            ||     left      down     up      right __     __
 __        |      <       {     }         >        __  || __  home      ent      bs      end   __     __
                                __        __       __  || __  __        __
 ```
