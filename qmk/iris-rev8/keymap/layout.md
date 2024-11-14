@@ -137,11 +137,11 @@ __        __     __      __    __        __       __  || __  bs        ent      
 ## Experimental layer
 
 ```layer:exp
-lock      !      g+tab   #     g+s+4     boot         ||     boot      __       __      __    __     __
-vol+      `      :       (     )         ~            ||     __        (        [       ]     )      __
-play      _      -       [     ]         to(game)     ||     left      down     up      right __     __
-vol-      |      <       copy  paste     >        __  || __  bs        ent      home    end   __     __
-                               play      __       __  || __  __        __
+lock      !      vol-    play  vol+      boot         ||     boot      __       __      __    __     __
+__        `      -       (     )         ~            ||     __        (        [       ]     )      __
+__        _      :       [     ]         to(game)     ||     left      down     up      right __     __
+__        |      <       {     }         >        __  || __  home      ent      bs      end   __     __
+                               __        __       __  || __  __        __
 ```
 
 ## Layer template
