@@ -137,7 +137,7 @@ __        __     __      __    __        __       __  || __  bs        ent      
 ## Experimental layer
 
 ```layer:exp
-lock      !      vol-    play  vol+      boot         ||     boot      __       __      __    __     __
+lock      !      vol-    play  vol+      boot         ||     boot      __       __      __    __     del
 __        `      -       (     )         ~            ||     __        (        [       ]     )      __
 __        _      :       [     ]         $            ||     left      down     up      right __     __
 __        |      <       {     }         >        __  || __  home      ent      bs      end   __     __
