@@ -62,10 +62,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                           _______,          _______,          _______,  /* || */  _______, _______,       TO(LBASE)
   ),
   [LEXP] = LAYOUT(
-    LCTL(LGUI(KC_Q)), KC_EXLM,      KC_VOLD,            KC_MPLY,          KC_VOLU,          QK_BOOT,                    /* || */           QK_BOOT,       _______,   _______,            _______,      _______,         KC_DEL,
-    _______,          KC_GRV,       KC_MINS,            KC_LPRN,          KC_RPRN,          KC_TILD,                    /* || */           _______,       KC_LPRN,   KC_LBRC,            KC_RBRC,      KC_RPRN,         _______,
+    LCTL(LGUI(KC_Q)), KC_EXLM,      KC_VOLD,            KC_MPLY,          KC_VOLU,          QK_BOOT,                    /* || */           QK_BOOT,       _______,   KC_MINS,            KC_PLUS,      KC_EQL,          _______,
+    _______,          KC_GRV,       KC_MINS,            KC_LPRN,          KC_RPRN,          KC_TILD,                    /* || */           KC_EQL,        KC_LPRN,   KC_LBRC,            KC_RBRC,      KC_RPRN,         _______,
     _______,          KC_UNDS,      KC_COLN,            KC_LBRC,          KC_RBRC,          KC_DLR,                     /* || */           KC_LEFT,       KC_DOWN,   KC_UP,              KC_RIGHT,     _______,         _______,
-    _______,          KC_PIPE,      KC_LABK,            KC_LCBR,          KC_RCBR,          KC_RABK,          _______,  /* || */  _______, KC_HOME,       KC_ENT,    KC_BSPC,            KC_END,       _______,         _______,
+    _______,          KC_PIPE,      KC_LABK,            KC_LCBR,          KC_RCBR,          KC_RABK,          _______,  /* || */  _______, KC_HOME,       KC_ENT,    KC_BSPC,            KC_END,       _______,         KC_DEL,
                                                                           _______,          _______,          _______,  /* || */  _______, _______,       _______
   ),
   [LFKEYS] = LAYOUT(
