@@ -140,7 +140,7 @@ __    __     __      __    __    __       __  || __  bs       ent      home    e
 lock  !      vol-    play  vol+  boot         ||     boot     __       -       +     =      __
 __    `      -       (     )     ~            ||     =        (        [       ]     )      __
 __    _      :       [     ]     $            ||     left     down     up      right __     __
-__    |      <       {     }     >        __  || __  home     ent      bs      end   __     del
+__    lsft   lalt    {     }     >        __  || __  home     ent      bs      end   __     del
                            __    __       __  || __  __       __
 ```
 
