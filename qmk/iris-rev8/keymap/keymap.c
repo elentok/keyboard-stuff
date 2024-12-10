@@ -2,6 +2,12 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+
+enum custom_keycodes {
+  QWERTY = SAFE_RANGE,
+  TS_BRK,
+};
+
 // #include "elentok.h"
 #include "generated-layout.h"
 // #include "iris-layout.h"
@@ -32,6 +38,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
+    case TS_BRK:
+      if (!record->event.pressed) {
+        SEND_STRING("() => {  }");
+        SEND_STRING(SS_TAP(X_LEFT));
+        SEND_STRING(SS_TAP(X_LEFT));
+      }
+      break;
     // case EC_VI_C:
     //   if (!record->event.pressed) {
     //     SEND_STRING(SS_TAP(X_DEL));
