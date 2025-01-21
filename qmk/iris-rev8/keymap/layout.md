@@ -139,7 +139,7 @@ __    __     __      __    __    __       __  || __  bs       ent      home    e
 ```layer:exp
 lock  !      vol-    play  vol+  boot         ||     boot     __       -       +           =      __
 esc   `      -       (     )     ~            ||     =        (        [       ]           )      __
-__    _      :       [     ]     $            ||     left     down     up      right       __     __
+__    esc    :       [     esc   $            ||     left     down     up      right       __     __
 __    lsft   lalt    {     }     >        __  || __  home     ent      bs      raw(TS_BRK) __     del
                            __    __       __  || __  __       __
 ```
