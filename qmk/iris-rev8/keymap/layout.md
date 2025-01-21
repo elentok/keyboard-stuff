@@ -138,13 +138,13 @@ __    __     __      __    __    __       __  || __  bs       ent      home    e
 
 ```layer:exp
 lock  !      vol-    play  vol+  boot         ||     boot     __       -       +           =      __
-esc   `      -       (     )     ~            ||     =        (        [       ]           )      __
-__    esc    :       [     esc   $            ||     left     down     up      right       __     __
-__    lsft   lalt    {     }     >        __  || __  home     ent      bs      raw(TS_BRK) __     del
+__    `      (       )     =     ~            ||     =        <        [       ]           )      __
+__    lctl   -       esc   :     $            ||     left     down     up      right       rctl   __
+__    lsft   {       }     lalt  >        __  || __  home     ent      bs      raw(TS_BRK) __     del
                            __    __       __  || __  __       __
 ```
 
-## Layer template
+## FKeys Layer
 
 ```layer:fkeys
 __    __     __      __    __    __           ||     __       f10      f11     f12         __     __
