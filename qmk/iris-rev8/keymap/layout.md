@@ -18,17 +18,11 @@ hd = d
 
 ```combos
 hd+hf = $
-# e+hf = [
 e+hf = lgui
 lsft/s+hd = c+a
-# hj+hk = esc
-# hj+hk = osl(j)
 hj+rsft/l = _
 u+i+o = c+s+g+i
-# hk+rsft/l = :
-# w+e = ~
 w+hf = `
-# hj+i = -
 hj+l = esc
 hj+i = rgui
 hj+o = =
@@ -40,8 +34,6 @@ rsft/l+. = right
 hk+lalt/, = up
 hj+m = down
 h+n = left
-# hd+e = [
-# hk+i = ]
 hk+l = rsft
 s+hd = lsft
 hj+hk = mo(j)
@@ -49,7 +41,6 @@ hd+hf = mo(f)
 c+v = mo(v)
 x+c = lalt
 ,+. = ralt
-# ,+. = comdot
 -+( = =
 v+b = mo(fkeys)
 ```
@@ -138,7 +129,7 @@ __    __     __      __    __    __       __  || __  bs       ent      home    e
 
 ```layer:exp
 lock  !      vol-    play  vol+  boot         ||     boot     __       -       +           =      __
-__    `      (       )     =     ~            ||     =        <        [       ]           )      __
+g+tab `      (       )     =     ~            ||     =        <        [       ]           )      __
 __    lctl   -       esc   :     $            ||     left     down     up      right       rctl   __
 __    lsft   {       }     lalt  >        __  || __  home     ent      bs      raw(TS_BRK) __     del
                            __    __       __  || __  __       __
