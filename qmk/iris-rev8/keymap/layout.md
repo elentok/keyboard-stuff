@@ -4,11 +4,11 @@ This is an example for the Iris keyboard.
 
 - The core layout is 2x(3x5 + 3) = 36
 
-```options
+```sh options
 layoutFn = LAYOUT
 ```
 
-```aliases
+```sh aliases
 lock = c+g+q
 hf = f
 hj = j
@@ -16,33 +16,33 @@ hk = k
 hd = d
 ```
 
-```combos
-hd+hf = $
-e+hf = lgui
-lsft/s+hd = c+a
-hj+rsft/l = _
-u+i+o = c+s+g+i
-w+hf = `
-hj+l = esc
-hj+i = rgui
-hj+o = =
-m+,+. = g+1
-hf+r = [
-hj+u = ]
-rsft/l+rctl/; = right
-rsft/l+. = right
-hk+lalt/, = up
-hj+m = down
-h+n = left
-hk+l = rsft
-s+hd = lsft
-# hj+hk = mo(j)
-hd+hf = mo(f)
-c+v = mo(v)
+```sh combos
+
+# Left mods
 x+c = lalt
+s+hd = lsft
+e+hf = lgui
+
+# Right mods
 ,+. = ralt
--+( = =
+hk+l = rsft
+hj+i = rgui
+
+# Layer switchers
+c+v = mo(num)
 v+b = mo(fkeys)
+hd+hf = mo(f)
+
+# Keys
+hj+l = esc
+hj+o = =
+w+hf = `
+
+# Spotify play/pause
+u+i+o = c+s+g+i
+
+# Switch language
+m+,+. = g+1
 ```
 
 ## Keyboard Structure
@@ -65,13 +65,23 @@ lsft  z      x       c     v     b          spc || ent n        m        ,      
                            lctl  mo(layer1) spc || ent rsft     ralt
 ```
 
+## Layer1
+
+```layer:layer1
+lock  !      vol-    play  vol+  boot           ||     boot     __       -       +           =      __
+g+tab `      (       )     =     ~              ||     =        <        [       ]           )      __
+__    lctl   -       esc   :     $              ||     left     down     up      right       rctl   __
+__    lsft   {       }     lalt  >          __  || __  home     ent      bs      raw(TS_BRK) __     del
+                           __    __         __  || __  __       __
+```
+
 ## Layer: DF (when DF are held/tapped)
 
 ```layer:f
 __    __     g+s+4   g+s+5 $     boot           ||     ^        &        *       -           =      __
-__    lalt   lsft    __    __    __             ||     _        -        s+tab   tab         pgup   \
-__    lctl   lgui    __    __    to(game)       ||     left     down     up      right       $      '
-__    lctl   lalt    __    __    __         __  || __  __       bs       ent     __          __     __
+__    lalt   lsft    __    __    __             ||     _        -        [       ]           pgup   __
+__    lctl   lgui    __    __    to(game)       ||     left     down     up      right       $      __
+__    lctl   lalt    __    __    __         __  || __  home     ent      bs      __          __     __
                            __    lalt       __  || __  __       f12
 ```
 
@@ -87,9 +97,9 @@ s+tab =      <       {     }     >          __  || __  __       __       __     
                            __    lalt       __  || __  __       __
 ```
 
-## Layer: CV (when CV is held)
+## Layer: Numbers (when CV is held)
 
-```layer:v
+```layer:num
 __    __     __      __    __    __             ||     __       __       *       __          __     __
 __    __     vol+    __    __    __             ||     +        7        8       9           =      __
 __    c+a    lgui    play  __    __             ||     -        4        5       6           0      /
@@ -125,16 +135,6 @@ __    __     __      __    __    __             ||     to(base) pgdn     g+s+tab
 __    __     __      __    __    __             ||     left     down     up      right       __     __
 __    __     __      __    __    __         __  || __  bs       ent      home    end         /      __
                            __    __         __  || __  __       to(base)
-```
-
-## Layer1
-
-```layer:layer1
-lock  !      vol-    play  vol+  boot           ||     boot     __       -       +           =      __
-g+tab `      (       )     =     ~              ||     =        <        [       ]           )      __
-__    lctl   -       esc   :     $              ||     left     down     up      right       rctl   __
-__    lsft   {       }     lalt  >          __  || __  home     ent      bs      raw(TS_BRK) __     del
-                           __    __         __  || __  __       __
 ```
 
 ## FKeys Layer
