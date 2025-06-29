@@ -162,7 +162,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case KC_N:
     // Repeating is useful for Vim navigation keys.
-    case LT(LJ, KC_J):
+    case LT(LJK, KC_J):
     case RGUI_T(KC_K):
     case RSFT_T(KC_L):
       return QUICK_TAP_TERM;  // Enable key repeating.

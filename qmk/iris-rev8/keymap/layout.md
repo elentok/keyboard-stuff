@@ -32,6 +32,7 @@ hj+i = rgui
 c+v = mo(num)
 v+b = mo(fkeys)
 hd+hf = mo(f)
+hj+hk = mo(jk)
 
 # Keys
 hj+l = esc
@@ -87,9 +88,7 @@ __    lctl   lalt    __    __    __         __  || __  home     ent      bs     
 
 ## Layer: JK (when JK are held/tapped)
 
-@deprecated
-
-```layer:j
+```layer:jk
 esc   !      g+s+tab g+tab g+s+4 g+s+5          ||     boot     __       __      __          __     __
 tab   `      -       (     )     ~              ||     __       __       __      rsft        ralt   __
 =     _      :       [     ]     $              ||     __       __       __      rgui        rctl   __
