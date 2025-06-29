@@ -12,29 +12,31 @@ layoutFn = LAYOUT
 lock = c+g+q
 hf = f
 hj = j
-hk = k
-hd = d
+hk = lgui/k
+hd = rgui/d
+hs = lsft/s
+hl = rsft/l
 ```
 
 ```combos
 hd+hf = $
 e+hf = lgui
 lsft/s+hd = c+a
-hj+rsft/l = _
+# hj+rsft/l = _
 u+i+o = c+s+g+i
 w+hf = `
-hj+l = esc
+hj+hl = esc
 hj+i = rgui
 hj+o = =
 m+,+. = g+1
 hf+r = [
 hj+u = ]
-rsft/l+rctl/; = right
-rsft/l+. = right
-hk+lalt/, = up
+hl+rctl/; = right
+hl+. = right
+# hk+lalt/, = up
 hj+m = down
 h+n = left
-hk+l = rsft
+hk+hl = rsft
 s+hd = lsft
 # hj+hk = mo(j)
 hd+hf = mo(f)
@@ -60,7 +62,7 @@ v+b = mo(fkeys)
 ```layer:base
 esc   1      2       3     4     5              ||     6        7        8       9           0      bs
 tab   q      w       e     r     t              ||     y        u        i       o           p      \
-lgui  lctl/a s       hd    hf    g              ||     h        hj       hk      l           rctl/; '
+lgui  lctl/a hs      hd    hf    g              ||     h        hj       hk      hl          rctl/; '
 lsft  z      x       c     v     b          spc || ent n        m        ,       .           /      rsft
                            lctl  mo(layer1) spc || ent rsft     ralt
 ```

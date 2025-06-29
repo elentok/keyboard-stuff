@@ -8,6 +8,14 @@ enum custom_keycodes {
   TS_BRK,
 };
 
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
+    'L', 'L', 'L', 'L', 'L', 'L',       /* || */        'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',       /* || */        'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L',       /* || */        'R', 'R', 'R', 'R', 'R', 'R',
+    'L', 'L', 'L', 'L', 'L', 'L', 'L',  /* || */  'R',  'R', 'R', 'R', 'R', 'R', 'R',
+                        'L', 'L', 'L',  /* || */  'R',  'R', 'R'
+);
+
 // #include "elentok.h"
 #include "generated-layout.h"
 // #include "iris-layout.h"
@@ -229,3 +237,4 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
 bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
   return !layer_state_is(LGAME);
 }
+
