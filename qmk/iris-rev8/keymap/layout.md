@@ -30,6 +30,7 @@ hj+i = rgui
 
 # Layer switchers
 c+v = mo(num)
+x+c+v = mo(snum)
 v+b = mo(fkeys)
 hd+hf = mo(f)
 hj+hk = mo(jk)
@@ -90,9 +91,9 @@ __    lctl   lalt    __    __    __         __  || __  home     ent      bs     
 
 ```layer:jk
 esc   !      g+s+tab g+tab g+s+4 g+s+5          ||     boot     __       __      __          __     __
-tab   `      -       (     )     ~              ||     __       __       __      rsft        ralt   __
-=     _      :       [     ]     $              ||     __       __       __      rgui        rctl   __
-s+tab =      <       {     }     >          __  || __  __       __       __      ralt        rctl   __
+tab   `      (       )     =     ~              ||     __       __       __      rsft        ralt   __
+=     _      -       esc   :     $              ||     __       __       __      rgui        rctl   __
+s+tab =      {       }     __    __         __  || __  __       __       __      ralt        rctl   __
                            __    lalt       __  || __  __       __
 ```
 
@@ -103,6 +104,16 @@ __    __     __      __    __    __             ||     __       __       *      
 __    __     vol+    __    __    __             ||     +        7        8       9           =      __
 __    c+a    lgui    play  __    __             ||     -        4        5       6           0      /
 __    __     lsft    __    __    __         __  || __  0        1        2       3           .      __
+                           __    __         __  || __  __       ,
+```
+
+## Layer: Shifted Numbers (when XCV is held)
+
+```layer:snum
+__    __     __      __    __    __             ||     __       __       *       __          __     __
+__    __     vol+    __    __    __             ||     vol+     &        *       (           =      __
+__    c+a    lgui    play  __    __             ||     vol-     $        %       ^           0      /
+__    __     lsft    __    __    __         __  || __  0        !        @       #           .      __
                            __    __         __  || __  __       ,
 ```
 
