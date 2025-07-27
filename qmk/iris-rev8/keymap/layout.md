@@ -84,8 +84,8 @@ __    lsft {       }     lalt  >          __  || __  home     ent      bs      r
 
 ```layer:f
 __    __   g+s+4   g+s+5 $     boot           ||     ^        &        *       -           =    __
-__    lalt lsft    __    __    __             ||     =        -        [       ]           pgup __
-__    lctl lgui    __    __    to(game)       ||     left     down     up      right       $    __
+__    lgui lsft    __    __    __             ||     =        -        [       ]           pgup __
+__    lalt lsft    __    __    to(game)       ||     left     down     up      right       $    __
 __    lctl lalt    __    __    __         __  || __  home     ent      bs      __          __   __
                          __    lalt       __  || __  __       f12
 ```
@@ -96,7 +96,7 @@ __    lctl lalt    __    __    __         __  || __  home     ent      bs      _
 esc   !    g+s+tab g+tab g+s+4 g+s+5          ||     boot     __       __      __          __   __
 tab   `    (       )     =     ~              ||     __       __       __      rsft        ralt __
 =     _    -       esc   :     $              ||     __       __       __      rgui        rctl __
-s+tab =    {       }     __    __         __  || __  __       __       __      ralt        rctl __
+s+tab <    {       }     >     __         __  || __  __       __       __      ralt        rctl __
                          __    lalt       __  || __  __       __
 ```
 

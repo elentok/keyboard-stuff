@@ -29,8 +29,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [LF] = LAYOUT(
     _______,          _______,    LGUI(LSFT(KC_4)),   LGUI(LSFT(KC_5)), KC_DLR,           QK_BOOT,                    /* || */           KC_CIRC,   KC_AMPR,   KC_ASTR,            KC_MINS,      KC_EQL,  _______,
-    _______,          KC_LALT,    KC_LSFT,            _______,          _______,          _______,                    /* || */           KC_EQL,    KC_MINS,   KC_LBRC,            KC_RBRC,      KC_PGUP, _______,
-    _______,          KC_LCTL,    KC_LGUI,            _______,          _______,          TO(LGAME),                  /* || */           KC_LEFT,   KC_DOWN,   KC_UP,              KC_RIGHT,     KC_DLR,  _______,
+    _______,          KC_LGUI,    KC_LSFT,            _______,          _______,          _______,                    /* || */           KC_EQL,    KC_MINS,   KC_LBRC,            KC_RBRC,      KC_PGUP, _______,
+    _______,          KC_LALT,    KC_LSFT,            _______,          _______,          TO(LGAME),                  /* || */           KC_LEFT,   KC_DOWN,   KC_UP,              KC_RIGHT,     KC_DLR,  _______,
     _______,          KC_LCTL,    KC_LALT,            _______,          _______,          _______,          _______,  /* || */  _______, KC_HOME,   KC_ENT,    KC_BSPC,            _______,      _______, _______,
                                                                         _______,          KC_LALT,          _______,  /* || */  _______, _______,   KC_F12
   ),
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,           KC_EXLM,    LGUI(LSFT(KC_TAB)), LGUI(KC_TAB),     LGUI(LSFT(KC_4)), LGUI(LSFT(KC_5)),           /* || */           QK_BOOT,   _______,   _______,            _______,      _______, _______,
     KC_TAB,           KC_GRV,     KC_LPRN,            KC_RPRN,          KC_EQL,           KC_TILD,                    /* || */           _______,   _______,   _______,            KC_RSFT,      KC_RALT, _______,
     KC_EQL,           KC_UNDS,    KC_MINS,            KC_ESC,           KC_COLN,          KC_DLR,                     /* || */           _______,   _______,   _______,            KC_RGUI,      KC_RCTL, _______,
-    LSFT(KC_TAB),     KC_EQL,     KC_LCBR,            KC_RCBR,          _______,          _______,          _______,  /* || */  _______, _______,   _______,   _______,            KC_RALT,      KC_RCTL, _______,
+    LSFT(KC_TAB),     KC_LABK,    KC_LCBR,            KC_RCBR,          KC_RABK,          _______,          _______,  /* || */  _______, _______,   _______,   _______,            KC_RALT,      KC_RCTL, _______,
                                                                         _______,          KC_LALT,          _______,  /* || */  _______, _______,   _______
   ),
   [LNUM] = LAYOUT(
