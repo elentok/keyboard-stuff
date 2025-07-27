@@ -3,6 +3,10 @@
 set -euo pipefail
 
 if [ ! -e ~/qmk_firmware ]; then
+  brew install qmk/qmk/qmk arm-none-eabi-gcc
+  export QMK_HOME='~/qmk_firmware' # Optional, set the location for `qmk_firmware`
+  # brew install qmk-toolbox
   cd
-  git clone https://github.com/qmk/qmk_firmware --depth=1 --recurse-submodules --shallow-submodules 
+  git clone https://github.com/qmk/qmk_firmware --depth=1 --recurse-submodules --shallow-submodules
+  qmk setup # This will clone `qmk/qmk_firmware` and optionally set up your build environment
 fi
