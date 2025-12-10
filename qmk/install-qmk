@@ -2,8 +2,12 @@
 
 set -euo pipefail
 
+# Python 3.13 is needed, see:
+#
+# https://github.com/qmk/homebrew-qmk/issues/82#issuecomment-3453135672
+
 if [ ! -e ~/qmk_firmware ]; then
-  brew install qmk/qmk/qmk arm-none-eabi-gcc
+  # brew install qmk/qmk/qmk arm-none-eabi-gcc python@3.13 avr-gcc dos2unix
   export QMK_HOME='~/qmk_firmware' # Optional, set the location for `qmk_firmware`
   # brew install qmk-toolbox
   cd

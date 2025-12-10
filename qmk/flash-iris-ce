@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+side="${1:-left}"
+
+echo
+echo "IMPORTANT: Double click the reset button to get the keyboard into bootloader mode"
+echo
+
+qmk flash -bl "uf2-split-$side" ./binaries/keebio_iris_ce_rev1_elentok.uf2
