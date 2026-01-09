@@ -74,8 +74,8 @@ lsft  z    x       c     v     b          spc || ent n          m        ,   .  
 
 ```layer:layer1
 esc   lock vol-    play  vol+  boot           ||     boot       __       -   +           =    __
-g+s+5 `    (       )     =     ~              ||     =          _        [   ]           )    __
-__    lctl -       esc   :     $              ||     left       down     up  right       rctl __
+g+s+5 tab  (       )     =     tab            ||     =          _        [   ]           )    __
+__    lgui -       esc   :     $              ||     left       down     up  right       rctl __
 __    lsft {       }     lalt  >          __  || __  home       ent      bs  raw(TS_BRK) __   del
                          __    __         __  || __  __         __
 ```
@@ -105,7 +105,7 @@ __    lctl lalt    __    __    __         __  || __  home       ent      bs  __ 
 ```layer:jk
 esc   !    g+s+tab g+tab g+s+4 g+s+5          ||     boot       __       __  __          __   __
 tab   `    (       )     =     ~              ||     __         __       __  rsft        ralt __
-=     _    -       esc   :     $              ||     __         __       __  rgui        rctl __
+__    _    -       esc   :     $              ||     __         __       __  rgui        rctl __
 s+tab <    {       }     >     __         __  || __  __         __       __  ralt        rctl __
                          __    lalt       __  || __  __         __
 ```

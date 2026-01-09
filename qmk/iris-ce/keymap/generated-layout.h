@@ -22,8 +22,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [LLAYER1] = LAYOUT(
     KC_ESC,           LCTL(LGUI(KC_Q)), KC_VOLD,            KC_MPLY,          KC_VOLU,          QK_BOOT,                    /* || */           QK_BOOT,     _______,   KC_MINS, KC_PLUS,  KC_EQL,  _______,
-    LGUI(LSFT(KC_5)), KC_GRV,           KC_LPRN,            KC_RPRN,          KC_EQL,           KC_TILD,                    /* || */           KC_EQL,      KC_UNDS,   KC_LBRC, KC_RBRC,  KC_RPRN, _______,
-    _______,          KC_LCTL,          KC_MINS,            KC_ESC,           KC_COLN,          KC_DLR,                     /* || */           KC_LEFT,     KC_DOWN,   KC_UP,   KC_RIGHT, KC_RCTL, _______,
+    LGUI(LSFT(KC_5)), KC_TAB,           KC_LPRN,            KC_RPRN,          KC_EQL,           KC_TAB,                     /* || */           KC_EQL,      KC_UNDS,   KC_LBRC, KC_RBRC,  KC_RPRN, _______,
+    _______,          KC_LGUI,          KC_MINS,            KC_ESC,           KC_COLN,          KC_DLR,                     /* || */           KC_LEFT,     KC_DOWN,   KC_UP,   KC_RIGHT, KC_RCTL, _______,
     _______,          KC_LSFT,          KC_LCBR,            KC_RCBR,          KC_LALT,          KC_RABK,          _______,  /* || */  _______, KC_HOME,     KC_ENT,    KC_BSPC, TS_BRK,   _______, KC_DEL,
                                                                               _______,          _______,          _______,  /* || */  _______, _______,     _______
   ),
