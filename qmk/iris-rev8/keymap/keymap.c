@@ -5,7 +5,10 @@
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
-  TS_BRK,
+  EL_COPY,
+  EL_CUT,
+  EL_PASTE,
+  // TS_BRK,
 };
 
 // #include "elentok.h"
@@ -38,13 +41,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
-    case TS_BRK:
-      if (!record->event.pressed) {
-        SEND_STRING("() => {  }");
-        SEND_STRING(SS_TAP(X_LEFT));
-        SEND_STRING(SS_TAP(X_LEFT));
+    case EL_COPY:
+      if (record->event.pressed) {
+        tap_code16(LGUI(KC_C)); // send Cmd+C / Win+C
+        layer_move(LBASE);
       }
       break;
+    case EL_CUT:
+      if (record->event.pressed) {
+        tap_code16(LGUI(KC_X)); // send Cmd+X / Win+X
+        layer_move(LBASE);
+      }
+      break;
+    case EL_PASTE:
+      if (record->event.pressed) {
+        tap_code16(LGUI(KC_V)); // send Cmd+V / Win+V
+        layer_move(LBASE);
+      }
+      break;
+    // case TS_BRK:
+    //   if (!record->event.pressed) {
+    //     SEND_STRING("() => {  }");
+    //     SEND_STRING(SS_TAP(X_LEFT));
+    //     SEND_STRING(SS_TAP(X_LEFT));
+    //   }
+    //   break;
     // case EC_VI_C:
     //   if (!record->event.pressed) {
     //     SEND_STRING(SS_TAP(X_DEL));
@@ -138,6 +159,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   //   break;
   case LGAME:
     rgb_matrix_sethsv_noeeprom(HSV_RED);
+    break;
+  case LSEL:
+    rgb_matrix_sethsv_noeeprom(HSV_GREEN);
     break;
   // case LONE:
   //   rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
