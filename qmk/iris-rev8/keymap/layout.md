@@ -21,6 +21,8 @@ hd = d
 # Left mods
 x+c = lalt
 s+hd = lsft
+# shift in L1
+up+right = lsft
 e+hf = lgui
 lgui+a = lctl
 lgui+a+s = a+lctl
@@ -50,7 +52,7 @@ w+hf = `
 u+i+o = c+s+g+i
 
 # Switch language
-m+,+. = g+1
+m+, = g+1
 ```
 
 ## Keyboard Structure
@@ -167,9 +169,9 @@ __       __       __      __    __    __         __  || __  __         f1       
 
 ```layer:sel
 to(base) __       __      __    __    __             ||     __         __       __       __      __       __
-__       to(base) __      __    __    __             ||     g+c        g+z      to(base) __      g+v      __
-__       lctl     lsft    lalt  lgui  __             ||     left       down     up       right   __       __
-__       __       g+x     g+c   g+v   __         __  || __  __         __       bs       a+right to(base) __
+__       to(base) __      __    __    __             ||     g+c        g+z      to(base) __      g+v      g+=
+__       lctl     lsft    lalt  lgui  __             ||     left       down     up       right   __       g+-
+__       __       g+x     g+c   g+v   __         __  || __  __         ent      bs       a+right to(base) __
                                 __    __         __  || __  __         to(base)
 ```
 
