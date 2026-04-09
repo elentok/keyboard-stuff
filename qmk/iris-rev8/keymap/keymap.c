@@ -163,6 +163,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   case LSEL:
     rgb_matrix_sethsv_noeeprom(HSV_GREEN);
     break;
+  case LNUM:
+    rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
+    break;
   // case LONE:
   //   rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
   //   break;

@@ -5,7 +5,7 @@
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
-  TS_BRK,
+  // TS_BRK,
 };
 
 #include "generated-layout.h"
@@ -23,13 +23,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
-    case TS_BRK:
-      if (!record->event.pressed) {
-        SEND_STRING("() => {  }");
-        SEND_STRING(SS_TAP(X_LEFT));
-        SEND_STRING(SS_TAP(X_LEFT));
-      }
-      break;
+    // case TS_BRK:
+    //   if (!record->event.pressed) {
+    //     SEND_STRING("() => {  }");
+    //     SEND_STRING(SS_TAP(X_LEFT));
+    //     SEND_STRING(SS_TAP(X_LEFT));
+    //   }
+    //   break;
   }
   return true;
 }
@@ -44,6 +44,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   switch(get_highest_layer(state)) {
   case LGAME:
     rgb_matrix_sethsv_noeeprom(HSV_RED);
+    break;
+  case LSEL:
+    rgb_matrix_sethsv_noeeprom(HSV_GREEN);
+    break;
+  case LNUM:
+    rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
     break;
   // case LONE:
   //   rgb_matrix_sethsv_noeeprom(HSV_ORANGE);
